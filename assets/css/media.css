@@ -38,14 +38,21 @@
     margin-top: 80px;
   }
 }
+
 @media (max-width: 991px) {
   #page__main {
     border-radius: 20px;
+  }
+  .bann{
+    height:100vw;
   }
   .bann__ava {
     right: 3%;
     width: 160px;
     font-size: 22px;
+  }
+  .bann__img{
+    margin:30% 0;
   }
   .bann__ava img {
     width: 80px;
@@ -66,7 +73,15 @@
   .tokenomics__item {
     font-size: 80px;
   }
+
+  
+  .gif_anim{ 
+    top: 30vw;
+
+    width: 300px; 
+  }
 }
+
 @media (max-width: 767px) {
   .top-line__logo {
     font-size: 40px;
@@ -102,7 +117,7 @@
     gap: 10px 15px;
   }
   .bann{
-    height:1000px;
+    height:500px;
   }
   .bann__wrap {
     padding-top: 25px;
@@ -117,7 +132,7 @@
     font-size: 18vw; 
   } 
   .bann__img{
-    margin:20% 0;
+    margin:34% 0;
   }
   .bann__btn img {
     max-height: 50px;
@@ -148,9 +163,9 @@
   }
 
   .gif_anim{ 
-    top: 20%;
+    top: 40%;
 
-    width: 200px; 
+    width: 300px; 
   }
 }
 /*==========  Mobile First Method  ==========*/
