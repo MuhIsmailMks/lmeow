@@ -5,7 +5,11 @@
   }
   .tokenomics__head {
     font-size: 100px;
-  }
+  }  
+  .tokenomics { 
+    background-size: 2000px auto !important;
+    background: #fff url("../img/tokenomics.png") no-repeat 50% 100%;
+  } 
 }
 @media (max-width: 1499px) {
   .bann__subhead {
@@ -26,8 +30,9 @@
   .tokenomics {
     padding-bottom: 520px;
     background-size: 1700px auto;
-  }
- 
+    background-size: 100vw auto !important;
+    background: #fff url("../img/tokenomics.png") no-repeat 50% 100%;
+  } 
 }
 @media (max-width: 1199px) {
   h2 {

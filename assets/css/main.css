@@ -308,6 +308,7 @@ img {
 
 .tokenomics {
   padding: 70px 0 600px;
+  background-size: 100vw auto !important;
   background: #fff url("../img/tokenomics.png") no-repeat 50% 140%;
   text-align: center;
   color: #2C2C2C;
