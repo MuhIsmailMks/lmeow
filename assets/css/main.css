@@ -243,6 +243,14 @@ img {
   font-size: 10vw;
   z-index:11;
   font-family: "genty", sans-serif;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:0;
+
+  width:100%;
+
 }
 /* .bann__head:before {
   content: "";
@@ -258,7 +266,7 @@ img {
   position: relative;
   z-index: 2;
   width: 100%;
-  margin: 10% 0 0;
+  margin: 5% 0 0;
 }
 .bann__btn {
   position: absolute;
@@ -522,4 +530,28 @@ img {
   }
 }
 
+
+/* animation */
+
+.floating_animation{
+  animation: floating_animation 5s linear infinite;
+  -webkit-animation: floating_animation 5s linear infinite;
+}
+
+@keyframes floating_animation {
+  0%.100%{
+      transform: translateY(-6%);
+      -webkit-transform: translateY(-6%);
+      -moz-transform: translateY(-6%);
+      -ms-transform: translateY(-6%);
+      -o-transform: translateY(-6%);
+  }
+  50%{ 
+      transform: translateY(6%);
+      -webkit-transform: translateY(6%);
+      -moz-transform: translateY(6%);
+      -ms-transform: translateY(6%);
+      -o-transform: translateY(6%);
+  }
+}
 
