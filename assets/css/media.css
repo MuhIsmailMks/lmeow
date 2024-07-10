@@ -96,7 +96,7 @@
 @media (max-width: 575px) {
   #page {
     padding: 0 5px;
-  }
+  }   
   .top-line {
     padding: 0 10px;
     gap: 10px 15px;
@@ -133,6 +133,18 @@
   }
   .marquee-lines {
     font-size: 16vw;
+  }
+
+  .link_btn { 
+    border-radius: 5px; 
+    font-size: 1.5rem; 
+    padding:1.2rem 1rem; 
+  }
+
+  .gif_anim{ 
+    top: 30%;
+
+    width: 200px; 
   }
 }
 /*==========  Mobile First Method  ==========*/

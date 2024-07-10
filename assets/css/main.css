@@ -117,7 +117,8 @@ img {
           flex: 1 0 auto;
   overflow: hidden;
   border-radius: 32px;
-  background: #9AC923;
+  background: #c6af89;
+  /* background: #af9471; */
   /* background: #2F50C0; */
 }
 
@@ -589,7 +590,20 @@ img {
   transition: all .5s ease-in-out
 }
  
+.gif_anim{
+  position: absolute; 
+  left: 50%;
+  transform: translateX(-50%);
 
+  top: 30%;
+
+  width: 600px;
+  height: auto;
+
+  object-fit: contain;
+
+  z-index: 0;
+}
 
 .link_btn {
   border: 2px solid #0B5600;
