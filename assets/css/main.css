@@ -328,7 +328,7 @@ img {
 .tokenomics__content {
   margin-bottom: 22px;
   opacity: 0.9;
-  font-size: 24px;
+  font-size: 24px; 
 }
 .tokenomics__content.aos-animate {
   opacity: 0.9 !important;
