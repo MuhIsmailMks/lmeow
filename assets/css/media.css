@@ -141,6 +141,9 @@
     margin:0;
     position:absolute;
     bottom:0;
+
+    object-fit:cover:
+    height:200px;
   }
   .bann__btn img {
     max-height: 50px;
