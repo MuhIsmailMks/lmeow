@@ -516,6 +516,8 @@ img {
   height: 2em;  
   font: 400 13vw/1 "FKScreamerLegacy-Upright", sans-serif; 
   overflow:hidden;
+  
+  font-family: "Monigue", sans-serif;
 }
 .marquee-lines__wrap {
   position: absolute;
