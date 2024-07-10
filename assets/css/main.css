@@ -331,8 +331,7 @@ img {
   color: #0D6D02;
 }
 .tokenomics__content {
-  margin-bottom: 22px;
-  opacity: 0.9;
+  margin-bottom: 22px; 
   font-size: 24px; 
   
   color: #2e2e2e;
@@ -554,6 +553,29 @@ img {
   }
 }
 
+/* about us */
+
+/* about us */
+.about_us{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  padding-top: 2rem;
+}
+.about_us_head{
+  color: #181818;
+}
+.about_us_head span{
+  color: #0D6D02;
+}
+.tokenomics__content{
+  width: 700px;
+  max-width: 90%;
+}
+
 
 /* animation */
 
@@ -638,27 +660,6 @@ img {
 .link_btn:hover{
   transform: skewX(-15deg) rotate(7deg);
   box-shadow: -1px 1px 0 0 #0B5600;
-}
-
-/* about us */
-.about_us{
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  text-align: center;
-  padding-top: 2rem;
-}
-.about_us_head{
-  color: #181818;
-}
-.about_us_head span{
-  color: #0D6D02;
-}
-.tokenomics__content{
-  width: 700px;
-  max-width: 90%;
 }
 
 /* footer */
