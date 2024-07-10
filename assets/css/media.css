@@ -1,0 +1,138 @@
+/*==========  Desktop First Method  ==========*/
+@media (max-width: 1499px) {
+  .bann__subhead {
+    font-size: 4.6vw;
+  }
+  .bann__head {
+    font-size: 16vw;
+  }
+  .bann__btn {
+    bottom: 2vw;
+  }
+  .bann__btn img {
+    max-height: 10vw;
+  }
+  .tokenomics {
+    padding-bottom: 520px;
+    background-size: 1700px auto;
+  }
+
+  .marquee-lines {
+    margin-top: 120px;
+  }
+}
+@media (max-width: 1199px) {
+  h2 {
+    font-size: 14vw;
+  }
+  .social-sect {
+    padding-bottom: 40%;
+  }
+  .social-sect__grid {
+    gap: 20px 15px;
+  }
+  .social-sect__item {
+    width: 160px;
+  }
+  .marquee-lines {
+    margin-top: 80px;
+  }
+}
+@media (max-width: 991px) {
+  #page__main {
+    border-radius: 20px;
+  }
+  .bann__ava {
+    right: 3%;
+    width: 160px;
+    font-size: 22px;
+  }
+  .bann__ava img {
+    width: 80px;
+  }
+  .tokenomics {
+    padding: 40px 0 62vw;
+    background-size: 190vw auto;
+  }
+  .tokenomics__wrap {
+    max-width: 630px;
+  }
+  .tokenomics__content {
+    font-size: 20px;
+  }
+  .tokenomics__items {
+    gap: 10px;
+  }
+  .tokenomics__item {
+    font-size: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .top-line__logo {
+    font-size: 40px;
+  }
+  .top-line__wave {
+    display: none;
+  }
+  .top-line__social {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 0px;
+            flex: 1 0 0;
+  }
+  .footer {
+    padding: 20px 0 15px;
+  }
+  .bann__ava {
+    display: none;
+  }
+  .social-sect__item {
+    width: 120px;
+  }
+  .social-sect__item img {
+    max-width: 35%;
+    max-height: 35%;
+  }
+}
+@media (max-width: 575px) {
+  #page {
+    padding: 0 5px;
+  }
+  .top-line {
+    padding: 0 10px;
+    gap: 10px 15px;
+  }
+  .bann__wrap {
+    padding-top: 25px;
+  }
+  .bann .copy-box {
+    margin-bottom: 20px;
+  }
+  .bann__subhead {
+    font-size: 8vw;
+  }
+  .bann__head {
+    font-size: 14vw;
+  }
+  .bann__btn img {
+    max-height: 50px;
+  }
+  .tokenomics__content {
+    font-size: 16px;
+  }
+  .tokenomics__items {
+    gap: 4vw 3vw;
+  }
+  .tokenomics__item {
+    font-size: 22vw;
+  }
+  .social-sect__grid {
+    gap: 4vw 3vw;
+  }
+  .social-sect__item {
+    width: 25vw;
+  }
+  .marquee-lines {
+    font-size: 16vw;
+  }
+}
+/*==========  Mobile First Method  ==========*/
