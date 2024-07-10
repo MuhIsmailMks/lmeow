@@ -1,10 +1,21 @@
 /*==========  Desktop First Method  ==========*/
+@media (min-width: 4000px) {
+  .bann__head {
+    font-size: 200px;
+  }
+  .tokenomics__head {
+    font-size: 100px;
+  }
+}
 @media (max-width: 1499px) {
   .bann__subhead {
     font-size: 4.6vw;
   }
   .bann__head {
     font-size: 16vw;
+  }
+  .tokenomics__head {
+    font-size: 10vw;
   }
   .bann__btn {
     bottom: 2vw;
