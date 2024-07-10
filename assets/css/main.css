@@ -116,9 +116,8 @@ img {
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
   overflow: hidden;
-  border-radius: 32px;
-  background: #c6af89;
-  /* background: #af9471; */
+  border-radius: 32px;  
+  background: #9AC923;
   /* background: #2F50C0; */
 }
 
@@ -253,8 +252,9 @@ img {
   gap:0;
 
   width:100%;
-  color:#9AC923;
+  /* color:#9AC923;
   -webkit-text-stroke: 4px black;
+  text-shadow: 0 12px 0px black; */
 }
 /* .bann__head:before {
   content: "";
