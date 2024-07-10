@@ -308,7 +308,7 @@ img {
 
 .tokenomics {
   padding: 70px 0 600px;
-  background: #fff url("../img/tokenomics.jpg") no-repeat 50% 100%;
+  background: #fff url("../img/tokenomics.png") no-repeat 50% 100%;
   text-align: center;
   color: #2C2C2C;
 }
@@ -374,7 +374,7 @@ img {
 
 .social-sect {
   padding: 45px 0 37%;
-  background: url("../img/social-sect.jpg") no-repeat 50% 100%/100% auto;
+  background: url("../img/social-sect.png") no-repeat 50% 100%/100% auto;
   text-align: center;
 }
 .social-sect__head {
