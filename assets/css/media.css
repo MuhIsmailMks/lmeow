@@ -30,7 +30,7 @@
   .tokenomics {
     padding-bottom: 520px;
     background-size: 1700px auto;
-    background-size: 100vw auto !important;
+    background-size: 110vw auto !important;
     background: #fff url("../img/tokenomics.png") no-repeat 50% 100%;
   } 
 }
