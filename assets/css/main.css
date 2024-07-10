@@ -640,12 +640,12 @@ img {
   height: 100%;
   width: 100%;
 
-  background-image: url('../img/bg_lines.webp');
+  background-image: url('../img/bg_lines2.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; 
 
-  animation: marq_bg 13s infinite linear;
+  animation: marq_bg 19s infinite linear;
 }
 
 @keyframes marq_bg {
