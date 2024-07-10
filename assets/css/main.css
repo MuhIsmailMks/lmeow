@@ -240,8 +240,8 @@ img {
 .bann__head {
   position: relative;
   line-height: 1;
-  font-size: 535px;
-  z-index:11
+  font-size: 10vw;
+  z-index:11;
 }
 .bann__head:before {
   content: "";
