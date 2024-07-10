@@ -1,4 +1,4 @@
-// Animate
+// Animate 
 
 function getDelayAnimate(wrap, itemsClass) {
 	Array.prototype.forEach.call(wrap, function (wrap) {

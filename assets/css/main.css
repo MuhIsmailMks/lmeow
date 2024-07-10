@@ -117,7 +117,8 @@ img {
           flex: 1 0 auto;
   overflow: hidden;
   border-radius: 32px;
-  background: #2F50C0;
+  background: #052C00;
+  /* background: #2F50C0; */
 }
 
 .clearfix:after {
@@ -151,7 +152,7 @@ img {
 }
 
 ._c-main {
-  color: #5279FF;
+  color: #0D6D02;
 }
 
 .social-item {
@@ -260,6 +261,10 @@ img {
   margin-left: -0.75em;
   width: 1.5em;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+
+    data-aos="zoom-in"
+    data-aos-duration="600"
+    data-aos-delay="100"
 } */
 .bann__img {
   display: block;
@@ -314,7 +319,7 @@ img {
   font-size:6vw;
 } 
 .tokenomics__head span {
-  color: #5279FF;
+  color: #0D6D02;
 }
 .tokenomics__content {
   margin-bottom: 22px;
@@ -346,7 +351,7 @@ img {
   padding: 0.15em 0;
   border: 0.03em solid #26103D;
   border-radius: 0.7em 0.7em 0.7em 0.7em/0.35em 0.35em 0.35em 0.35em;
-  background: #5279FF;
+  background: #0D6D02;
   -webkit-box-shadow: 0.05em 0.1em 0 #26103D;
           box-shadow: 0.05em 0.1em 0 #26103D;
   text-align: center;
@@ -487,7 +492,7 @@ img {
   letter-spacing: inherit;
   line-height: 36px;
   font-size: 16px;
-  color: #5279FF;
+  color: #0D6D02;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -536,6 +541,7 @@ img {
 .floating_animation{
   animation: floating_animation 5s linear infinite;
   -webkit-animation: floating_animation 5s linear infinite;
+  position:relative;
 }
 
 @keyframes floating_animation {
