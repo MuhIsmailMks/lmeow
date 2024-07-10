@@ -589,3 +589,26 @@ img {
   transition: all .5s ease-in-out
 }
  
+
+
+.link_btn {
+  border: 2px solid #0B5600;
+  border-radius: 10px;
+  box-shadow: -5px 6px 0 0 #0B5600;
+  color: inherit;
+  cursor: pointer; 
+  font-size: 3rem;
+  line-height: 1;
+  padding:1.5rem 2.5rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transform: skewX(15deg) rotate(7deg);
+  transition: all .2s ease-in-out;
+  background: linear-gradient(261.99deg, #0B5600 -12.47%, #9AC923 119.9%);
+}
+
+.link_btn:hover{
+  transform: skewX(-15deg) rotate(7deg);
+  box-shadow: -1px 1px 0 0 #0B5600;
+}
