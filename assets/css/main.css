@@ -512,10 +512,10 @@ img {
 /* new section */
 
 .marquee-lines {
-  position: relative;
-  margin: 190px 0 60px;
-  height: 2em;
+  position: relative; 
+  height: 2em;  
   font: 400 13vw/1 "FKScreamerLegacy-Upright", sans-serif; 
+  overflow:hidden;
 }
 .marquee-lines__wrap {
   position: absolute;
@@ -627,4 +627,46 @@ img {
 .link_btn:hover{
   transform: skewX(-15deg) rotate(7deg);
   box-shadow: -1px 1px 0 0 #0B5600;
+}
+
+
+/* marquee text */
+.marquee-lines::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0; 
+  
+  height: 100%;
+  width: 100%;
+
+  background-image: url('../img/bg_lines.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
+
+  animation: marq_bg 13s infinite linear;
+}
+
+@keyframes marq_bg {
+  0%,100%{
+    transform: scale(1.1); 
+    -o-transform: scale(1.1);
+  }
+  50%{ 
+    transform: scale(2); 
+    -o-transform: scale(2);
+  }
+}
+
+.marquee-lines::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0; 
+  
+  height: 100%;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.103);
 }

@@ -16,10 +16,7 @@
     padding-bottom: 520px;
     background-size: 1700px auto;
   }
-
-  .marquee-lines {
-    margin-top: 120px;
-  }
+ 
 }
 @media (max-width: 1199px) {
   h2 {
@@ -33,10 +30,7 @@
   }
   .social-sect__item {
     width: 160px;
-  }
-  .marquee-lines {
-    margin-top: 80px;
-  }
+  } 
 }
 
 @media (max-width: 991px) {
