@@ -576,9 +576,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  -webkit-animation: spin 8s linear infinite;
-  animation: spin 8s linear infinite; 
+   
 }
  
 .main_right_link .rotate_img {
@@ -588,21 +586,6 @@ img {
 .main_right_link:hover .rotate_img {
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
-  transition: all .3s ease-in-out
+  transition: all .5s ease-in-out
 }
-
-
-
-@-webkit-keyframes spin {
-  to {
-      -webkit-transform: rotate(1turn);
-      transform: rotate(1turn)
-  }
-}
-
-@keyframes spin {
-  to {
-      -webkit-transform: rotate(1turn);
-      transform: rotate(1turn);
-  }
-}
+ 
