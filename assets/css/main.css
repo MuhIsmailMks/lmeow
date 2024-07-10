@@ -239,6 +239,7 @@ img {
   line-height: 1;
   font-size: 70px; 
 }
+
 .bann__head {
   position: relative;
   line-height: 1.45;
@@ -252,7 +253,8 @@ img {
   gap:0;
 
   width:100%;
-
+  color:#9AC923;
+  -webkit-text-stroke: 2px black;
 }
 /* .bann__head:before {
   content: "";
