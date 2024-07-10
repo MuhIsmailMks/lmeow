@@ -53,6 +53,11 @@
   .mobile_token{
     display:block;
   }
+  .top-line__copy{
+    position:relative;
+    left:auto;
+    transform: none;
+  }
 }
 
 @media (max-width: 991px) {

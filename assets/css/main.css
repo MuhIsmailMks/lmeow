@@ -201,6 +201,11 @@ img {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
+  position: absolute;
+  z-index:11;
+
+  left:50%;
+  transform: translateX(-50%);
 }
 .top-line__social {
   display: -webkit-box;
@@ -639,6 +644,14 @@ img {
   box-shadow: -1px 1px 0 0 #0B5600;
 }
 
+/* footer */
+.email{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.2em;
+}
 
 /* marquee text */
 .marquee-lines::before{
@@ -679,4 +692,8 @@ img {
   width: 100%;
 
   background-color: rgba(0, 0, 0, 0.103);
+}
+
+.email{
+
 }
