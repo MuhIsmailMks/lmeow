@@ -350,8 +350,9 @@ img {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
-  width: 1.4em;
-  padding: 0.15em 0;
+  min-width: 1.4em;
+  width: auto;
+  padding: 0.15em .72rem;
   border: 0.03em solid #26103D;
   border-radius: 0.7em 0.7em 0.7em 0.7em/0.35em 0.35em 0.35em 0.35em;
   background: #0D6D02;
