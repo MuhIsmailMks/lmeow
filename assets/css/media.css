@@ -149,6 +149,12 @@
   .bann__head {
     font-size: 19vw; 
   } 
+  .bann__head .floating_animation{
+    width:auto;
+  }
+  .bann__head span{
+    width:100px;
+  }
   .bann__img{
     margin:0;
     position:absolute;
