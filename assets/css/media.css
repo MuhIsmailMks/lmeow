@@ -142,8 +142,11 @@
     position:absolute;
     bottom:0;
 
-    object-fit:cover:
+    object-fit:cover;
     height:200px;
+  }
+  .bann__btn{
+    bottom:30px;
   }
   .bann__btn img {
     max-height: 50px;
