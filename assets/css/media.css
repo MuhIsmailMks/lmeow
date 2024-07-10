@@ -42,6 +42,12 @@
   .social-sect__item {
     width: 160px;
   } 
+  .desk_token{
+    display:none;
+  }
+  .mobile_token{
+    display:block;
+  }
 }
 
 @media (max-width: 991px) {
@@ -64,8 +70,9 @@
   }
   .tokenomics {
     padding: 40px 0 62vw;
-    background-size: 190vw auto;
-  }
+    background-size: 160vw auto !important;
+    background: #fff url("../img/tokenomics.png") no-repeat 50% 100%;
+  } 
   .tokenomics__wrap {
     max-width: 630px;
   }

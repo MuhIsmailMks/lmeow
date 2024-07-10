@@ -308,7 +308,7 @@ img {
 
 .tokenomics {
   padding: 70px 0 600px;
-  background: #fff url("../img/tokenomics.png") no-repeat 50% 100%;
+  background: #fff url("../img/tokenomics.png") no-repeat 50% 140%;
   text-align: center;
   color: #2C2C2C;
 }
@@ -371,6 +371,12 @@ img {
 }
 .tokenomics__item-head {
   font-size: 0.2em;
+}
+.desk_token{
+  display:block;
+}
+.mobile_token{
+  display:none;
 }
 
 .social-sect {
