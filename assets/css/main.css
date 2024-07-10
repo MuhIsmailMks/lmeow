@@ -645,7 +645,7 @@ img {
   background-position: center;
   background-size: cover; 
 
-  animation: marq_bg 19s infinite linear;
+  animation: marq_bg 50s infinite linear;
 }
 
 @keyframes marq_bg {
