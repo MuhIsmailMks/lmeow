@@ -433,20 +433,25 @@ img {
 .social-sect__item._tg .social-sect__svg-box {
   fill: #64B5FF;
 }
-.social-sect__item._tg:hover .social-sect__svg-box {
+
+/* .social-sect__item._tg:hover .social-sect__svg-box {
   fill: #7ec1ff;
-}
+} */
 
 .social-sect__item._x .social-sect__svg-box {
-  fill: #648FFF;
+  fill: black;
+  /* fill: #648FFF; */
 }
-.social-sect__item._x:hover .social-sect__svg-box {
+
+
+/* .social-sect__item._x:hover .social-sect__svg-box {
   fill: #7ea1ff;
-}
+} */
 
 .social-sect__item._ps .social-sect__svg-box {
   fill: #F9F4F6;
 }
+
 .social-sect__item._ps:hover .social-sect__svg-box {
   fill: white;
 }
@@ -561,3 +566,43 @@ img {
   }
 }
 
+
+
+/* spin  */
+
+.main_right_link{
+  position:relative;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  -webkit-animation: spin 8s linear infinite;
+  animation: spin 8s linear infinite; 
+}
+ 
+.main_right_link .rotate_img {
+  transition: all .2s ease-in-out;
+}
+
+.main_right_link:hover .rotate_img {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  transition: all .3s ease-in-out
+}
+
+
+
+@-webkit-keyframes spin {
+  to {
+      -webkit-transform: rotate(1turn);
+      transform: rotate(1turn)
+  }
+}
+
+@keyframes spin {
+  to {
+      -webkit-transform: rotate(1turn);
+      transform: rotate(1turn);
+  }
+}
