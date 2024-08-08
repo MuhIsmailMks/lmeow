@@ -294,12 +294,13 @@
     const imageContract = document.querySelector('.imageContract img');
 
     function checkViewportWidth() { 
-        if (window.innerWidth < 500) {
+        if (window.innerWidth < 900) {
             imageHero.setAttribute('src', "./assets/images/bg_image_mobile.png")
             imageWho.setAttribute('src', "./assets/images/bg_image_mobile_left.png")
             imageContract.setAttribute('src', "./assets/images/bg_image_mobile.png")
         } else { 
             imageHero.setAttribute('src', "./assets/images/bg_image.png")
+            imageWho.setAttribute('src', "./assets/images/bg_image.png")
             imageContract.setAttribute('src', "./assets/images/bg_image.png")
         }
     }
