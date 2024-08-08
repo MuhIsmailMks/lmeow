@@ -1,495 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/logo.png">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png"> 
+
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
-    <!-- AOS scroll effect cdn --> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <!-- tailwind css cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- css link -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>PEPE’s Mother</title>
+    <title>SHIB</title>
 </head>
-<body> 
 
+<body>
 
-    <style>  
+    <div class="container_site w-full h-auto relative max-w-[100%] overflow-hidden">
 
-
-    </style>
- 
-    <div class="w-full min-h-[100vh] h-auto bg-[#FF3BB9] max-w-[100%] absolute overflow-hidden">
-       
-            <!-- navbar -->
-            <nav   class="w-full z-[999] justify-center h-[80px] xl:h-[100px] absolute left-0 top-0 max-w-[100%]  flex items-center   ">
-
-                <div   class="nav_container px-[1rem] md:px-[2rem]  flex items-center relative h-[100%] justify-between w-full max-w-[100%] xl:max-w-[3100px] ">
-
-                    <div class="left flex relative z-10 justify-center items-center  text-[white] text_nav text-[15px] md:text-[30px]" data-aos="fade-right"
-                    data-aos-duration="800"
-                    data-aos-delay="200">
-
-                        <div class="logo mr-[1rem]">
-                            <img src="./assets/images/logo.png" alt="" class="w-[60px] md:w-[100px] h-auto object-contain">
-                        </div> 
-
-                    
-
-                    </div>
-
-                    <div class="center absolute left-0  top-0 h-full w-[100%] z-0 justify-center flex items-center "
-                    data-aos="fade-up"
-                    data-aos-duration="800"
-                    data-aos-delay="300">
-
-                    <ul class="flex items-center absolute opacity-0 xl:opacity-100 xl:relative gap-[2rem] link_none">
-
-                        <li class="list-none"><a href="#home"
-                                class="text-[#fff] uppercase duration-200 ease-in text_nav text-[18px] tracking-[1px]">Home</a>
-                        </li>
-
-                        <li class="list-none"><a href="#about"
-                                class="text-[#fff] uppercase duration-200 ease-in text_nav text-[18px] tracking-[1px]">About</a>
-                        </li> 
-
-                        <li class="list-none"><a href="#roadmap"
-                                class="text-[#fff] uppercase duration-200 ease-in text_nav text-[18px] tracking-[1px]">roadmap</a>
-                        </li>
-    
-
-                    </ul>
-
-                    </div>
-
-                    <div class="right relative z-10 md:w-auto flex justify-center h-full items-center gap-[1rem]" data-aos="fade-left"
-                    data-aos-duration="800"
-                    data-aos-delay="200">
-
-                    <div class="social flex items-center relative  gap-[1rem]">
-                        <a href="https://x.com/home" target="_blank" class="w-[40px] md:w-[55px] lg:w-[56.35px] h-[40px] md:h-[55px] lg:h-[56.35px] flex justify-center items-center duration-300 ease-in  hover:scale-110">
-                            <img src="./assets/images/twitter_nav.svg" alt="twitterIcon" class="w-[100%] h-auto object-contain  duration-200">
-                        </a>
-                        <a href="https://telegram.org/" target="_blank" class="w-[40px] md:w-[55px] lg:w-[56.35px] h-[40px] md:h-[55px] lg:h-[56.35px] flex justify-center items-center duration-300 ease-in  hover:scale-110">
-                            <img src="./assets/images/telegram_nav.svg" alt="telegramIcon" class="w-full h-auto object-contain duration-200">
-                        </a>
-                        <a href="https://solana.com/" target="_blank" class="w-[40px] md:w-[55px] lg:w-[56.35px] h-[40px] md:h-[55px] lg:h-[56.35px] flex justify-center items-center duration-300 ease-in  hover:scale-110">
-                            <img src="./assets/images/sols_nav.svg" alt="telegramIcon" class="w-full h-auto object-contain duration-200">
-                        </a>
-                    </div> 
-
-                        <div class="menu-button relative">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    
-                    </div>
-
-                </div>
-
-                <div class="menu absolute duration-300 top-[110%] rounded-xl right-[2rem] px-[1.75rem] w-auto h-auto flex justify-center backdrop-blur-lg py-[2rem] bg-[#FE63C7]">
-
-                    <ul class="flex items-center  relative gap-[2rem] link_none flex-col justify-center ">
-                    
-                     <li class="list-none"><a href="#home"
-                            class="text-white uppercase duration-200 ease-in text_nav text-[14px] tracking-[1px]">Home</a>
-                    </li>
-
-                     <li class="list-none"><a href="#about"
-                            class="text-white uppercase duration-200 ease-in text_nav text-[14px] tracking-[1px]">About</a>
-                    </li>
-
-                    <li class="list-none">
-                        <a href="#roadmap"
-                            class="text-white uppercase duration-200 ease-in text_nav text-[14px] tracking-[1px]">roadmap</a>
-                    </li>
- 
-
-                
-                                
-                    </ul>
-
-                </div>
-
-           </nav>
-
-            <!-- home -->
-            <section id="home" class="home w-full h-auto relative flex items-center">
-
-                <!-- background -->
-                <div class="bg-image imagehome w-full h-full absolute left-[50%] translate-x-[-50%] top-0 flex justify-center items-center z-[0] max-w-[1900px]"> 
-                    
-                    <!-- hero img -->
-                     <img src="./assets/images/hero_bg1.svg" alt="" class="absolute left-0 top-0 w-full xl:w-[50%] h-auto object-contain">
-
-                     <img src="./assets/images/hero_bg2.svg" alt="" class="absolute left-[-10%] bottom-[-20%] max-w-[900px] w-[70%] xl:w-[40%] h-auto object-contain">
-
-                    <!-- rotate image -->
-                    <div class="absolute w-[100vw] md:w-[1000px] h-[100vw] md:h-[1000px] object-contain z-10 top-[50%] xl:top-0 xl:right-[-10%] min-[2000px]:right-[-5%]" data-aos="zoom-in"
-                    data-aos-duration="1000"
-                    data-aos-delay="1000">
-                        <img src="./assets/images/rotate_img.svg" alt="" class="absolute  w-full h-full rotate_animation">
-                    </div>
+        <!-- navbar -->
+        <nav class="absolute z-[99] left-0 top-0 flex justify-center items-center w-full h-[130px] gap-[1rem] xl:gap-[2rem]">
+            <a target="_blank" href="https://twitter.com/" class="social hover:rotate-[25deg] duration-200 relative flex justify-center items-center">
+                <img src="./assets/images/bone.png" alt=""
+                    class="h-auto object-contain relative w-[100px] md:w-[175.64px]">
+                <img src="./assets/images/twitter.svg" alt=""
+                    class="absolute h-auto object-contain w-[13px] md:w-[23px]">
+            </a>
+            <div class="logo relative">
+                <img src="./assets/images/logo.png" alt="" class="h-auto object-contain w-[66px] md:w-[102.06px]">
+            </div>
+            <a target="_blank" href="https://web.telegram.org" class="social hover:rotate-[-25deg] duration-200 relative flex justify-center items-center">
+                <img src="./assets/images/bone.png" alt=""
+                    class="h-auto object-contain relative w-[100px] md:w-[175.64px]">
+                <img src="./assets/images/telegram.svg" alt=""
+                    class="absolute h-auto object-contain w-[13px] md:w-[23px]">
+            </a>
+        </nav>
         
+        <!-- hero -->
+        <section class="hero w-full pb-[50px] xl:pb-0 h-auto relative flex items-center">
+
+            <!-- background -->
+            <div class="bg-image imageHero w-full h-full absolute left-0 top-0 flex justify-center items-center">
+                <img src="./assets/images/bg_image.png" alt="bg" class="object-cover w-full h-full left-0 top-0">
+            </div>
+
+            <div  class="content pt-[70px] md:pt-[100px] xl:pt-[0px] relative h-auto xl:h-[834px] w-full max-w-[1800px] xl:px-[2rem] mx-auto flex justify-between items-center  flex-col xl:flex-row">
+
+                <div class="left w-[90%] xl:w-[820px] flex flex-col items-center">
+
+                    <img src="./assets/images/hero_text.png" alt="popo" class="w-[100%] object-contain h-auto  ">
+                    
+                    <p class="text-white text-center text-[25.99px] relative w-full xl:w-[70%]">In a world saturated with meme
+                        coins, where the hype seems to overshadow substance, the community behind $BRETT is leading a
+                        takeover. </p>
+                    <div class="btns flex justify-center items-center w-full relative gap-[1rem] mt-[2rem]">
+                        <a target="_blank" href="#"
+                            class="duration-300 relative bg-white w-[100px] h-[50px] md:w-[151px] md:h-[58px] rounded-full flex items-center justify-center">
+                            <p class="text-center text-black font-[700] md:text-[22px] ">CHART</p>
+                        </a>
+                        <a target="_blank" href="https://www.dextools.io/app/en/base/pair-explorer/0xc08ae9e9ec06e3f5ee779178625c7180efc9cf21"
+                            class="duration-300 relative bg-white w-[100px] h-[50px] md:w-[151px] md:h-[58px] rounded-full flex items-center justify-center">
+                            <p class="text-center text-black font-[700] md:text-[22px] ">BUY NOW</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="right relative w-full xl:w-[763px]">
+                    <img src="./assets/images/hero_image.png" alt="popo" class="w-full h-auto object-cover">
+                </div>
+            </div>
+
+            <!-- marquee -->
+            <div class="marquee_container absolute left-0 bottom-0 w-full h-auto">
+                <div class="marquee bordered marquee-left">
+                    <div class="marquee-el" style="animation-duration: 45s;">
+                        <p>
+                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
+                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
+                        </p>
+                    </div>
+                    <div class="marquee-el" style="animation-duration: 45s;">
+                        <p>
+                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
+                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+         <!-- who -->
+         <section class="who w-full h-auto relative flex items-start justify-center py-[200px]">
+
+            <!-- background -->
+            <div class="bg-image z-0 w-full h-full absolute left-0 top-0 flex justify-center items-center imageWho">
+                <img src="./assets/images/bg_image.png" alt="" class="object-cover w-full h-full left-0 top-0">
+            </div>
+ 
+            <div class="content z-[1] relative py-[2rem] xl:py-0 bg-[#FF3A39] w-[1467px] max-w-[90%] h-auto max-h-[700px] xl:max-h-[1000px] xl:h-[592px] rounded-[66px] flex flex-col xl:flex-row justify-between items-center px-[3rem]">
+
+                <div class="relative float_animation">
+                    <img src="./assets/images/who_image.png" alt="Shib" class=" w-auto object-contain h-[90%] mirror_img">
                 </div>
 
-                <div  class="content pt-[100px] xl:pt-[0px] relative h-auto xl:h-[1000px] w-full max-w-[1800px] xl:px-[2rem] mx-auto flex justify-between   flex-col xl:flex-row text-white  ">
+                <div class="about h-auto w-[100%] xl:max-w-[60%] xl:w-[751px] text-center text-white ">
+                    <h2 class="title_styling text-[40px] xl:text-[80px]">Who Is SHIB 2.0?</h2>
+                    <p class="text-[20px] xl:text-[30px]">
+                        After dominating the BASE blockchain as a Fan tribute, BRETT 2.0 offers a second opportunity to financial freedom, as once PEPE2.0 offered. Join us as we climb to the heights of BRETT, and bring wealth and opportunity to those who missed out on BRETT.
 
-                    <!-- hero content -->
-                    <div class="left w-[100%] xl:w-[620px] min-[1600px]:w-[50vw] xl:pl-[3rem] flex flex-col xl:pt-[200px]   max-lg:px-[2rem] gap-[1.75rem] md:gap-[0rem] max-xl:text-center max-xl:items-center">
+                    </p>
 
-                        <h1 class="uppercase bold_stroke leading-[1]  text-[21vw] xl:text-[160px] min-[1700px]:text-[185.81px]" data-aos="fade-right"
-                        data-aos-duration="1000"
-                        data-aos-delay="200">Mama</h1>
-                        <p class="text-white leading-[1] text-[60px] xl:text-[89.96px] medium_stroke  relative w-full" data-aos="fade-right"
-                        data-aos-duration="1000"
-                        data-aos-delay="400"> pepe’s Mother</p>
+                </div>
 
-                        <div class="relative mt-[1.5rem] lg:mt-[3rem] flex_align_center gap-[1rem]" data-aos="fade-right"
-                        data-aos-duration="1000"
-                        data-aos-delay="600">
-                            <a href="#"
-                            class="duration-300 btn_shadow hover:scale-110 relative bg-[#FFCBCD] w-[130px] h-[45px] md:w-[166px] md:h-[57px] min-[1800px]:w-[196px] min-[1800px]:h-[78px] rounded-lg max-xl:mx-auto flex items-center justify-center">
-                            <p class="text-center text-black font-[700] md:text-[18px] min-[1800px]:text-[21px]">BUY NOW</p>
-                           </a>
-                           <a href="https://www.dextools.io/" target="_blank"
-                           class="duration-300 btn_shadow hover:scale-110 relative bg-[#fff] w-[130px] h-[45px] md:w-[166px] md:h-[57px] min-[1800px]:w-[196px] min-[1800px]:h-[78px] rounded-lg max-xl:mx-auto flex items-center justify-center">
-                           <p class="text-center text-[#F0000C] font-[700] md:text-[18px] min-[1800px]:text-[21px]">DEXTOOLS</p>
-                          </a>
-                        </div>
+            </div>
 
-                        <div class="relative mt-[1.5rem] lg:mt-[3rem] w-[90%] sm:w-[543px] h-[67px] md:h-[85px] border-[2px] border-[#FFEAEA] max-[1200px]:mx-auto  rounded-lg flex_center" data-aos="fade-right"
-                        data-aos-duration="1000"
-                        data-aos-delay="800">
-                            <div class="relative  w-[97%] h-[80%] border-[2px] bg-[#FF5CC5] border-[#FFEAEA] rounded-lg flex_between px-[1rem] text-[15px] lg:text-[21.83px]">
-                                <p>CA: </p>
-                                <span class="text_bold tracking-widest text_ellipsis max-sm:max-w-[70%] overflow-hidden copy-box__btn copy-box__text">01s7dfdekx014381048482i4u1kh</span>
-                                <img src="./assets/images/copy-icon.svg" alt="copy" class="w-[25px] md:w-[40px] cursor-pointer h-auto object-contain copy-box ">
-                            </div>
-                        </div>
-
+            <!-- marquee -->
+            <div class="marquee_container absolute left-0 bottom-0 w-full h-auto">
+                <div class="marquee bordered marquee-left">
+                    <div class="marquee-el" style="animation-duration: 45s;">
+                        <p>
+                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
+                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
+                        </p>
                     </div>
-
-                    <!-- image hero -->
-                    <div class="right relative xl:absolute bottom-0 right-0 w-full max-[1000px]:mt-[2rem] xl:w-[763px] flex justify-center float_animation">
-                        <img src="./assets/images/hero-img.png" alt="popo" class="max-w-[100%] w-[60%] md:w-[600px] bottom-[-20px] xl:bottom-[-40px] relative xl:absolute h-auto object-cover" data-aos="fade-up"
-                        data-aos-duration="1000"
-                        data-aos-delay="600">
+                    <div class="marquee-el" style="animation-duration: 45s;">
+                        <p>
+                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
+                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
+                        </p>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                </div> 
+          <!-- address -->
+          <section class="address w-full h-auto relative flex items-start justify-center py-[100px]">
 
-            </section>
+            <!-- background -->
+            <div class="bg-image w-full h-full absolute left-0 top-0 flex justify-center items-center imageContract">
+                <img src="./assets/images/bg_image.png" alt="" class="object-cover w-full h-full left-0 top-0">
+            </div>
 
-            <!-- about -->
-            <section  id="about" class="about w-full  relative flex_center_alignEnd h-[500px] min-[500px]:h-[100vw] xl:h-[90vw] min-[2400px]:h-[60vw] max-h-[2000px] overflow-hidden">
+            <div class="content relative w-full flex flex-col items-center">
+
+                <h2 class="title_styling text-[40px] md:text-[80px]">CONTRACT ADDRESS</h2>
+                <div class="copy_address cursor-pointer max-w-[90%] w-[767.09px] h-[50.87px] bg-white border-[2px] border-[#343230] rounded-full flex items-center justify-between px-[1rem]">
+                    <p class="value text-[#343230] text-[10px] md:text-[20px]" data-set="0xeD899bfDB28c8ad65307Fa40f4acAB113AE2E14c">0xeD899bfDB28c8ad65307Fa40f4acAB113AE2E14c</p>
+                    <div class="bg-[#FF3A39] rounded-full text-[#343230] flex justify-center items-center border-[2px] border-[#343230] h-[85%] w-[80px] md:w-[102px] text-[13px] md:text-[18.28px]">
+                        <span>COPY</span>
+                    </div>
+                </div>
+
+                <div class="tax relative mt-[3rem] flex w-full justify-center flex-col md:flex-row gap-[3rem] items-center">
+                    <div class="h-auto relative w-[175.64px] flex justify-center items-center">
+                        <img src="./assets/images/bone.png" alt="bone" class=" w-full h-auto object-contain">
+                        <p class="absolute text-[16px] xl:text-[22px]">0/0 TAXES</p>
+                    </div>
+                    <div class="h-auto relative w-[175.64px] flex justify-center items-center">
+                        <img src="./assets/images/bone.png" alt="bone" class="w-full h-auto object-contain">
+                        <p class="absolute text-[16px] xl:text-[22px]">LP LOCKED</p>
+                    </div>
+                    <div class="h-auto relative w-[175.64px] flex justify-center items-center">
+                        <img src="./assets/images/bone.png" alt="bone" class="w-full h-auto object-contain">
+                        <p class="absolute text-[16px] xl:text-[22px]">RENOUNCED</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- marquee -->
+            <div class="marquee_container absolute left-0 bottom-0 w-full h-auto">
+                <div class="marquee bordered marquee-left">
+                    <div class="marquee-el" style="animation-duration: 45s;">
+                        <p>
+                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
+                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
+                        </p>
+                    </div>
+                    <div class="marquee-el" style="animation-duration: 45s;">
+                        <p>
+                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
+                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+           <!-- join -->
+           <section class="join w-full h-auto relative flex items-start justify-center py-[100px]">
  
-                <!-- content -->
-                 <div class="w-full max-w-[2000px] h-auto relative z-10 flex justify-center  ">
+            <div class="bg_grass absolute w-full h-full bottom-0 left-0">
+                <img src="./assets/images/grass.svg" alt="" class="absolute bottom-[4%] left-[10%]">
+                <img src="./assets/images/grass.svg" alt="" class="absolute bottom-[10%] right-[10%]">
+            </div>
 
-                    <!-- bg top -->
-                    <img src="./assets/images/about_top_img.svg" alt="" class="w-full h-auto object-cover absolute top-[-15vw]">
+            <div class="content relative w-full flex-col items-center">
 
-                  
-                    <!-- bg callender -->
-
-                     <!-- desktop -->
-                    <img src="./assets/images/callender.svg" alt="" class="w-full h-auto object-cover relative hidden min-[1000px]:block">
-
-                    <!-- mobile -->
-                    <img src="./assets/images/callender_mobile.svg" alt="" class="w-full min-w-[430px] h-auto object-cover relative block min-[1000px]:hidden">
-
-                    <!-- about img -->
-                    <div class="absolute w-[100px] min-[500px]:w-[250px] lg:w-[300px] xl:w-[35%] h-[100px] sm:h-[220px] xl:h-[500px] object-contain bottom-0 left-[5%] z-20" data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="600">
-                        <img src="./assets/images/about-img.png" alt="" class="absolute w-full zoom_outIn_image">
-                    </div>
-
-                    <!-- about content -->
-                     <div class="w-[90%] h-[90%] min-[1000px]:h-[60%] bottom-0 absolute z-10 flex items-center flex-col">
-                        
-                          <!-- bg decor -->
-                         <img src="./assets/images/decor_about.svg" alt="" class="w-[80px] md:w-[150px] xl:w-[300px] h-auto object-cover absolute top-[-50px] xl:top-[-200px] left-0 zoom_outIn">
-
-                        <!-- about -->
-                        <h1 class="bold_stroke uppercase text-white text-[10vw] md:text-[70px] xl:text-[150px]" data-aos="fade-up"
-                        data-aos-duration="800"
-                        data-aos-delay="200">About</h1>
-
-                        <div class="text-center w-[80%] max-[400px]:text-[9px] text-[11px] md:text-[19px] min-[1600px]:text-[28px] capitalize text-[#5C5154] flex_col gap-[.5rem] lg:gap-[2rem] text_bold_grey max-lg:tracking-widest">
-                            <p class="w-full" data-aos="fade-up"
-                            data-aos-duration="800"
-                            data-aos-delay="300">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type a
-                            </p>
-
-                            <p class="w-full" data-aos="fade-up"
-                            data-aos-duration="800"
-                            data-aos-delay="400">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type a
-                            </p>
-
-                        </div>
-
-                           <!-- feature -->
-                      <div class="w-[80%] relative flex flex-col items-end mt-[1rem] lg:mt-[4rem] min-[1900px]:mt-[10em]">
-
-                        <div class="w-[80%] min-[1000px]:w-[68%] min-[1500px]:w-[60%] flex_col gap-[1rem]">
-
-                            <h2 class="medium_stroke text-white text-[8vw] leading-[1] md:text-[60px] xl:text-[110px] min-[1500px]:text-[120px]" data-aos="fade-up"
-                            data-aos-duration="800"
-                            data-aos-delay="500">Featured on</h2>
-                            
-                            <div class="w-full flex_align_center gap-[.5rem] lg:gap-[1.5rem] flex-wrap  " data-aos="fade-left"
-                            data-aos-duration="800"
-                            data-aos-delay="600">
-                                <a href="https://www.dextools.io/" target="_blank" class="relative cursor-pointer feature">
-                                    <img src="./assets/images/dex.png" alt="" class="h-[25px] md:h-[60px] lg:h-[55px] min-[1500px]:h-[60px] w-auto object-contain duration-200">
-                                </a>
-                                <a href="https://dexscreener.com/" target="_blank" class="relative cursor-pointer feature">
-                                    <img src="./assets/images/dexscreen.png" alt="" class="h-[25px] md:h-[60px] lg:h-[55px] min-[1500px]:h-[60px] w-auto object-contain duration-200">
-                                </a>
-                                <a href="https://coinmarketcap.com/" target="_blank" class="relative cursor-pointer feature">
-                                    <img src="./assets/images/coinmarket.png" alt="" class="h-[25px] md:h-[60px] lg:h-[55px] min-[1500px]:h-[60px] w-auto object-contain duration-200">
-                                </a>
-                                <a href="https://www.coingecko.com/" target="_blank" class="relative cursor-pointer feature">
-                                    <img src="./assets/images/coinGecko.png" alt="" class="h-[25px] md:h-[60px] lg:h-[55px] min-[1500px]:h-[60px] w-auto object-contain duration-200">
-                                </a>
-                           
-                            </div>
-                        </div>
-
-                      </div>
-
-
-                     </div>
-
-                  
-                 </div>
-
-            </section>
-
-            <!-- tokenomics -->
-             <section id="tokenomics" class="w-full h-[850px] md:h-[900px] bg-[#008000] flex_center relative z-10">
-
-                 <!-- border bottom--> 
-                 <img src="./assets/images/bottom_token.svg" alt="" class="absolute left-[-5%] bottom-[-10px] lg:bottom-[-50px] min-w-[1000px] lg:min-w-[3200px] min-[3000px]:min-w-[10000px] w-[150vw] object-cover">
-
-                <!-- bg -->
-                 <img src="./assets/images/bg_token1.svg" alt="" class="absolute left-[-200px] top-0 w-[500px] object-contain h-auto">
-
-                 <img src="./assets/images/bg_token2.svg" alt="" class="absolute right-[-100px] md:right-[-250px] bottom-0 w-[500px] object-contain h-auto">
-
-                <!-- content -->
-                 <div class="token_container relative max-w-[90%] w-[1168px] h-[600.2px] rounded-[50px] bg-[#3FBE3F] flex_center max-[1000px]:flex-col-reverse max-[1000px]:gap-[3rem]">
-
-                     <!-- bg decor -->
-                    <img src="./assets/images/decor_token.svg" alt="" class="w-[80px] md:w-[150px] xl:w-[200px] h-auto object-cover absolute top-[-50px] right-[-20px] lg:right-[-50px] zoom_outIn">
-                       
-                    <!-- left -->
-                    <div class="w-[80%] lg:w-[65%] relative h-auto lg:pl-[3rem] max-[1000px]:text-center">
-                        <h1 class="uppercase bold_stroke_token text-white text-[40px] lg:text-[100px]" data-aos="fade-right"
-                        data-aos-duration="800"
-                        data-aos-delay="200">tokenomics</h1>
-                        <div class="flex flex-col mt-[1.5rem] lg:mt-[2rem] gap-[1rem] text-[#F3F3F3] text-[16px] lg:text-[39.48px] max-w-[90%] w-[338.51px] max-[1000px]:mx-auto">
-                            <p data-aos="fade-right"
-                            data-aos-duration="800"
-                            data-aos-delay="300">40% liquidity</p>
-                            <span class="w-full h-auto relative">
-                                <img src="./assets/images/lines.svg" alt="" class="w-full h-auto object-cover">
-                            </span>
-                            <p data-aos="fade-right"
-                            data-aos-duration="800"
-                            data-aos-delay="400">40% airdrop</p>
-                            <span class="w-full h-auto relative">
-                                <img src="./assets/images/lines.svg" alt="" class="w-full h-auto object-cover">
-                            </span>
-                            <p data-aos="fade-right"
-                            data-aos-duration="800"
-                            data-aos-delay="500">20% marketing</p>
-                            <span class="w-full h-auto relative">
-                                <img src="./assets/images/lines.svg" alt="" class="w-full h-auto object-cover">
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- right -->
-                    <div class="w-[50%] lg:w-[30%] relative h-auto flex_center">
-                        <img src="./assets/images/tokenomics_chart.svg" alt="" class="w-[300px] h-auto object-contain" data-aos="zoom-in"
-                        data-aos-duration="800"
-                        data-aos-delay="200">
-                    </div>
-
-                 </div>
-
-             </section>
-
-             <!-- roadmap -->
-              <section id="roadmap" class="bg-[#2FB926] relative h-[1750px] xl:h-[1100px] pt-[5rem] lg:pt-[10em] flex items-center flex-col z-[5]">
+                <h2 class="title_styling text-[40px] md:text-[80px] text-center">JOIN THE FAM NOW</h2>
+            
+                <div class="socials mt-[30px] xl:pt-0 w-full flex items-center flex-col md:flex-row justify-center gap-[20px] md:gap-[70px]">
+                    <a target="_blank" href="https://web.telegram.org/a/" class="social hover:rotate-[25deg] duration-200 relative flex justify-center items-center">
+                        <img src="./assets/images/bone.png" alt=""
+                            class="h-auto object-contain relative w-[170px] md:w-[217.13px]">
+                        <img src="./assets/images/telegram.svg" alt=""
+                            class="absolute h-auto object-contain w-[19px] md:w-[33px]">
+                    </a>
+                    <a target="_blank" href="https://twitter.com/" class="social hover:rotate-[-25deg] duration-200 relative flex justify-center items-center">
+                        <img src="./assets/images/bone.png" alt=""
+                            class="h-auto object-contain relative w-[170px] md:w-[217.13px]">
+                        <img src="./assets/images/twitter.svg" alt=""
+                            class="absolute h-auto object-contain w-[19px] md:w-[33px]">
+                    </a>
+                </div>
                 
-                <!-- title -->
-                <h1 class="text-white bold_stroke_roadmap text-center text-[60px] lg:text-[120px]" data-aos="fade-up"
-                data-aos-duration="800"
-                data-aos-delay="200">ROADMAP</h1>
+            </div>
 
-                <!-- phases -->
-                 <div class="phase_container w-full flex_center flex-wrap h-auto gap-[2rem] min-[1500px]:gap-[3.5rem]">
-                    
-                    <div class="phase max-w-[95%] w-[383.82px] h-[383.82px] flex_center relative" data-aos="fade-right"
-                    data-aos-duration="800"
-                    data-aos-delay="500">
-                        
-                        <!-- bg -->
-                         <img src="./assets/images/phase_bg.svg" alt="" class="w-full h-full object-contain">
+        </section>
+       
+    </div>
 
-                        <!-- content -->
-                         <div class="absolute h-full w-full flex_center flex-col text-[#FFFFFF]">
-                            <h1 class="text-[40px] absolute top-[90px]">PHASE 1</h1>
-                            <ul class="w-[80%] text-left text-[18px] absolute bottom-[30px]">
-                                <li>• Website & Social Media Launch </li>
-                                <li>• TGE, DEx Listing & LP Lock</li>
-                                <li>• Birdeye/DEXScreener/DEXTools Update</li>
-                                <li>• Airdrop Active Wallets</li>
-                                <li>• Initial Marketing Campaigns</li>
-                                <li>• Tokenomics & Roadmap Release</li> 
-                            </ul>
-                         </div>
+    <script>
+        
+    // bg image 
+    document.addEventListener('DOMContentLoaded', function() {
 
-                    </div>
+    const imageHero = document.querySelector('.imageHero img');
+    const imageWho = document.querySelector('.imageWho img');
+    const imageContract = document.querySelector('.imageContract img');
 
-                    <div class="phase max-w-[95%] w-[383.82px] h-[383.82px] flex_center relative" data-aos="fade-right"
-                    data-aos-duration="800"
-                    data-aos-delay="300">
-                        
-                        <!-- bg -->
-                         <img src="./assets/images/phase_bg.svg" alt="" class="w-full h-full object-contain">
-
-                        <!-- content -->
-                         <div class="absolute h-full w-full flex_center flex-col text-[#FFFFFF]">
-                            <h1 class="text-[40px] absolute top-[90px]">PHASE 2</h1>
-                            <ul class="w-[80%] text-left text-[18px] absolute bottom-[30px]">
-                                <li>• Website & Social Media Launch</li>
-                                <li>• TGE, DEx Listing & LP Lock</li>
-                                <li>• Birdeye/DEXScreener/DEXTools Update</li>
-                                <li>• Airdrop Active Wallets</li>
-                                <li>• Initial Marketing Campaigns</li>
-                                <li>• Tokenomics & Roadmap Release</li>
-                            </ul>
-                         </div>
-
-                    </div>
-
-                    <div class="phase max-w-[95%] w-[383.82px] h-[383.82px] flex_center relative z-10" data-aos="fade-right"
-                    data-aos-duration="800"
-                    data-aos-delay="100">
-                        
-                        <!-- bg -->
-                         <img src="./assets/images/phase_bg.svg" alt="" class="w-full h-full object-contain">
-
-                        <!-- content -->
-                         <div class="absolute h-full w-full flex_center flex-col text-[#FFFFFF]">
-                            <h1 class="text-[40px] absolute top-[90px]">PHASE 3</h1>
-                            <ul class="w-[80%] text-left text-[18px] absolute bottom-[30px]">
-                                <li>• Website & Social Media Launch</li>
-                                <li>• TGE, DEx Listing & LP Lock</li>
-                                <li>• Birdeye/DEXScreener/DEXTools Update</li>
-                                <li>• Airdrop Active Wallets</li>
-                                <li>• Initial Marketing Campaigns</li>
-                                <li>• Tokenomics & Roadmap Release</li>
-                            </ul>
-                         </div>
-
-                    </div>
-
-                 </div>
-
-                 <!-- btns -->
-                  <div class="relative flex_center gap-[2rem] mt-[3rem] lg:mt-[10rem] z-10" data-aos="fade-up"
-                  data-aos-duration="800"
-                  data-aos-delay="500">
-                    <a href="https://telegram.org/" target="_blank"
-                    class="duration-300 btn_shadow hover:scale-110 relative roadmap_btn1 w-[130px] h-[45px] md:w-[166px] md:h-[57px] min-[1800px]:w-[196px] min-[1800px]:h-[78px] rounded-lg max-xl:mx-auto flex items-center justify-center">
-                    <p class="text-center uppercase text-white font-[700] md:text-[18px] min-[1800px]:text-[21px]">Telegram</p>
-                   </a>
-                   <a href="https://x.com/" target="_blank"
-                   class="duration-300 btn_shadow hover:scale-110 relative roadmap_btn2 w-[130px] h-[45px] md:w-[166px] md:h-[57px] min-[1800px]:w-[196px] min-[1800px]:h-[78px] rounded-lg max-xl:mx-auto flex items-center justify-center">
-                   <p class="text-center uppercase text-[#F0000C] font-[700] md:text-[18px] min-[1800px]:text-[21px]">twitter x</p>
-                  </a>
-                  </div>
-
-                  <!-- background -->
-                   <div class="w-full flex_center h-[50%] absolute bottom-0 z-0 left-0">
-
-                    <img src="./assets/images/bg_roadmap1.svg" alt="" class="absolute bottom-[-10px] lg:bottom-[-190px] w-[150px] lg:w-[400px] h-auto object-contain zoom_outIn">
-
-                    <div class="absolute left-[-50px] lg:left-[-100px] bottom-[-70px] lg:bottom-[-130px] w-[200px] lg:w-[500px] h-[250px] lg:h-[500px] object-contain" data-aos="fade-up"
-                    data-aos-duration="800"
-                    data-aos-delay="200">
-                        <img src="./assets/images/rooadmap1.png" alt="roadmap1" class="absolute w-full h-auto float_animation">
-                    </div>
-
-                    <div class="absolute right-[-50px] lg:right-[-100px] bottom-[-70px] lg:bottom-[-120px] w-[200px] lg:w-[500px] h-[240px] lg:h-[475px]" data-aos="fade-up"
-                    data-aos-duration="800"
-                    data-aos-delay="400">
-                        <img src="./assets/images/rooadmap2.png" alt="" class="absolute w-full h-auto object-contain float_animation" style="animation-delay: -4s;">
-                    </div>
-
-                   </div>
-
-              </section>
-
-              <!-- footer -->
-               <footer class="w-full h-[350px] lg:h-[250px] relative bg-[#008000] flex_center z-10">
-
-                   <!-- bg --> 
-                    <img src="./assets/images/bg_footer.svg" alt="" class="absolute left-[-1%] top-[-10vw] md:top-[-160px] min-w-[105vw] w-[110vw]  object-cover">
-
-                    <!-- content -->
-                     <div class="flex_between w-[80%] h-auto text-white absolute z-10 top-[10%] md:top-[25%] flex-col md:flex-row max-[734px]:gap-[1.5rem]">
-                        <div class="logo flex_center" data-aos="fade-right"
-                        data-aos-duration="800"
-                        data-aos-delay="200">
-                            <img src="./assets/images/logo.png" alt="" class="w-[70px] h-auto object-contain float_animation" style="animation-delay: -3s;" >
-                            <h2 class="uppercase text-[31.95px] ">Mother</h2>
-                        </div>
-                        <ul class="flex items-center gap-[1rem] text-[18px] uppercase" data-aos="fade-up"
-                        data-aos-duration="800"
-                        data-aos-delay="200">
-                            <li><a href="#about">about</a></li>
-                            <li><a href="#tokenomics">tokenomics</a></li>
-                            <li><a href="#roadmap">roadmap</a></li>
-                        </ul>
-                        <div class="socials flex_center gap-[1rem]" data-aos="fade-left"
-                        data-aos-duration="800"
-                        data-aos-delay="200">
-                            <a href="https://x.com/home" target="_blank" class="w-[40px] md:w-[55px] lg:w-[56.35px] h-[40px] md:h-[55px] lg:h-[56.35px] flex justify-center items-center duration-300 ease-in  hover:scale-110">
-                                <img src="./assets/images/twitter_footer.svg" alt="twitterIcon" class="w-[100%] h-auto object-contain  duration-200">
-                            </a>
-                            <a href="https://telegram.org/" target="_blank" class="w-[40px] md:w-[55px] lg:w-[56.35px] h-[40px] md:h-[55px] lg:h-[56.35px] flex justify-center items-center duration-300 ease-in  hover:scale-110">
-                                <img src="./assets/images/telegram_footer.svg" alt="telegramIcon" class="w-full h-auto object-contain duration-200">
-                            </a>
-                            <a href="https://solana.com/" target="_blank" class="w-[40px] md:w-[55px] lg:w-[56.35px] h-[40px] md:h-[55px] lg:h-[56.35px] flex justify-center items-center duration-300 ease-in  hover:scale-110">
-                                <img src="./assets/images/solscan_footer.svg" alt="telegramIcon" class="w-full h-auto object-contain duration-200">
-                            </a>
-                        </div>
-                     </div>
-
-               </footer>
+    function checkViewportWidth() { 
+        if (window.innerWidth < 500) {
+            imageHero.setAttribute('src', "./assets/images/bg_image_mobile.png")
+            imageWho.setAttribute('src', "./assets/images/bg_image_mobile_left.png")
+            imageContract.setAttribute('src', "./assets/images/bg_image_mobile.png")
+        } else { 
+            imageHero.setAttribute('src', "./assets/images/bg_image.png")
+            imageContract.setAttribute('src', "./assets/images/bg_image.png")
+        }
+    }
  
-      </div>
+    checkViewportWidth(); 
+    window.addEventListener('resize', checkViewportWidth);
 
-    <!-- gsap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-     <!-- aos js library animation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
- 
-    <script src="./assets/js/index.js"></script>
+    });
+
+
+    // copy address
+    const copybtn = document.querySelector(".copy_address");
+    
+     copybtn.addEventListener("click", function() { 
+        let textSpan = copybtn.querySelector('span');
+        let intervalId;
+            let addressText = document.querySelector(".value").getAttribute('data-set');
+            textSpan.innerHTML = 'COPIED';
+
+            if (intervalId) {  
+                clearInterval(intervalId);
+            }
+
+            intervalId = setInterval(() => {
+                textSpan.innerHTML = 'COPY'; 
+                clearInterval(intervalId);  
+            }, 1000);
+
+            navigator.clipboard.writeText(addressText);
+        }); 
+
+    </script>
 </body>
 </html>
