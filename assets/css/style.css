@@ -141,8 +141,10 @@ section{
 
 /* animation */
 .float_animation{
-    animation: float 2s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite;
+    -webkit-animation: float 6s ease-in-out infinite;
 }
+
 @keyframes float {
 	0% {
 		transform: translatey(0px);
@@ -154,3 +156,25 @@ section{
 		transform: translatey(0px);
 	}
 }
+
+.zoom_in{
+    animation: zoom_in 22s infinite linear;
+    -webkit-animation: zoom_in 22s infinite linear;
+}
+
+@keyframes zoom_in {
+    0%,100%{
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+    }
+    50%{
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+}
+  }

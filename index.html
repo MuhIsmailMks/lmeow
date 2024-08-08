@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png"> 
-
+    <!-- AOS scroll effect cdn --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,21 +24,38 @@
 
         <!-- navbar -->
         <nav class="absolute z-[99] left-0 top-0 flex justify-center items-center w-full h-[130px] gap-[1rem] xl:gap-[2rem]">
+
+           <div class="relative" data-aos="fade-right"
+           data-aos-duration="500"
+           data-aos-delay="200">
             <a target="_blank" href="https://twitter.com/" class="social hover:rotate-[25deg] duration-200 relative flex justify-center items-center">
                 <img src="./assets/images/bone.png" alt=""
                     class="h-auto object-contain relative w-[100px] md:w-[175.64px]">
                 <img src="./assets/images/twitter.svg" alt=""
                     class="absolute h-auto object-contain w-[13px] md:w-[23px]">
             </a>
-            <div class="logo relative">
+           </div>
+
+            <div class="logo relative" data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="200"
+            >
                 <img src="./assets/images/logo.png" alt="" class="h-auto object-contain w-[66px] md:w-[102.06px]">
             </div>
+
+            <div class="relative" data-aos="fade-left"
+            data-aos-duration="500"
+            data-aos-delay="200">
+
             <a target="_blank" href="https://web.telegram.org" class="social hover:rotate-[-25deg] duration-200 relative flex justify-center items-center">
                 <img src="./assets/images/bone.png" alt=""
                     class="h-auto object-contain relative w-[100px] md:w-[175.64px]">
                 <img src="./assets/images/telegram.svg" alt=""
                     class="absolute h-auto object-contain w-[13px] md:w-[23px]">
             </a>
+
+            </div>
+     
         </nav>
         
         <!-- hero -->
@@ -48,29 +66,44 @@
                 <img src="./assets/images/bg_image.png" alt="bg" class="object-cover w-full h-full left-0 top-0">
             </div>
 
-            <div  class="content pt-[70px] md:pt-[100px] xl:pt-[0px] relative h-auto xl:h-[834px] w-full max-w-[1800px] xl:px-[2rem] mx-auto flex justify-between items-center  flex-col xl:flex-row">
+            <div class="content  pt-[100px] xl:pt-[0px] relative h-auto xl:h-[834px] w-full max-w-[1800px] xl:px-[2rem] mx-auto flex justify-between items-center  flex-col xl:flex-row">
 
-                <div class="left w-[90%] xl:w-[820px] flex flex-col items-center">
+                <div class="left w-[90%] xl:w-[820px] flex flex-col items-center max-lg:gap-4">
 
-                    <img src="./assets/images/hero_text.png" alt="popo" class="w-[100%] object-contain h-auto  ">
+                    <img src="./assets/images/hero_text.png" alt="popo" class="w-[100%] object-contain h-auto" data-aos="fade-right"
+                    data-aos-duration="600"
+                    data-aos-delay="300">
                     
-                    <p class="text-white text-center text-[25.99px] relative w-full xl:w-[70%]">In a world saturated with meme
+                    <p class="text-white text-center text-[25.99px] relative w-full xl:w-[70%]" data-aos="fade-right"
+                    data-aos-duration="500"
+                    data-aos-delay="400">In a world saturated with meme
                         coins, where the hype seems to overshadow substance, the community behind $BRETT is leading a
                         takeover. </p>
-                    <div class="btns flex justify-center items-center w-full relative gap-[1rem] mt-[2rem]">
-                        <a target="_blank" href="#"
-                            class="duration-300 relative bg-white w-[100px] h-[50px] md:w-[151px] md:h-[58px] rounded-full flex items-center justify-center">
+
+                    <div class="btns flex justify-center items-center w-full relative gap-[1rem] mt-[2rem]" data-aos="fade-right"
+                    data-aos-duration="500"
+                    data-aos-delay="500">
+
+                        <a href="#chart"
+                            class="duration-300 relative bg-white w-[140px] h-[50px] md:w-[151px] md:h-[58px] rounded-full flex items-center justify-center">
                             <p class="text-center text-black font-[700] md:text-[22px] ">CHART</p>
                         </a>
+
                         <a target="_blank" href="https://www.dextools.io/app/en/base/pair-explorer/0xc08ae9e9ec06e3f5ee779178625c7180efc9cf21"
-                            class="duration-300 relative bg-white w-[100px] h-[50px] md:w-[151px] md:h-[58px] rounded-full flex items-center justify-center">
+                            class="duration-300 relative bg-white w-[140px] h-[50px] md:w-[151px] md:h-[58px] rounded-full flex items-center justify-center">
                             <p class="text-center text-black font-[700] md:text-[22px] ">BUY NOW</p>
                         </a>
+
                     </div>
+
                 </div>
-                <div class="right relative w-full xl:w-[763px]">
-                    <img src="./assets/images/hero_image.png" alt="popo" class="w-full h-auto object-cover">
+
+                <div class="right relative w-full xl:w-[763px] lg:h-full flex items-end lg:pb-12" data-aos="fade-left"
+                data-aos-duration="500"
+                data-aos-delay="600">
+                    <img src="./assets/images/hero_image.png" alt="popo" class="w-full h-auto object-cover zoom_in">
                 </div>
+
             </div>
 
             <!-- marquee -->
@@ -90,25 +123,36 @@
                     </div>
                 </div>
             </div>
+
         </section>
  
          <!-- who -->
-         <section class="who w-full h-auto relative flex items-start justify-center py-[200px]">
+         <section class="who w-full h-auto relative flex items-start justify-center py-[100px] lg:py-[200px]">
 
             <!-- background -->
             <div class="bg-image z-0 w-full h-full absolute left-0 top-0 flex justify-center items-center imageWho">
                 <img src="./assets/images/bg_image.png" alt="" class="object-cover w-full h-full left-0 top-0">
             </div>
  
-            <div class="content z-[1] relative py-[2rem] xl:py-0 bg-[#FF3A39] w-[1467px] max-w-[90%] h-auto max-h-[700px] xl:max-h-[1000px] xl:h-[592px] rounded-[66px] flex flex-col xl:flex-row justify-between items-center px-[3rem]">
+            <div class="content z-[1] relative py-[2rem] xl:py-0 bg-[#FF3A39] w-[1467px] max-w-[90%] h-auto max-h-[700px] xl:max-h-[1000px] xl:h-[592px] rounded-[66px] flex flex-col xl:flex-row justify-between items-center px-[1.5rem] lg:px-[3rem]">
 
-                <div class="relative float_animation">
-                    <img src="./assets/images/who_image.png" alt="Shib" class=" w-auto object-contain h-[90%] mirror_img">
+                <div class="relative float_animation" >
+                    <div class="relative" data-aos="fade-right"
+                    data-aos-duration="500"
+                    data-aos-delay="200">
+                        <img src="./assets/images/who_image.png" alt="Shib" class=" w-auto object-contain h-[60vw] lg:h-[500px] mirror_img">
+                    </div>
                 </div>
 
                 <div class="about h-auto w-[100%] xl:max-w-[60%] xl:w-[751px] text-center text-white ">
-                    <h2 class="title_styling text-[40px] xl:text-[80px]">Who Is SHIB 2.0?</h2>
-                    <p class="text-[20px] xl:text-[30px]">
+
+                    <h2 class="title_styling text-[40px] xl:text-[80px]" data-aos="fade-left"
+                    data-aos-duration="500"
+                    data-aos-delay="200">Who Is SHIB 2.0?</h2>
+
+                    <p class="text-[20px] xl:text-[30px]" data-aos="fade-left"
+                    data-aos-duration="500"
+                    data-aos-delay="300">
                         After dominating the BASE blockchain as a Fan tribute, BRETT 2.0 offers a second opportunity to financial freedom, as once PEPE2.0 offered. Join us as we climb to the heights of BRETT, and bring wealth and opportunity to those who missed out on BRETT.
 
                     </p>
@@ -134,6 +178,7 @@
                     </div>
                 </div>
             </div>
+
         </section>
 
           <!-- address -->
@@ -146,15 +191,22 @@
 
             <div class="content relative w-full flex flex-col items-center">
 
-                <h2 class="title_styling text-[40px] md:text-[80px]">CONTRACT ADDRESS</h2>
-                <div class="copy_address cursor-pointer max-w-[90%] w-[767.09px] h-[50.87px] bg-white border-[2px] border-[#343230] rounded-full flex items-center justify-between px-[1rem]">
-                    <p class="value text-[#343230] text-[10px] md:text-[20px]" data-set="0xeD899bfDB28c8ad65307Fa40f4acAB113AE2E14c">0xeD899bfDB28c8ad65307Fa40f4acAB113AE2E14c</p>
+                <h2 class="title_styling text-[40px] md:text-[80px]" data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="200">CONTRACT ADDRESS</h2>
+
+                <div class="copy_address cursor-pointer max-w-[90%] w-[767.09px] h-[50.87px] bg-white border-[2px] border-[#343230] rounded-full flex items-center justify-between px-[.5rem] lg:px-[1rem]" data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="400">
+                    <p class="value text-ellipsis overflow-hidden max-w-[80%] text-[#343230] text-[10px] md:text-[20px]" data-set="0xeD899bfDB28c8ad65307Fa40f4acAB113AE2E14c">0xeD899bfDB28c8ad65307Fa40f4acAB113AE2E14c</p>
                     <div class="bg-[#FF3A39] rounded-full text-[#343230] flex justify-center items-center border-[2px] border-[#343230] h-[85%] w-[80px] md:w-[102px] text-[13px] md:text-[18.28px]">
                         <span>COPY</span>
                     </div>
                 </div>
 
-                <div class="tax relative mt-[3rem] flex w-full justify-center flex-col md:flex-row gap-[3rem] items-center">
+                <div class="tax relative mt-[3rem] flex w-full justify-center flex-col md:flex-row gap-[3rem] items-center" data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="600">
                     <div class="h-auto relative w-[175.64px] flex justify-center items-center">
                         <img src="./assets/images/bone.png" alt="bone" class=" w-full h-auto object-contain">
                         <p class="absolute text-[16px] xl:text-[22px]">0/0 TAXES</p>
@@ -201,9 +253,13 @@
 
             <div class="content relative w-full flex-col items-center">
 
-                <h2 class="title_styling text-[40px] md:text-[80px] text-center">JOIN THE FAM NOW</h2>
+                <h2 class="title_styling text-[40px] md:text-[80px] text-center" data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="200">JOIN THE FAM NOW</h2>
             
-                <div class="socials mt-[30px] xl:pt-0 w-full flex items-center flex-col md:flex-row justify-center gap-[20px] md:gap-[70px]">
+                <div class="socials mt-[30px] xl:pt-0 w-full flex items-center flex-col md:flex-row justify-center gap-[20px] md:gap-[70px]" data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="500">
                     <a target="_blank" href="https://web.telegram.org/a/" class="social hover:rotate-[25deg] duration-200 relative flex justify-center items-center">
                         <img src="./assets/images/bone.png" alt=""
                             class="h-auto object-contain relative w-[170px] md:w-[217.13px]">
@@ -224,8 +280,12 @@
        
     </div>
 
+       <!-- aos js library animation -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        
+      AOS.init({
+      once: true
+    });
     // bg image 
     document.addEventListener('DOMContentLoaded', function() {
 
