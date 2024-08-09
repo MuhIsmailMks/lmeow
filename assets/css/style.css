@@ -51,9 +51,9 @@ body{
 }
  
 section{
-    background-color: #EB172A;
-    /* background: linear-gradient(180deg, #76CD02 0%, #89CE2D 100%); */
-}
+    background-color: #EB172A; 
+    overflow: hidden;
+} 
 
 .btns a{
     box-shadow: -4px 6px 0px 0px #000000;
@@ -177,5 +177,31 @@ section{
       -moz-transform: scale(1.1);
       -ms-transform: scale(1.1);
       -o-transform: scale(1.1);
+    }
+}
+
+
+.bg_img{
+    animation: bg_img 33s infinite linear;
+    -webkit-animation: bg_img 33s infinite linear;
+}
+
+@keyframes bg_img {
+    0%,100%{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+    50%{
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
 }
   }
+
+  
+ 
