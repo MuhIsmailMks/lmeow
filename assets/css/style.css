@@ -116,8 +116,7 @@ section{
 
 /* title_styling */
 .title_styling{
-    text-shadow: 0 4px 4px #599D16;
-    /* text-shadow: 0 4px 4px #d1001f; */
+    text-shadow: 0 4px 4px #599D16; 
     color: white;
     font-family: var(--font-amiger);
 }
