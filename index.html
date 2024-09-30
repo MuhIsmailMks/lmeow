@@ -1,337 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png"> 
-    <!-- AOS scroll effect cdn --> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <!-- tailwind css cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- css link -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>SHIB</title>
+    
+    <!-- css -->
+     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Document</title>
 </head>
+<body class="bg-[#75DED9]">
+    
+   <div class="py-[100px] hidden min-[1200px]:flex flex-col items-center  max-w-[100%] overflow-x-hidden relative">
 
-<body>
+    <h1 class="text-center text-white text-[5vw]">MEME Maker</h1>
+ 
+    <!-- input image -->
+    <div class="w-[95%] max-w-[3000px] h-[550px] uploadImageContainer cursor-pointer relative flex justify-center items-center rounded-[20px] border-black border-[4px]">
+       <input type="file" id="imageInput" accept="image/*" class="w-full h-full cursor-pointer absolute z-10 opacity-0">
 
-    <div class="container_site w-full h-auto relative max-w-[100%] overflow-hidden">
+       <div class="absolute top-[5%] flex flex-col items-center z-10 text-white">
+           <img src="./assets/icons/uploadIcon.svg" alt="upload" class="w-[50px] h-auto object-contain">
+           <p class="text-[1.5em]">Drag & drop an image here,</p>
+           <p class="text-[1.5em]">or click to select one</p>
+           <p class="text-[.95em] lowercase">(Only *.jpeg and *.png images will be accepted)            </p>
+       </div>
 
-        <!-- navbar -->
-        <nav class="absolute z-[99] left-0 top-0 flex justify-center items-center w-full h-[130px] gap-[1rem] xl:gap-[2rem]">
+       <img src="./assets/images/bgInput.webp" alt="" class="bottom-0 w-full h-auto object-contain absolute z-0">
 
-           <div class="relative" data-aos="fade-right"
-           data-aos-duration="500"
-           data-aos-delay="200">
-            <a target="_blank" href="https://twitter.com/" class="social hover:rotate-[25deg] duration-200 relative flex justify-center items-center">
-                <img src="./assets/images/bone.png" alt=""
-                    class="h-auto object-contain relative w-[100px] md:w-[175.64px]">
-                <img src="./assets/images/twitter.svg" alt=""
-                    class="absolute h-auto object-contain w-[13px] md:w-[23px]">
-            </a>
+    </div>
+   
+   <div class="memeMakerContainer w-[94vw] h-[45vw]  relative hidden justify-center items-center mx-auto border-[2px] rounded-xl border-black bg-white overflow-hidden ">
+       
+       <!-- canvas -->
+       <div class="w-[70%] h-full bg-white relative">
+           <canvas id="imageCanvas" width="700" height="700" class="h-full w-full"></canvas>
+       </div>
+
+       <!-- buttons settings -->
+       <div class="settingContainer w-[30%] flex flex-wrap gap-4 justify-center h-full pt-4 border-l-[2px] border-black">
+
+           <div class="choiseBtnContainer w-[90%] flex justify-between rounded-full border-black border-[1px] h-[40px]">
+
+               <button data-btn="head" class="active">HEAD</button>
+               <button data-btn="accessories">ACCESSORIES</button>
+               <button data-btn="extras">EXTRAS</button>
+
            </div>
 
-            <div class="logo relative" data-aos="fade-up"
-            data-aos-duration="500"
-            data-aos-delay="200"
-            >
-                <img src="./assets/images/logo.png" alt="" class="h-auto object-contain w-[66px] md:w-[102.06px]">
-            </div>
+           <!-- choise meme -->
 
-            <div class="relative" data-aos="fade-left"
-            data-aos-duration="500"
-            data-aos-delay="200">
+            <!-- head -->
+          <div id="head" class="choiseMemes active w-full justify-center items-start flex-wrap gap-3 h-auto">
 
-            <a target="_blank" href="https://web.telegram.org" class="social hover:rotate-[-25deg] duration-200 relative flex justify-center items-center">
-                <img src="./assets/images/bone.png" alt=""
-                    class="h-auto object-contain relative w-[100px] md:w-[175.64px]">
-                <img src="./assets/images/telegram.svg" alt=""
-                    class="absolute h-auto object-contain w-[13px] md:w-[23px]">
-            </a>
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Head/body-cup.png" alt="">
+           </div>
 
-            </div>
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Head/body-levitating.png" alt="">
+           </div>
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Head/body.png" alt="">
+           </div>
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Head/bogdanoff.png" alt="">
+           </div>
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Head/brave-deebo.png" alt="">
+           </div>
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Head/cashgun.png" alt="">
+           </div>
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Head/deebo-pose-jump.png" alt="">
+           </div>
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Head/deebo-pose-standing.png" alt="">
+           </div>
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Head/eyes.png" alt="">
+           </div>
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Head/face.png" alt="">
+           </div>
+
+          </div>
+
+          <!-- accessories -->
+          <div id="accessories" class="choiseMemes w-full justify-center items-start flex-wrap gap-3 h-auto">
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Accessories/army-helmet.png" alt="">
+           </div> 
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Accessories/bandage.png" alt="">
+           </div> 
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Accessories/bandana.png" alt="">
+           </div> 
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Accessories/beanie.png" alt="">
+           </div> 
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Accessories/bubble.png" alt="">
+           </div> 
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Accessories/cap.png" alt="">
+           </div> 
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Accessories/chain-dol.png" alt="">
+           </div> 
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Accessories/chain.png" alt="">
+           </div> 
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Accessories/cheff.png" alt="">
+           </div> 
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Accessories/crown.png" alt="">
+           </div> 
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Accessories/eyepatch.png" alt="">
+           </div> 
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Accessories/fwog-hat.png" alt="">
+           </div> 
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Accessories/glasses-sup.png" alt="">
+           </div> 
+
+           <div class="w-[25%] relative cursor-pointer addImage">
+               <img src="./assets/images/Accessories/headphones.png" alt="">
+           </div> 
+
+          </div>
+
+           <!-- extras -->
+           <div id="extras" class="choiseMemes w-full justify-center items-start flex-wrap gap-3 h-auto">
+
+               <div class="w-[25%] relative cursor-pointer addImage">
+                   <img src="./assets/images/Extras/bee.png" alt="">
+               </div>  
+
+               <div class="w-[25%] relative cursor-pointer addImage">
+                   <img src="./assets/images/Extras/butterfly-tor.png" alt="">
+               </div>  
+
+               <div class="w-[25%] relative cursor-pointer addImage">
+                   <img src="./assets/images/Extras/butterfly-yellow.png" alt="">
+               </div>  
+
+               <div class="w-[25%] relative cursor-pointer addImage">
+                   <img src="./assets/images/Extras/cash-side.png" alt="">
+               </div>  
+
+               <div class="w-[25%] relative cursor-pointer addImage">
+                   <img src="./assets/images/Extras/cash.png" alt="">
+               </div>  
+
+               <div class="w-[25%] relative cursor-pointer addImage">
+                   <img src="./assets/images/Extras/coin-deebo.png" alt="">
+               </div>  
+
+               <div class="w-[25%] relative cursor-pointer addImage">
+                   <img src="./assets/images/Extras/coins.png" alt="">
+               </div>  
+
+               <div class="w-[25%] relative cursor-pointer addImage">
+                   <img src="./assets/images/Extras/floating-cash.png" alt="">
+               </div>  
+
+               <div class="w-[25%] relative cursor-pointer addImage">
+                   <img src="./assets/images/Extras/gm.png" alt="">
+               </div>  
+
+               <div class="w-[25%] relative cursor-pointer addImage">
+                   <img src="./assets/images/Extras/plantbar.png" alt="">
+               </div>  
+
+               <div class="w-[25%] relative cursor-pointer addImage">
+                   <img src="./assets/images/Extras/rocket.png" alt="">
+               </div>  
+
+               <div class="w-[25%] relative cursor-pointer addImage">
+                   <img src="./assets/images/Extras/stone-dex.png" alt="">
+               </div>  
+   
+           </div>
+
+
+          <!-- start and download -->
+           <div class="btnChoise w-full flex justify-center items-center gap-4">
+
+               <button id="restartButton" class=" ">Start Over</button>
+
+               <button id="downloadButton">Download Image</button>
+
+            
+           </div> 
+
+
+       </div>
      
-        </nav>
-        
-        <!-- hero -->
-        <section class="hero w-full pb-[50px] xl:pb-0 h-auto relative flex items-center">
 
-            <!-- background -->
-            <div class="bg-image imageHero w-full h-full absolute left-0 top-0 flex justify-center items-center">
-                <img src="./assets/images/bg_image.png" alt="bg" class="object-cover w-full bg_img  h-full left-0 top-0">
-            </div>
+   </div>
 
-            <div class="content  pt-[100px] xl:pt-[0px] relative h-auto xl:h-[834px] w-full max-w-[1800px] xl:px-[2rem] mx-auto flex justify-between items-center  flex-col xl:flex-row">
+   <div id="settingsPanel" style="display:none;" class="">
+       <div class="">
+           <label for="rotate">Rotate:</label>
+       <input type="range" id="rotate" min="0" max="360" value="0">
+       </div> 
+       <br>
+       <div class=""><label for="size">Size:</label>
+           <input type="range" id="size" min="0.1" max="2" step="0.1" value="1"  ></div>
+       <br> 
 
-                <div class="left w-[90%] xl:w-[820px] flex flex-col items-center max-lg:gap-4">
+       <button id="toggleMirror">
+           <img src="./assets/icons/mirror.svg" alt="mirror" class="w-[45px] h-auto object-contain">
+       </button>
 
-                    <img src="./assets/images/hero_text.png" alt="popo" class="w-[100%] object-contain h-auto" data-aos="fade-right"
-                    data-aos-duration="600"
-                    data-aos-delay="300">
-                    
-                    <p class="text-white text-center text-[25.99px] relative w-full xl:w-[70%]" data-aos="fade-right"
-                    data-aos-duration="500"
-                    data-aos-delay="400">In a world saturated with meme
-                        coins, where the hype seems to overshadow substance, the community behind $BRETT is leading a
-                        takeover. </p>
+       <button id="deleteButton">
+           <img src="./assets/icons/deleteIcon.svg" alt="delete" class="w-[45px] h-auto object-contain">
+       </button>
+       <button id="bringToFrontButton" class="my-3">
+           <img src="./assets/icons/indexTop.svg" alt="delete" class="w-[45px] h-auto object-contain">
+       </button>
+       <button id="sendToBackButton">
+           <img src="./assets/icons/indexBottom.svg" alt="index" class="w-[45px] h-auto object-contain">
+       </button>
 
-                    <div class="btns flex justify-center items-center w-full relative gap-[1rem] mt-[2rem]" data-aos="fade-right"
-                    data-aos-duration="500"
-                    data-aos-delay="500">
+   </div>
+   </div>
 
-                        <a href="#chart"
-                            class="duration-300 relative bg-white w-[140px] h-[50px] md:w-[151px] md:h-[58px] rounded-full flex items-center justify-center">
-                            <p class="text-center text-black font-[700] md:text-[22px] ">CHART</p>
-                        </a>
-
-                        <a target="_blank" href="https://www.dextools.io/app/en/pairs"
-                            class="duration-300 relative bg-white w-[140px] h-[50px] md:w-[151px] md:h-[58px] rounded-full flex items-center justify-center">
-                            <p class="text-center text-black font-[700] md:text-[22px] ">BUY NOW</p>
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="right relative w-full xl:w-[763px] lg:h-full flex items-end lg:pb-12" data-aos="fade-left"
-                data-aos-duration="500"
-                data-aos-delay="600">
-                    <img src="./assets/images/hero_image.png" alt="popo" class="w-full h-auto object-cover zoom_in">
-                </div>
-
-            </div>
-
-            <!-- marquee -->
-            <div class="marquee_container z-10 absolute left-0 bottom-0 w-full h-auto">
-                <div class="marquee bordered marquee-left">
-                    <div class="marquee-el" style="animation-duration: 45s;">
-                        <p>
-                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
-                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
-                        </p>
-                    </div>
-                    <div class="marquee-el" style="animation-duration: 45s;">
-                        <p>
-                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
-                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </section>
- 
-         <!-- who -->
-         <section class="who w-full h-auto relative flex items-start justify-center py-[100px] lg:py-[200px]">
-
-            <!-- background -->
-            <div class="bg-image z-0 w-full h-full absolute left-0 top-0 flex justify-center items-center imageWho">
-                <img src="./assets/images/bg_image.png" alt="" class="object-cover w-full bg_img  h-full left-0 top-0" style="animation-delay: -3s;">
-            </div>
- 
-            <div class="content z-[1] relative py-[2rem] xl:py-0 bg-[#FF3A39] w-[1467px] max-w-[90%] h-auto max-h-[700px] xl:max-h-[1000px] xl:h-[592px] rounded-[66px] flex flex-col xl:flex-row justify-between items-center px-[1.5rem] lg:px-[3rem]">
-
-                <div class="relative float_animation" >
-                    <div class="relative" data-aos="fade-right"
-                    data-aos-duration="500"
-                    data-aos-delay="200">
-                        <img src="./assets/images/who_image.png" alt="Shib" class=" w-auto object-contain h-[60vw] lg:h-[500px] mirror_img">
-                    </div>
-                </div>
-
-                <div class="about h-auto w-[100%] xl:max-w-[60%] xl:w-[751px] text-center text-white ">
-
-                    <h2 class="title_styling text-[40px] xl:text-[80px]" data-aos="fade-left"
-                    data-aos-duration="500"
-                    data-aos-delay="200">Who Is SHIB 2.0?</h2>
-
-                    <p class="text-[20px] xl:text-[30px]" data-aos="fade-left"
-                    data-aos-duration="500"
-                    data-aos-delay="300">
-                        After dominating the BASE blockchain as a Fan tribute, BRETT 2.0 offers a second opportunity to financial freedom, as once PEPE2.0 offered. Join us as we climb to the heights of BRETT, and bring wealth and opportunity to those who missed out on BRETT.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- marquee -->
-            <div class="marquee_container z-10 absolute left-0 bottom-0 w-full h-auto">
-                <div class="marquee bordered marquee-left">
-                    <div class="marquee-el" style="animation-duration: 45s;">
-                        <p>
-                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
-                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
-                        </p>
-                    </div>
-                    <div class="marquee-el" style="animation-duration: 45s;">
-                        <p>
-                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
-                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-          <!-- address -->
-          <section class="address w-full h-auto relative flex items-start justify-center py-[100px]">
-
-            <!-- background -->
-            <div class="bg-image w-full h-full absolute left-0 top-0 flex justify-center items-center imageContract">
-                <img src="./assets/images/bg_image.png" alt="" class="object-cover w-full bg_img  h-full left-0 top-0" style="animation-delay: -4s;">
-            </div>
-
-            <div class="content relative w-full flex flex-col items-center">
-
-                <h2 class="title_styling text-[40px] md:text-[80px]" data-aos="fade-up"
-                data-aos-duration="500"
-                data-aos-delay="200">CONTRACT ADDRESS</h2>
-
-                <div class="copy_address cursor-pointer max-w-[90%] w-[767.09px] h-[50.87px] bg-white border-[2px] border-[#343230] rounded-full flex items-center justify-between px-[.5rem] lg:px-[1rem]" data-aos="fade-up"
-                data-aos-duration="500"
-                data-aos-delay="400">
-                    <p class="value text-ellipsis overflow-hidden max-w-[80%] text-[#343230] text-[10px] md:text-[20px]" data-set="0xeD899bfDB28c8ad65307Fa40f4acAB113AE2E14c">0xeD899bfDB28c8ad65307Fa40f4acAB113AE2E14c</p>
-                    <div class="bg-[#FF3A39] rounded-full text-[#343230] flex justify-center items-center border-[2px] border-[#343230] h-[85%] w-[80px] md:w-[102px] text-[13px] md:text-[18.28px]">
-                        <span>COPY</span>
-                    </div>
-                </div>
-
-                <div class="tax relative mt-[3rem] flex w-full justify-center flex-col md:flex-row gap-[3rem] items-center" data-aos="fade-up"
-                data-aos-duration="500"
-                data-aos-delay="600">
-                    <div class="h-auto relative w-[175.64px] flex justify-center items-center">
-                        <img src="./assets/images/bone.png" alt="bone" class=" w-full h-auto object-contain">
-                        <p class="absolute text-[16px] xl:text-[22px]">0/0 TAXES</p>
-                    </div>
-                    <div class="h-auto relative w-[175.64px] flex justify-center items-center">
-                        <img src="./assets/images/bone.png" alt="bone" class="w-full h-auto object-contain">
-                        <p class="absolute text-[16px] xl:text-[22px]">LP LOCKED</p>
-                    </div>
-                    <div class="h-auto relative w-[175.64px] flex justify-center items-center">
-                        <img src="./assets/images/bone.png" alt="bone" class="w-full h-auto object-contain">
-                        <p class="absolute text-[16px] xl:text-[22px]">RENOUNCED</p>
-                    </div>
-                </div>
-
-            </div>
-            
-            <!-- marquee -->
-            <div class="marquee_container z-10 absolute left-0 bottom-0 w-full h-auto">
-                <div class="marquee bordered marquee-left">
-                    <div class="marquee-el" style="animation-duration: 45s;">
-                        <p>
-                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
-                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
-                        </p>
-                    </div>
-                    <div class="marquee-el" style="animation-duration: 45s;">
-                        <p>
-                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
-                            <span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;<span>$SHIB2</span>&nbsp;&nbsp;
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-           <!-- join -->
-           <section class="join w-full h-auto relative flex items-start justify-center py-[100px]">
- 
-            <div class="bg_grass absolute w-full h-full bottom-0 left-0">
-                <img src="./assets/images/grass.svg" alt="" class="absolute bottom-[4%] left-[10%]">
-                <img src="./assets/images/grass.svg" alt="" class="absolute bottom-[10%] right-[10%]">
-            </div>
-
-            <div class="content relative w-full flex-col items-center">
-
-                <h2 class="title_styling text-[40px] md:text-[80px] text-center" data-aos="fade-up"
-                data-aos-duration="500"
-                data-aos-delay="200">JOIN THE FAM NOW</h2>
-            
-                <div class="socials mt-[30px] xl:pt-0 w-full flex items-center flex-col md:flex-row justify-center gap-[20px] md:gap-[70px]" data-aos="fade-up"
-                data-aos-duration="500"
-                data-aos-delay="500">
-                    <a target="_blank" href="https://web.telegram.org/a/" class="social hover:rotate-[25deg] duration-200 relative flex justify-center items-center">
-                        <img src="./assets/images/bone.png" alt=""
-                            class="h-auto object-contain relative w-[170px] md:w-[217.13px]">
-                        <img src="./assets/images/telegram.svg" alt=""
-                            class="absolute h-auto object-contain w-[19px] md:w-[33px]">
-                    </a>
-                    <a target="_blank" href="https://twitter.com/" class="social hover:rotate-[-25deg] duration-200 relative flex justify-center items-center">
-                        <img src="./assets/images/bone.png" alt=""
-                            class="h-auto object-contain relative w-[170px] md:w-[217.13px]">
-                        <img src="./assets/images/twitter.svg" alt=""
-                            class="absolute h-auto object-contain w-[19px] md:w-[33px]">
-                    </a>
-                </div>
-                
-            </div>
-
-        </section>
-       
-    </div>
-
-       <!-- aos js library animation -->
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-      AOS.init({
-      once: true
-    });
-    // bg image 
-    document.addEventListener('DOMContentLoaded', function() {
-
-    const imageHero = document.querySelector('.imageHero img');
-    const imageWho = document.querySelector('.imageWho img');
-    const imageContract = document.querySelector('.imageContract img');
-
-    function checkViewportWidth() { 
-        if (window.innerWidth < 900) {
-            imageHero.setAttribute('src', "./assets/images/bg_image_mobile.png")
-            imageWho.setAttribute('src', "./assets/images/bg_image_mobile_left.png")
-            imageContract.setAttribute('src', "./assets/images/bg_image_mobile.png")
-        } else { 
-            imageHero.setAttribute('src', "./assets/images/bg_image.png")
-            imageWho.setAttribute('src', "./assets/images/bg_image.png")
-            imageContract.setAttribute('src', "./assets/images/bg_image.png")
-        }
-    }
- 
-    checkViewportWidth(); 
-    window.addEventListener('resize', checkViewportWidth);
-
-    });
+   <div class="h-[100vh] w-full min-[1200px]:hidden relative flex justify-center items-center  ">
+    <h1 class="text-center text-white text-[5vw]">not available on mobile</h1>
+   </div>
 
 
-    // copy address
-    const copybtn = document.querySelector(".copy_address");
-    
-     copybtn.addEventListener("click", function() { 
-        let textSpan = copybtn.querySelector('span');
-        let intervalId;
-            let addressText = document.querySelector(".value").getAttribute('data-set');
-            textSpan.innerHTML = 'COPIED';
-
-            if (intervalId) {  
-                clearInterval(intervalId);
-            }
-
-            intervalId = setInterval(() => {
-                textSpan.innerHTML = 'COPY'; 
-                clearInterval(intervalId);  
-            }, 1000);
-
-            navigator.clipboard.writeText(addressText);
-        }); 
-
-    </script>
+    <script src="./assets/js/index.js"></script>
 </body>
 </html>
