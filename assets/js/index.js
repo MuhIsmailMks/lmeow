@@ -3,43 +3,34 @@ const memeMakerContainer = document.querySelector('.memeMakerContainer');
 const uploadImageContainer = document.querySelector('.uploadImageContainer');
 const ctx = canvas.getContext('2d');
 const imageInput = document.getElementById('imageInput');
-
 const toggleButton = document.getElementById('toggleMirror');
 
 let isMirrored = false;  
-let inputImage = null; // Variabel untuk menyimpan gambar dari input
-let inputImageLoaded = false; // Flag untuk memastikan gambar input sudah dimuat
-let images = []; // Array untuk menyimpan gambar tambahan
+let inputImage = null; 
+let inputImageLoaded = false; 
+let images = []; 
 let isDragging = false;
-let dragIndex = -1; // Index gambar yang sedang di-drag
-let offsetX = 0, offsetY = 0; // Offset untuk memindahkan gambar
+let dragIndex = -1; 
+let offsetX = 0, offsetY = 0; 
 
-let addImageClicked = []; // Array untuk menyimpan status klik
+let addImageClicked = []; 
 
-// Panel pengaturan elemen
 const settingsPanel = document.getElementById('settingsPanel');
 const rotateInput = document.getElementById('rotate');
 const sizeInput = document.getElementById('size'); 
 
-// Event listener untuk input file
 document.getElementById('imageInput').addEventListener('change', function(event) {
     const file = event.target.files[0];
-
-    // container
     memeMakerContainer.classList.remove('hidden');
     memeMakerContainer.classList.add('flex');
-    
-    uploadImageContainer.classList.add('hidden')
-    uploadImageContainer.classList.remove('flex')
+    uploadImageContainer.classList.add('hidden');
+    uploadImageContainer.classList.remove('flex');
 
-    // file image 
     if (file) {
         const reader = new FileReader();
-
         reader.onload = function(e) {
             const img = new Image();
             img.onload = function() {
-                
                 inputImage = {
                     image: img,
                     x: 0,
@@ -51,39 +42,25 @@ document.getElementById('imageInput').addEventListener('change', function(event)
                     mirror: false
                 };
                 inputImageLoaded = true; 
-
-                // Render ulang canvas setelah gambar input dimuat
                 renderImages();
-    
             };
-
             img.src = e.target.result;
         };
         reader.readAsDataURL(file);
-        
-    }  else {
+    } else {
         alert('Please upload a valid image file.');
     }
 });
 
-
-
-
-// Event listener untuk gambar dari div addImage
-// Event listener untuk gambar dari div addImage
 document.querySelectorAll('.addImage').forEach((imageDiv) => {
     const img = imageDiv.querySelector('img');
-
     img.addEventListener('click', function() {
-        const newImg = new Image(); // Buat objek gambar baru
+        const newImg = new Image();
         newImg.onload = function() {
-            
             newImg.style.backgroundColor="red";
             const scale = Math.min(canvas.width / newImg.width, canvas.height / newImg.height) * 0.5;
-            const x = Math.random() * (canvas.width - newImg.width * scale); // Posisi acak
+            const x = Math.random() * (canvas.width - newImg.width * scale); 
             const y = Math.random() * (canvas.height - newImg.height * scale);
-
-            // Tambahkan data gambar ke array images
             images.push({
                 image: newImg,
                 x: x,
@@ -94,60 +71,40 @@ document.querySelectorAll('.addImage').forEach((imageDiv) => {
                 scale: 1,
                 mirror: false
             });
-
-            imageDiv.classList.add('active'); // Tambahkan class active ke elemen addImage
-
-            renderImages(); // Render ulang semua gambar
+            imageDiv.classList.add('active');
+            renderImages();
         };
-
-        newImg.src = this.src; // Set sumber gambar baru
+        newImg.src = this.src;
     });
 });
 
-
-// Fungsi untuk merender ulang gambar di canvas
 function renderImages() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height); // Bersihkan canvas
-
-    // Render gambar dari input
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     if (inputImageLoaded) {
         drawImage(inputImage);
     }
-
-    // Render semua gambar tambahan di array images
     images.forEach(imgData => {
         drawImage(imgData);
     });
 }
 
-
-// Fungsi untuk menggambar gambar dengan pengaturan
 function drawImage(imgData) {
-    ctx.save(); // Simpan konteks saat ini
-
-    // Terapkan rotasi dan cermin
-    ctx.translate(imgData.x + imgData.width / 2, imgData.y + imgData.height / 2); // Pindahkan titik referensi
-    ctx.rotate((imgData.rotation * Math.PI) / 180); // Terapkan rotasi
+    ctx.save();
+    ctx.translate(imgData.x + imgData.width / 2, imgData.y + imgData.height / 2);
+    ctx.rotate((imgData.rotation * Math.PI) / 180);
     if (imgData.mirror) {
-        ctx.scale(-1, 1); // Cermin
+        ctx.scale(-1, 1);
     }
-    ctx.drawImage(imgData.image, -imgData.width / 2, -imgData.height / 2, imgData.width, imgData.height); // Gambar
-    ctx.restore(); // Kembalikan konteks ke keadaan sebelumnya
+    ctx.drawImage(imgData.image, -imgData.width / 2, -imgData.height / 2, imgData.width, imgData.height);
+    ctx.restore();
 }
 
-// Fungsi untuk mengecek apakah mouse berada di atas gambar
 function isMouseOnImage(x, y, imgData) {
     return x > imgData.x && x < imgData.x + imgData.width && y > imgData.y && y < imgData.y + imgData.height;
 }
 
+let selectedImageIndex = -1;
 
-let selectedImageIndex = -1; // Variabel untuk menyimpan index gambar yang dipilih
-
-
-
-
-
-// Fungsi untuk menukar posisi elemen dalam array
 function swapArrayElements(arr, index1, index2) {
     if (index1 >= 0 && index2 >= 0 && index1 < arr.length && index2 < arr.length) {
         const temp = arr[index1];
@@ -156,249 +113,156 @@ function swapArrayElements(arr, index1, index2) {
     }
 }
 
-// Event listener untuk tombol 'Bring to Front' (+1 Index)
 document.getElementById('bringToFrontButton').addEventListener('click', function() {
     if (selectedImageIndex < images.length - 1) {
-        // Geser elemen gambar satu posisi ke depan (meningkatkan z-index)
         swapArrayElements(images, selectedImageIndex, selectedImageIndex + 1);
-        selectedImageIndex++; // Update selectedImageIndex
-        renderImages(); // Render ulang gambar
+        selectedImageIndex++;
+        renderImages();
     }
 });
 
-// Event listener untuk tombol 'Send to Back' (-1 Index)
 document.getElementById('sendToBackButton').addEventListener('click', function() {
     if (selectedImageIndex > 0) {
-        // Geser elemen gambar satu posisi ke belakang (menurunkan z-index)
         swapArrayElements(images, selectedImageIndex, selectedImageIndex - 1);
-        selectedImageIndex--; // Update selectedImageIndex
-        renderImages(); // Render ulang gambar
+        selectedImageIndex--;
+        renderImages();
     }
 });
-
 
 canvas.addEventListener('mousedown', function(e) {
     const mouseX = e.offsetX;
     const mouseY = e.offsetY;
     let isOverImage = false;
 
-    // Cek apakah kita mengklik salah satu gambar
     for (let i = 0; i < images.length; i++) {
         const imgData = images[i];
         const centerX = imgData.x + imgData.width / 2;
         const centerY = imgData.y + imgData.height / 2;
-        const marginRight = imgData.width * .8; // Margin 20% hanya di sisi kanan
-        const marginY = imgData.height * 0.2; // Margin 20% atas dan bawah
+        const marginRight = imgData.width * .8; 
+        const marginY = imgData.height * 0.2; 
 
-        // Cek apakah mouse berada di sisi kanan gambar (dalam margin) atau di tengah
         if (mouseX > imgData.x && mouseX < imgData.x + imgData.width + marginRight &&
             mouseY > imgData.y - marginY && mouseY < imgData.y + imgData.height + marginY) {
             isDragging = true;
             dragIndex = i;
             offsetX = mouseX - images[i].x;
             offsetY = mouseY - images[i].y;
-
-             // Posisi settingsPanel di sebelah kiri gambar yang di-drag
-             const panelX = images[i].x; 
-             const panelY = images[i].y + 100;
-             // Set posisi settingsPanel dan tampilkan
-             const settingsPanel = document.getElementById('settingsPanel');
-             settingsPanel.style.left = `${panelX}px`;
-             settingsPanel.style.top = `${panelY}px `;
-             settingsPanel.style.display = 'flex'; // Tampilkan panel
-         
+            const panelX = images[i].x; 
+            const panelY = images[i].y + 100;
+            const settingsPanel = document.getElementById('settingsPanel');
+            settingsPanel.style.left = `${panelX}px`;
+            settingsPanel.style.top = `${panelY}px `;
+            settingsPanel.style.display = 'flex'; 
             break;
         }
         canvas.style.cursor = isOverImage ? 'grabbing' : 'grab';    
     }
-
 });
 
-// mousemove
 canvas.addEventListener('mousemove', function(e) {
     if (isDragging) {
         const mouseX = e.offsetX;
         const mouseY = e.offsetY;
-
-        // Perbarui posisi gambar yang sedang di-drag
         images[dragIndex].x = mouseX - offsetX;
         images[dragIndex].y = mouseY - offsetY;
- 
-        
-         // Cek apakah mouse berada di atas gambar
-    let isOverImage = false;
-    for (let i = 0; i < images.length; i++) {
-        if (isMouseOnImage(mouseX, mouseY, images[i])) {
-            isOverImage = true; // Mouse berada di atas gambar 
-
-                       // Posisi settingsPanel di sebelah kiri gambar yang di-drag
-                       const panelX = images[i].x; // 150 bisa disesuaikan dengan lebar panel
-                       const panelY = images[i].y + 100;
-                       // Set posisi settingsPanel dan tampilkan
-                       const settingsPanel = document.getElementById('settingsPanel');
-                       settingsPanel.style.left = `${panelX}px`;
-                       settingsPanel.style.top = `${panelY}px `;
-                       settingsPanel.style.display = 'flex'; // Tampilkan panel
-            break;
+        let isOverImage = false;
+        for (let i = 0; i < images.length; i++) {
+            if (isMouseOnImage(mouseX, mouseY, images[i])) {
+                isOverImage = true; 
+                const panelX = images[i].x; 
+                const panelY = images[i].y + 100;
+                const settingsPanel = document.getElementById('settingsPanel');
+                settingsPanel.style.left = `${panelX}px`;
+                settingsPanel.style.top = `${panelY}px `;
+                settingsPanel.style.display = 'flex'; 
+                break;
+            }
         }
-    }
-
-    // Ubah kursor berdasarkan posisi mouse
-    canvas.style.cursor = isOverImage ? 'grabbing' : 'grab'; 
-    // Jika di atas gambar, ubah kursor
-
-
-        // Render ulang semua gambar
+        canvas.style.cursor = isOverImage ? 'grabbing' : 'grab'; 
         renderImages();
     }
 });
 
 canvas.addEventListener('mouseup', function() {
-    isDragging = false; // Selesai dragging 
-    canvas.style.cursor = 'grab'; // Kembalikan kursor
+    isDragging = false; 
+    canvas.style.cursor = 'grab'; 
 });
 
-
-
-// Update pengaturan saat diubah
 rotateInput.addEventListener('input', function() {
     if (dragIndex >= 0) {
         images[dragIndex].rotation = parseFloat(this.value);
-        renderImages(); // Render ulang semua gambar
+        renderImages(); 
     }
 });
 
 sizeInput.addEventListener('input', function() {
     if (dragIndex >= 0) {
-        // Perbarui ukuran berdasarkan skala
         const scale = parseFloat(this.value);
         images[dragIndex].scale = scale;
-
-        // Perbarui width dan height berdasarkan skala
         images[dragIndex].width = images[dragIndex].image.width * scale;
         images[dragIndex].height = images[dragIndex].image.height * scale;
-
-        renderImages(); // Render ulang semua gambar
+        renderImages(); 
     }
 });
 
- 
-
 toggleButton.addEventListener('click', function() {
-    isMirrored = !isMirrored; // Toggle statusnya
+    isMirrored = !isMirrored; 
     if (dragIndex >= 0) {
         images[dragIndex].mirror = isMirrored;
-        renderImages(); // Render ulang semua gambar
+        renderImages(); 
     } 
 });
 
-
-
-// Event listener untuk tombol Download Image
 document.getElementById('downloadButton').addEventListener('click', function() {
     const link = document.createElement('a');
-    link.download = 'meme_maker.png'; // Nama file yang akan diunduh
-    link.href = canvas.toDataURL('image/png'); // Mengambil data URL dari canvas
-    link.click(); // Men-trigger download
+    link.download = 'meme_maker.png'; 
+    link.href = canvas.toDataURL('image/png'); 
+    link.click(); 
 });
 
-
-// Event listener untuk tombol Delete di settingsPanel
 document.getElementById('deleteButton').addEventListener('click', function() { 
     if (selectedImageIndex !== -1) {
-        // Hapus gambar yang dipilih dari array images
         images.splice(selectedImageIndex, 1);
-
-        // Reset selectedImageIndex setelah penghapusan
         selectedImageIndex = -1;
-
-        // Render ulang semua gambar setelah penghapusan
         renderImages();
-
-        // Sembunyikan settingsPanel setelah penghapusan
         document.getElementById('settingsPanel').style.display = 'none';
-
-               // Cek apakah semua gambar telah dihapus
-               if (images.length === 0) {
-                // Remove class 'active' dari semua elemen addImage
-                document.querySelectorAll('.addImage').forEach(imageDiv => {
-                    imageDiv.classList.remove('active');
-                });
-            }
+        if (images.length === 0) {
+            document.querySelectorAll('.addImage').forEach(imageDiv => {
+                imageDiv.classList.remove('active');
+            });
+        }
     }
 });
 
-// Event listener untuk drag and drop pada canvas
 canvas.addEventListener('mousedown', function(e) {
     const mouseX = e.offsetX;
     const mouseY = e.offsetY;
-
-    // Cek apakah kita mengklik salah satu gambar
     for (let i = 0; i < images.length; i++) {
         if (isMouseOnImage(mouseX, mouseY, images[i])) {
             isDragging = true;
-            selectedImageIndex = i;  // Simpan index gambar yang dipilih
+            selectedImageIndex = i;  
             offsetX = mouseX - images[i].x;
             offsetY = mouseY - images[i].y;
-
-            // Tampilkan settingsPanel ketika gambar dipilih
             const settingsPanel = document.getElementById('settingsPanel');
             settingsPanel.style.display = 'flex';
-            settingsPanel.style.left = `${images[i].x}px`; // Posisikan di dekat gambar
-            settingsPanel.style.top = `${images[i].y}px`;
-
+            settingsPanel.style.left = `${images[i].x}px`;
+            settingsPanel.style.top = `${images[i].y + 100}px`;
             break;
         }
     }
 });
 
-// Event listener untuk tombol Restart
-document.getElementById('restartButton').addEventListener('click', function() { 
-    images = []; 
-     // Sembunyikan settingsPanel setelah penghapusan
-     document.getElementById('settingsPanel').style.display = 'none';
-    document.querySelectorAll('.addImage').forEach(imageDiv => {
-        imageDiv.classList.remove('active');
-    });
-
-    // Render ulang canvas untuk menghapus gambar
-    renderImages();
+canvas.addEventListener('mouseup', function() {
+    isDragging = false;
 });
 
+canvas.addEventListener('mousemove', function(e) {
+    if (isDragging && selectedImageIndex !== -1) {
+        const mouseX = e.offsetX;
+        const mouseY = e.offsetY;
+        images[selectedImageIndex].x = mouseX - offsetX;
+        images[selectedImageIndex].y = mouseY - offsetY;
+        renderImages();
+    }
+});
 
-
-// choise button
- // Seleksi semua tombol di dalam container
- const buttons = document.querySelectorAll('.choiseBtnContainer button');
- // Seleksi semua elemen dengan id yang sama dengan data-btn
- const contentElements = document.querySelectorAll('.choiseMemes');
-
- buttons.forEach(button => {
-     button.addEventListener('click', () => {
-         // Hapus class 'active' dari semua tombol
-         buttons.forEach(btn => btn.classList.remove('active'));
-         // Tambahkan class 'active' ke tombol yang diklik
-         button.classList.add('active');
-
-         // Dapatkan nilai data-btn dari tombol yang diklik
-         const btnData = button.getAttribute('data-btn');
-
-         // Loop untuk menghilangkan class 'active' dari semua content
-         contentElements.forEach(content => {
-             // Cek apakah id content sama dengan data-btn
-             if (content.id === btnData) {
-                 content.classList.add('active');
-             } else {
-                 content.classList.remove('active');
-             }
-         });
-     });
- });
-
-
- const settingContainer = document.querySelector('.settingContainer');
-
- settingContainer.addEventListener('click',() => {
-    document.getElementById('settingsPanel').style.display = 'none';
-
- })
