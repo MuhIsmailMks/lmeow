@@ -55,71 +55,7 @@ document.getElementById("contractButton").addEventListener("click", function() {
  
   alert("Copy Address Success");
 });
- 
- 
-// swiper 1 for how to get 
-const swiper1 = document.querySelector('.swiper-container1');
-
-const swiperParams1 = {
-  slidesPerView: 1, 
-  centered:true,
-  breakpoints: {
-    1: {
-      direction: 'vertical', 
-      slidesPerView: 'auto',
-      spaceBetween:50,   
-    }, 
-    768: {
-      direction: 'horizontal', 
-      slidesPerView: 'auto',
-      spaceBetween:20,   
-    }, 
-  },  
-  on: {
-    init() { 
-    },
-  },
-};
-
-Object.assign(swiper1, swiperParams1);
-swiper1.initialize();
-
-// swiper 2 for meme
-  const swiper2 = document.querySelector('.swiper-container2');
   
-  const swiperParams2 = {
-    slidesPerView: 1,
-    spaceBetween:10,
-    freeMode:true,
-    on: {
-      init() { 
-      },
-    },
-  };
-  
-  Object.assign(swiper2, swiperParams2);
-  swiper2.initialize();
-
-  // times  
-const initialCountDownDate = new Date("Mar 7, 2024 00:00:00").getTime();
- 
-let x = setInterval(function() {
- 
-  let now = new Date().getTime();
-   
-  let distance = now - initialCountDownDate;
- 
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
- 
-  document.getElementById("day").innerHTML = (days + 1) + " days"
-  document.getElementById("countdown").innerHTML = hours + "H "+ minutes + "M " + seconds + "S";
-
-}, 1000);
-
-
   // animation 
 let controller = new ScrollMagic.Controller();
 
@@ -179,26 +115,68 @@ animations.forEach(animation => {
 
 
 
+//  gsap
+ 
+gsap.registerPlugin(ScrollTrigger);
 
-// rotate image moskonomics
-function rotateImageOnScroll() {
-  let width = window.innerWidth;
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+gsap.fromTo(
+  ".lines",  
+  { height: "0px" },  
+  {
+    height: () => (window.innerWidth >= 1024 ? "180px" : "100px"),  
+    duration: 2.5,  
+    ease: "power2.out", 
+    scrollTrigger: {
+      trigger: ".imageMarket", 
+      start: "top 80%" ,
+      toggleActions: "play none none reverse",  
+    },
+  }
+);
+
+
+
+
+ 
+// swiper 1 for how to get 
+const swiper1 = document.querySelector('.swiper-container1');
+
+const swiperParams1 = {
+  slidesPerView: 1, 
+  centered:true,
+  breakpoints: {
+    1: {
+      direction: 'vertical', 
+      slidesPerView: 'auto',
+      spaceBetween:50,   
+    }, 
+    768: {
+      direction: 'horizontal', 
+      slidesPerView: 'auto',
+      spaceBetween:20,   
+    }, 
+  },  
+  on: {
+    init() { 
+    },
+  },
+};
+
+Object.assign(swiper1, swiperParams1);
+swiper1.initialize();
+
+// swiper 2 for meme
+  const swiper2 = document.querySelector('.swiper-container2');
   
-  let rotation 
- 
-
-  if (width >= 1300) {
-      rotation = scrollTop / 9 ; 
-  } else if (width >= 500 && width <= 1300) {
-      rotation = scrollTop / 15;
-  } else {
-      rotation = scrollTop / 19 ;
-  } 
-  gsap.to("#rotatingImage", { rotation: rotation, duration: 1.5 });
-}
- 
-window.addEventListener('scroll', rotateImageOnScroll); 
-rotateImageOnScroll();
-
- 
+  const swiperParams2 = {
+    slidesPerView: 1,
+    spaceBetween:10,
+    freeMode:true,
+    on: {
+      init() { 
+      },
+    },
+  };
+  
+  Object.assign(swiper2, swiperParams2);
+  swiper2.initialize();
