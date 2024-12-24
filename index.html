@@ -1,265 +1,2839 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/buy-mosk.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- swiper js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- AOS scroll effect cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
     <!-- tailwind css cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- css -->
-     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>MOSK</title>
+  </head>
+  <body>
+    <div
+      class="container max-w-[100%] w-full h-full overflow-hidden box-border relative"
+    >
+      <!-- background body -->
+      <div
+        class="bg_color absolute w-full h-full left-0 top-0 bg-[#1e195fe1] z-[0]"
+      ></div>
+      <aside class="texture fixed z-[-1] left-0 top-0 h-[100vh] w-full">
+        <img
+          src="./assets/images/bg_image2.jpg"
+          alt="bg_parallax"
+          class="w-[100vw] h-full absolute object-cover z-[-1] top-0 left-0 pointer-events-none"
+        />
+      </aside>
 
-    <title>Document</title>
-</head>
-<body class="bg-[#75DED9]">
-    
-   <div class="py-[100px] hidden min-[1200px]:flex flex-col items-center  max-w-[100%] overflow-x-hidden relative">
+      <!-- marque text slider-->
+      <div
+        class="relative w-full h-[50px] xl:h-[64px] flex items-center overflow-hidden mx-auto"
+      >
+        <div class="bg absolute w-full h-full left-0 top">
+          <img
+            src="./assets/images/marquee_bg.jpg"
+            alt=""
+            class="object-cover left-0 top-0 h-full w-full"
+          />
+        </div>
 
-    <h1 class="text-center text-white text-[5vw]">MEME Maker</h1>
+        <div class="fw spaceless w-full max-w-[100%] overflow-hidden relative">
+          <div
+            class="marquee-border flex relative w-[100%] overflow-hidden bordered marquee-left"
+          >
+            <div class="marquee-el" style="animation-duration: 15s;">
+              <div class="flex items-center">
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                src="./assets/icons/catFootprint.svg"
+                class="w-[40px] h-[40px] object-contain"
+              />
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                src="./assets/icons/catFootprint.svg"
+                class="w-[40px] h-[40px] object-contain"
+              />
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+              </div>
+            </div>
+            <div class="marquee-el" style="animation-duration: 15s;">
+              <div class="flex items-center">
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+
+                <span
+                  class="uppercase mx-[.5rem] xl:mx-[.85rem] xl:tracking-[-2px] text-[16px] md:text-[30px] min-[900px]:text-[30px] xl:text-[49px]"
+                  >The OG CAT COIN ON ETH
+                </span>
+                <img
+                  src="./assets/icons/catFootprint.svg"
+                  class="w-[40px] h-[40px] object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- navbar -->
+      <nav
+        id="nav"
+        class="max-w-[1800px] w-full h-auto fixScroll fixed z-[995] left-[50%] translate-x-[-50%] duration-200 top-0 py-[1.5rem] px-[1rem] lg:px-[2.3rem] 2xl:px-[10vw] flex justify-between items-center"
+      >
+        <!-- menu container -->
+        <div
+          class="menu_container min-w-[100vw] fixed left-[50%] translate-x-[-50%] z-[999] h-auto max-h-[100vh] min-[1440px]:h-[910px] w-full overflow-hidden p-[1.5rem] xl:p-[2rem] min-[1400px]:p-[4rem] flex flex-col gap-[1rem] md:gap-[4rem] xl:gap-[3rem]"
+        >
+          <!-- backrgound texture -->
+          <div class="bg_texture absolute left-0 top-0 h-full w-full z-[0]">
+            <img
+              src="./assets/images/marquee_bg.jpg"
+              alt=""
+              class="object-cover w-full h-full"
+            />
+          </div>
+
+          <!-- nav menu -->
+          <div
+            class="menu-nav w-full max-w-[1500px] mx-auto flex items-center justify-between relative z-[99]"
+          >
+            <div class="logo">
+              <img
+                src="./assets/images/Logo-menu.png"
+                alt="mosk logo"
+                class="w-auto object-contain h-[40px] min-[500px]:h-[55px] md:h-[76px]"
+              />
+            </div>
+            <div
+              class="accessibility flex justify-center items-center gap-[1rem] lg:gap-[2rem]"
+            >
+              <!-- social media -->
+              <div
+                class="social_media_container absolute md:relative opacity-0 md:opacity-100 flex justify-center items-center gap-[1rem] lg:gap-[1.5rem]"
+              >
+                <!-- twitter / X -->
+                <a
+                  href="https://twitter.com/ElanMoskCoin"
+                  target="_blank"
+                  id="twitter_icon"
+                  class="relative btn_hover h-[55px] w-[55px] md:h-[72px] md:w-[72px] lg:h-[64px] lg:w-[64px] rounded-[10px] flex items-center justify-center"
+                >
+                  <img
+                    src="./assets/icons/twitter.svg"
+                    alt=""
+                    class="relative object-contain z-[2]"
+                  />
+                  <div
+                    class="container_bg_hover absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] rounded-[5px] w-[96%] h-[96%] overflow-hidden z-[0]"
+                  ></div>
+                  <div
+                    class="absolute left-0 top-0 h-full w-full overflow-hidden rounded-[inherit] border-[3px] border-black"
+                  >
+                    <div
+                      class="container_bg_hover absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] rounded-[15px] w-[200%] h-[200%] overflow-hidden z-[1]"
+                    >
+                      <div class="bg_hover_effect bg-[#fa41bc] z-[0]"></div>
+                    </div>
+                  </div>
+                </a>
+                <!-- telegram -->
+                <a
+                  href="https://t.me/ElanMoskCoin"
+                  id="telegram"
+                  target="_blank"
+                  class="relative btn_hover h-[55px] w-[55px] md:h-[72px] md:w-[72px] lg:h-[64px] lg:w-[64px] rounded-[10px] flex items-center justify-center"
+                >
+                  <img
+                    src="./assets/icons/Telegram.svg"
+                    alt=""
+                    class="relative object-contain z-[2]"
+                  />
+                  <div
+                    class="container_bg_hover absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] rounded-[5px] w-[96%] h-[96%] overflow-hidden z-[0]"
+                  ></div>
+                  <div
+                    class="absolute left-0 top-0 h-full w-full overflow-hidden rounded-[inherit] border-[3px] border-black"
+                  >
+                    <div
+                      class="container_bg_hover absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] rounded-[15px] w-[200%] h-[200%] overflow-hidden z-[1]"
+                    >
+                      <div class="bg_hover_effect bg-[#697fff] z-[0]"></div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- close btn -->
+              <button
+                class="close-btn duration-300 relative h-[40px] w-[40px] min-[500px]:w-[50px] min-[500px]:h-[50px] md:h-[72px] md:w-[72px] lg:h-[64px] lg:w-[64px] rounded-full flex items-center justify-center border-[2px] lg:border-[3px] border-black bg-[#FF6F77]"
+              >
+                <img
+                  src="./assets/icons/close-btn.svg"
+                  alt=""
+                  class="max-w-[50%] h-auto object-contain"
+                />
+              </button>
+            </div>
+          </div>
+
+          <!-- links -->
+          <div class="links relative max-w-[1200px] 2xl:max-w-[1500px] mx-auto">
+            <ul class="flex flex-wrap gap-y-0 gap-x-[5rem]">
+              <li class="w-full md:w-auto" id="price">
+                <a
+                  href="#price"
+                  class="text-[10vw] min-[370px]:text-[44px] md:text-[96px] xl:text-[90px] min-[1400px]:text-[110px]"
+                  >PRICE</a
+                >
+              </li>
+              <li class="w-full md:w-auto">
+                <a
+                  href="#moskonomics"
+                  class="text-[10vw] min-[370px]:text-[44px] md:text-[96px] xl:text-[90px] min-[1400px]:text-[110px]"
+                  >MOSKONOMICS</a
+                >
+              </li>
+              <li class="w-full md:w-auto" id="howtogetLink">
+                <a
+                  href="#howtoget"
+                  class="text-[10vw] min-[370px]:text-[44px] md:text-[96px] xl:text-[90px] min-[1400px]:text-[110px]"
+                  >HOW TO GET</a
+                >
+              </li>
+              <li class="w-full md:w-auto">
+                <a
+                  href="#plans"
+                  class="text-[10vw] min-[370px]:text-[44px] md:text-[96px] xl:text-[90px] min-[1400px]:text-[110px]"
+                  >PLANS</a
+                >
+              </li>
+              <li class="w-full md:w-auto">
+                <a
+                  href="#meme"
+                  class="text-[10vw] min-[370px]:text-[44px] md:text-[96px] xl:text-[90px] min-[1400px]:text-[110px]"
+                  >MEME</a
+                >
+              </li>
+              <li class="w-full md:w-auto">
+                <a
+                  href="#contact"
+                  class="text-[10vw] min-[370px]:text-[44px] md:text-[96px] xl:text-[90px] min-[1400px]:text-[110px]"
+                  >CONTACTS</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- social media mobile-->
+          <div
+            class="social_media_container relative md:absolute opacity-100 md:opacity-0 flex justify-center items-center gap-[1rem] lg:gap-[1.5rem]"
+          >
+            <!-- twitter / X -->
+            <a
+              href="https://twitter.com/ElanMoskCoin"
+              target="_blank"
+              class="h-[50px] w-[50px] rounded-[10px] relative flex items-center justify-center overflow-hidden border-[2px] border-black"
+            >
+              <img
+                src="./assets/icons/twitter.svg"
+                alt="twitter logo"
+                class="object-contain relative z-10 h-auto w-[50%]"
+              />
+            </a>
+
+            <!-- telegram -->
+            <a
+              href="https://t.me/ElanMoskCoin"
+              target="_blank"
+              id="telegram"
+              class="h-[50px] w-[50px] relative rounded-[10px] flex items-center justify-center overflow-hidden border-[2px] border-black"
+            >
+              <img
+                src="./assets/icons/Telegram.svg"
+                alt=""
+                class="object-contain relative z-10 h-auto w-[50%]"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- menu btn -->
+        <button
+          class="menu_btn btn_hover absolute lg:relative opacity-0 lg:opacity-100 h-[75px] w-[180px] xl:rounded-[15px]"
+        >
+          <span
+            class="relative text-black font-bold text-[1.5rem] z-[9] xl:text-[48px]"
+            >Menu</span
+          >
+          <div
+            class="container_bg_hover absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] rounded-[15px] w-[96%] h-[96%] overflow-hidden z-[2]"
+          >
+            <div class="bg_hover_effect bg-[#fdfd8b]"></div>
+          </div>
+        </button>
+
+        <!-- logo -->
+        <div class="logo">
+          <img
+            src="./assets/images/Logo.png"
+            alt=""
+            class="h-[24px] md:h-[43px] xl:h-[76px] w-auto object-contain"
+          />
+        </div>
+
+        <div class="accessibility flex items-center gap-[.55rem]">
+          <!-- menu btn -->
+          <button
+            class="menu_btn btn_hover relative h-[40px] w-[79px] md:w-[110px] md:h-[45px] rounded-[7px] lg:hidden"
+          >
+            <span
+              class="relative text-black font-bold text-[16px] z-[9] md:text-[22px]"
+              >Menu</span
+            >
+            <div
+              class="container_bg_hover absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] rounded-[5px] w-[96%] h-[96%] overflow-hidden z-[2]"
+            ></div>
+          </button>
+
+          <!-- social media -->
+          <div
+            class="social_media_container relative flex justify-center items-center gap-[.55rem] lg:gap-[1.5rem]"
+          >
+            <!-- twitter / X -->
+            <a
+              href="https://twitter.com/ElanMoskCoin"
+              target="_blank"
+              class="social_media relative w-[40px] h-[40px] md:h-[45px] md:w-[45px] lg:h-[55px] lg:w-[55px] overflow-hidden rounded-[10px] flex items-center border-black border-[1px] xl:border-[3px] justify-center"
+            >
+              <div
+                class="container_bg_hover absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] rounded-[15px] w-[200%] h-[200%] overflow-hidden z-[2]"
+              >
+                <div class="bg_hover_effect bg-[#fa41bc] z-[0]"></div>
+              </div>
+
+              <img
+                src="./assets/icons/twitter.svg"
+                alt="twitter"
+                class="relative z-[9] w-[14px] md:w-[22px] lg:w-[30px]"
+              />
+            </a>
+            <!-- telegram -->
+            <a
+              href="https://t.me/ElanMoskCoin"
+              target="_blank"
+              class="social_media w-[40px] h-[40px] md:h-[45px] overflow-hidden border-black border-[1px] xl:border-[3px] relative md:w-[45px] lg:h-[55px] lg:w-[55px] rounded-[10px] flex items-center justify-center"
+            >
+              <div
+                class="container_bg_hover absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] rounded-[15px] w-[200%] h-[200%] overflow-hidden z-[2]"
+              >
+                <div class="bg_hover_effect bg-[#697fff] z-[0]"></div>
+              </div>
+              <img
+                src="./assets/icons/Telegram.svg"
+                alt="telegram"
+                class="relative z-[3] w-[14px] md:w-[22px] lg:w-[30px]"
+              />
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- hero section -->
+      <section
+        class="hero w-full h-auto relative pt-[12rem] max-w-[1800px] mx-auto flex justify-center"
+      >
+        <!-- hero images -->
+        <div class="images h-auto">
+          <!-- bg hero -->
+          <img
+            src="./assets/images/bg_hero.png"
+            alt="bg hero"
+            class="w-[90%] md:w-full max-w-[1600px] h-auto relative left-0 z-[0] mx-auto"
+          />
+          <!-- elan mosk -->
+          <div
+            class="absolute mosk_hero left-0 top-[40%] md:top-[-2%] xl:top-[-6rem] min-[1440px]:top-[-14rem] w-full h-auto flex justify-center"
+          >
+            <img
+              src="./assets/images/main_image_hero.png"
+              alt=""
+              class="w-auto h-[230px] min-[400px]:h-[330px] md:h-[940px] min-[900px]:h-[1300px] xl:w-full xl:h-auto max-w-[1000px] object-cover absolute z-[0]"
+            />
+          </div>
+
+          <!-- decor image container -->
+          <div
+            class="image-dec_container absolute w-full left-[50%] translate-x-[-50%] max-w-[1700px] h-[700px] top-[40%] lg:top-[20%]"
+          >
+            <!-- ufo -->
+            <img
+              src="./assets/images/ufo.png"
+              alt=""
+              class="w-auto ufo_hero h-[180px] min-[600px]:h-[280px] md:h-[334px] min-[900px]:h-[420px] xl:h-[400px] min-[1400px]:h-[495px] object-contain absolute z-[11] left-[-10%] xl:left-0"
+            />
+            <!-- rockets -->
+            <img
+              src="./assets/images/rockets.png"
+              alt=""
+              class="w-auto absolute rockets_hero z-[111] h-[175px] min-[600px]:h-[300px] md:h-[366px] min-[900px]:h-[400px] xl:h-[500px] min-[1400px]:h-[631px] object-contain right-[-10%] xl:right-0"
+            />
+          </div>
+
+          <!-- sonala coins -->
+          <img
+            src="./assets/images/solanaCoin.png"
+            alt=""
+            class="w-auto z-[10] h-[32px] min-[400px]:h-[50px] md:h-[72px] min-[900px]:h-[95px] lg:h-[109px] object-contain bottom-[65%] lg:bottom-[75%] xl:bottom-[70%] left-[23%] min-[1440px]:left-[32%] absolute"
+          />
+          <!-- tesla coins -->
+          <img
+            src="./assets/images/teslaCoin.png"
+            alt=""
+            class="w-auto z-[10] h-[32px] min-[400px]:h-[50px] md:h-[72px] min-[900px]:h-[95px] lg:h-[109px] object-contain bottom-[65%] lg:bottom-[75%] xl:bottom-[70%] right-[25%] min-[1440px]:right-[32%] absolute"
+          />
+        </div>
+        <!-- buy mosk button -->
+        <div
+          class="absolute buy-mosk w-full h-auto flex justify-center bottom-[10%] xl:bottom-[30%] 2xl:bottom-[25%]"
+        >
+          <button
+            class="uppercase social_media cursor-pointer z-[99] relative bg-blue-400 w-[204px] h-[64px] md:h-[104px] md:w-[400px] xl:w-[673px] xl:h-[128px] overflow-hidden rounded-[12px] xl:rounded-[16px] border-[2px] md:border-[3px] xl:border-[5px] border-black flex justify-center items-center"
+          >
+            <a
+              href="#"
+              class="relative z-[3] text-[32px] md:text-[64px] xl:text-[96px]"
+              >buy $mosk</a
+            >
+            <div
+              class="container_bg_hover absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] rounded-[15px] w-[200%] h-[200%] overflow-hidden z-[2]"
+            >
+              <div class="bg_hover_effect bg-[#fdfd8b]"></div>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <!-- about section -->
+      <section
+        id="about"
+        class="w-full h-auto relative flex flex-col items-center mt-[50px] md:mt-[10rem]"
+      >
+        <!-- about us -->
+        <div
+          class="about-us relative px-[1.5rem] rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] max-w-[95%] py-4 w-[302px] min-[420px]:w-[400px] h-auto md:w-[666px] xl:w-[1152px] xl:h-[788px] flex items-center justify-center flex-col"
+        >
+          <div class="bg_images absolute z-[1] left-0 top-0 w-full h-full">
+            <!-- border -->
+            <div
+              class="w-full h-full border-black border-[.7px] md:border-[1.7px] xl:border-[3px] left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] z-[5]"
+            ></div>
+            <!-- image1 -->
+            <div
+              class="image1 w-full h-full left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] overflow-hidden bg-[#003b24] z-[4]"
+            >
+              <img
+                src="./assets/images/Bg3_hori.png"
+                alt=""
+                class="w-full h-full opacity-[.3] object-cover"
+              />
+            </div>
+            <!-- image2 -->
+            <div
+              class="image2 animated_bg_image w-full h-full left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] overflow-hidden bg-[#faee4c]"
+            >
+              <img
+                src="./assets/images/Bg3_hori.png"
+                alt=""
+                class="w-full h-full opacity-[.3] object-cover"
+              />
+            </div>
+            <!-- image3 -->
+            <div
+              class="image3 animated_bg_image2 w-full h-full left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] overflow-hidden bg-[#04b7c4]"
+            >
+              <img
+                src="./assets/images/Bg3_hori.png"
+                alt=""
+                class="w-full h-full opacity-[.3] object-cover"
+              />
+            </div>
+            <!-- image4 -->
+            <div
+              class="image4 animated_bg_image3 w-full h-full left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] overflow-hidden bg-[#0417c4]"
+            >
+              <img
+                src="./assets/images/Bg3_hori.png"
+                alt=""
+                class="w-full h-full opacity-[.3] object-cover"
+              />
+            </div>
+          </div>
+          <div class="w-[100%] lg:w-[40%] h-auto relative z-[20]">
+            <img
+              src="./assets/images/aboutImage.png"
+              alt=""
+              class="w-full h-auto"
+            />
+          </div>
+          <h2
+            class="relative mediumStroke z-[2] text-center leading-[1] text-white text-[30px] md:text-[36px] xl:text-[46px] tracking-[-.5px] xl:tracking-[-2px] my-12"
+          >
+            The Big Lmeowski
+          </h2>
+          <p
+            class="relative z-[2] text-center leading-[1] max-md:leading-[1.2] text-white text-[4vw] md:text-[20px] xl:text-[36px] tracking-[-.5px] xl:tracking-[-2px]"
+          >
+            End of 2022 was pure chaos—FTX imploding and LMEOW dropping onto the
+            ETH scene like a total legend. Twitter Spaces were wild, with us
+            meowing into mics like it was the next meta. Then the dev hit us
+            with the rug, but plot twist: he locked the token for 100 years.
+            Fast forward, GCR called it in Feb 2023, hyping LMEOW as the next
+            big thing (and let’s be real, when GCR speaks, CT listens). Now it’s
+            March 2024, BTC is ripping ATHs, and LMEOW’s climbing with OGs and
+            chad degenerates rallying hard. Feels like the prophecy’s
+            unfolding—cats > dogs, and LMEOW’s leading the way.
+          </p>
+        </div>
+
+        <!-- contract -->
+        <div
+          class="contact_container relative h-[300px] xl:h-[500px] max-w-[1900px] mx-auto w-full overflow-hidden"
+        >
+          <div
+            class="contract absolute h-auto w-[302px] min-[420px]:w-[400px] md:w-[666px] xl:w-[1152px] max-w-[1800px] flex items-center"
+          >
+            <div class="bg relative w-full h-auto">
+              <img
+                src="./assets/images/contract_image.png"
+                alt="contact"
+                class="max-w-[100%] w-full h-auto object-contain"
+              />
+            </div>
+            <div
+              class="contract_text absolute right-[19%] min-[420px]:right-[25%] md:right-[24%]"
+            >
+              <input
+                id="contractInput"
+                type="text"
+                class="hidden"
+                value="FoVH6Vgn1rRvPf4v6YekbJg6bunRfA5zLaycNgwgCyyE"
+              />
+              <button
+                id="contractButton"
+                class="text-[14px] md:text-[28px] xl:text-[46.78px]"
+              >
+                Contract : FoV...gwgCyyE
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- moskonomics -->
+      <section id="moskonomics" class="relative w-full hidden h-auto">
+        <!-- moskonomics price -->
+        <div class="moskonomics-price w-full relative flex justify-center">
+          <img
+            src="./assets/images/moskonomics_bg.png"
+            alt=""
+            class="object-contain h-auto max-w-[100%] w-[350px] md:w-[770.4px] xl:w-[1284px] relative"
+          />
+
+          <!-- moskonomics content -->
+          <div
+            class="moskonomics_content_container absolute left-[50%] translate-x-[-50%] top-[25px] md:top-[55px] xl:top-[100px] w-[295px] md:w-[655px] xl:w-[1100px]"
+          >
+            <div
+              class="moskonomics-content absolute w-[207px] h-[105px] md:w-[460px] md:h-[230px] xl:w-[775px] xl:h-[370px] left-0 flex items-center flex-col"
+            >
+              <div
+                class="bg absolute left-0 top-0 w-full h-full overflow-hidden"
+              >
+                <div
+                  class="bg_container-moskonomics absolute w-full animated_moskonomics_bg h-auto"
+                >
+                  <img
+                    src="./assets/images/bg_3.jpg"
+                    alt=""
+                    class="w-full h-full object-cover relative"
+                  />
+                </div>
+              </div>
+              <!-- buttons  -->
+              <div
+                class="btns relative w-full flex justify-start items-center gap-[.35rem] lg:gap-[1rem] p-[.2rem] md:p-[.7rem] xl:p-[.5rem]"
+              >
+                <button class="relative">
+                  <img
+                    src="./assets/images/btn_1.png"
+                    alt="btn1"
+                    class="h-auto w-[15px] min-[500px]:w-[20px] md:w-[28px] xl:w-[32px]"
+                  />
+                </button>
+                <button class="relative">
+                  <img
+                    src="./assets/images/btn_2.png"
+                    alt="btn1"
+                    class="h-auto w-[15px] min-[500px]:w-[20px] md:w-[28px] xl:w-[32px]"
+                  />
+                </button>
+                <button class="relative">
+                  <img
+                    src="./assets/images/btn_3.png"
+                    alt="btn1"
+                    class="h-auto w-[15px] min-[500px]:w-[20px] md:w-[28px] xl:w-[32px]"
+                  />
+                </button>
+              </div>
+              <!-- price -->
+              <h3
+                class="price_moskonomics leading-[1] relative tracking-[-.5px] xl:tracking-[-1.5px] text-[15px] md:text-[40px] xl:text-[72px]"
+              >
+                PRICE : 0.002142 SOL
+              </h3>
+              <!-- times -->
+              <h4
+                id="day"
+                class="times relative tracking-[-1px] xl:tracking-[-2px] text-[13px] md:text-[30px] xl:text-[40px]"
+              >
+                60 Days
+              </h4>
+              <h4
+                id="countdown"
+                class="times relative tracking-[-1px] xl:tracking-[-2px] text-[13px] md:text-[30px] xl:text-[40px]"
+              >
+                10H 12M 22S
+              </h4>
+              <!-- sol button -->
+              <button
+                class="sol_btn duration-300 relative roundex-[5px] min-[420px]:rounded-[7px] md:rounded-[12px] xl:rounded-[16px] border-black border-[.95px] xl:border-[3px] py-[.1rem] px-[1.2rem] xl:h-[80px] xl:w-[248px] text-[10px] md:text-[30px] xl:text-[48px]"
+              >
+                <span
+                  class="text-white tracking-[-.75px] md:tracking-[-1.5px] xl:tracking-[-2px]"
+                  >solscan</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- moskonomics title -->
+        <div
+          class="moskonomics_title uppercase flex justify-center mb-[50px] xl:mb-[100px]"
+        >
+          <h1 class="text-[38.54px] md:text-[85.72px] xl:text-[148px]">
+            moskonomics
+          </h1>
+        </div>
+
+        <!-- moskonomics text -->
+        <div
+          class="marquu_container w-full flex flex-col items-center gap-[.1rem] md:gap-[4rem] mb-[2rem] xl:mb-0 py-[1rem] min-[1500px]:overflow-hidden mx-auto"
+        >
+          <div class="moskonomics-marquee v2 w-full relative h-auto">
+            <div
+              class="marquee relative w-full h-[30px] md:h-[40px] xl:h-[64px] flex items-center"
+            >
+              <div
+                class="marquee-text moskonomics-marquee-1 translate-x-[-30%] xl:translate-x-[-13%] min-[1500px]:translate-x-[-15%] min-[2100px]:translate-x-[-18%] _2 overflow-hidden relative w-full flex items-center"
+              >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >sell tax 0%</span
+                >
+                <span
+                  class="flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0 min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px] min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                  >LIQUIDITY burn</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >sell tax 0%</span
+                >
+                <span
+                  class="flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0 min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px] min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                  >LIQUIDITY burn</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >sell tax 0%</span
+                >
+                <span
+                  class="flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0 min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px] min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                  >LIQUIDITY burn</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="moskonomics-marquee v2 w-full relative h-auto">
+            <div
+              class="marquee relative w-full h-[30px] md:h-[40px] xl:h-[64px] flex items-center"
+            >
+              <div
+                class="marquee-text moskonomics-marquee-1 translate-x-[-25%] xl:translate-x-[-40%] overflow-hidden relative w-full flex items-center"
+              >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >sell tax 0%</span
+                >
+                <span
+                  class="flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0 min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px] min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                  >LIQUIDITY burn</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >sell tax 0%</span
+                >
+                <span
+                  class="flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0 min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px] min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                  >LIQUIDITY burn</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >sell tax 0%</span
+                >
+                <span
+                  class="flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0 min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px] min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                  >LIQUIDITY burn</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="moskonomics-marquee v2 w-full relative h-auto">
+            <div
+              class="marquee relative w-full h-[30px] md:h-[40px] xl:h-[64px] flex items-center"
+            >
+              <div
+                class="marquee-text moskonomics-marquee-2 translate-x-[-20%] xl:translate-x-[-20%] min-[1500px]:translate-x-[-10%] min-[2100px]:translate-x-[-30%] _2 overflow-hidden relative w-full flex items-center"
+              >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >sell tax 0%</span
+                >
+                <span
+                  class="flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0 min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px] min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                  >LIQUIDITY burn</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >sell tax 0%</span
+                >
+                <span
+                  class="flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0 min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px] min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                  >LIQUIDITY burn</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >sell tax 0%</span
+                >
+                <span
+                  class="flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0 min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px] min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                  >LIQUIDITY burn</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- buy moskonomics -->
+        <div
+          class="buy-moskonomics flex items-center justify-center relative xl:my-[4rem]"
+        >
+          <div class="main_image relative w-full mx-auto flex justify-center">
+            <div
+              class="bd border-black border-[3px] rounded-full h-[90%] w-[83%] max-w-[1500px] absolute"
+            ></div>
+            <img
+              id="rotatingImage"
+              src="./assets/images/buy-mosk.png"
+              alt="mosk"
+              class="w-[90%] border-black border-[3px] max-w-[1500px]"
+            />
+          </div>
+
+          <button
+            class="buy-mosk social_media btn uppercase cursor-pointer absolute bottom-0 bg-blue-400 w-[90%] max-w-[1400px] h-[64px] md:h-[104px] md:w-[80%] xl:w-[90%] xl:h-[142px] overflow-hidden rounded-[12px] xl:rounded-[16px] border-[2px] md:border-[3px] xl:border-[5px] border-black flex justify-center items-center"
+          >
+            <a
+              href="#"
+              class="relative z-[1] text-[32px] md:text-[64px] xl:text-[96px]"
+              >buy $mosk</a
+            >
+            <div
+              class="container_bg_hover absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] rounded-[15px] w-[200%] h-[200%] overflow-hidden z-[0]"
+            >
+              <div class="bg_hover_effect bg-[#fdfd8b]"></div>
+            </div>
+          </button>
+        </div>
+
+        <!-- moskonomics text bottom -->
+        <div
+          class="marquu_container w-full flex flex-col items-center gap-[.1rem] md:gap-[4rem] mb-[2rem] xl:mb-0 py-[1rem] min-[1500px]:overflow-hidden mx-auto"
+        >
+          <div class="moskonomics-marquee v2 w-full relative h-auto">
+            <div
+              class="marquee relative w-full h-[30px] md:h-[40px] xl:h-[64px] flex items-center"
+            >
+              <div
+                class="marquee-text moskonomics-marquee-1 translate-x-[-30%] xl:translate-x-[-40%] min-[1500px]:translate-x-[-40%] overflow-hidden relative w-full flex items-center"
+              >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >sell tax 0%</span
+                >
+                <span
+                  class="flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0 min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px] min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                  >LIQUIDITY burn</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >sell tax 0%</span
+                >
+                <span
+                  class="flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0 min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px] min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                  >LIQUIDITY burn</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >sell tax 0%</span
+                >
+                <span
+                  class="flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0 min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px] min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                  >LIQUIDITY burn</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="moskonomics-marquee v2 w-full relative h-auto">
+            <div
+              class="marquee relative w-full h-[30px] md:h-[40px] xl:h-[64px] flex items-center"
+            >
+              <div
+                class="marquee-text moskonomics-marquee-1 translate-x-[-25%] xl:translate-x-[-60%] overflow-hidden relative w-full flex items-center"
+              >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >sell tax 0%</span
+                >
+                <span
+                  class="flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0 min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px] min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                  >LIQUIDITY burn</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >sell tax 0%</span
+                >
+                <span
+                  class="flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0 min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px] min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                  >LIQUIDITY burn</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >sell tax 0%</span
+                >
+                <span
+                  class="flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0 min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px] min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                  >LIQUIDITY burn</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="moskonomics-marquee v2 w-full relative h-auto">
+            <div
+              class="marquee relative w-full h-[30px] md:h-[40px] xl:h-[64px] flex items-center"
+            >
+              <div
+                class="marquee-text moskonomics-marquee-2 translate-x-[-20%] xl:translate-x-[-20%] min-[1500px]:translate-x-[-10%] min-[2100px]:translate-x-[5%] _2 overflow-hidden relative w-full flex items-center"
+              >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >sell tax 0%</span
+                >
+                <span
+                  class="flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0 min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px] min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                  >LIQUIDITY burn</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >sell tax 0%</span
+                >
+                <span
+                  class="flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0 min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px] min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                  >LIQUIDITY burn</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >sell tax 0%</span
+                >
+                <span
+                  class="flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0 min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px] min-[400px]:relative absolute opacity-0 min-[400px]:opacity-100"
+                  >LIQUIDITY burn</span
+                >
+                <span
+                  class="relative flex justify-center items-center h-[100%] mx-[1rem] xl:mx-0"
+                >
+                  <img
+                    src="./assets/icons/moskonomics_point.svg"
+                    alt=""
+                    class="mt-[3vw] min-[450px]:mt-[1.3vw] md:mt-[2rem] xl:mt-[3rem] w-auto h-[10px] md:h-[20px] xl:h-[30px]"
+                  />
+                </span>
+                <span
+                  class="uppercase relative w-auto xl:tracking-[-2px] text-[25px] md:text-[55px] min-[900px]:text-[70px] xl:text-[96px]"
+                  >Contract revoked</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- how to get secion -->
+      <section
+        id="howtoget"
+        class="w-full h-auto relative my-[100px] xl:my-[300px]"
+      >
+        <div
+          class="title relative w-full h-[auto] flex items-center justify-center flex-col"
+        >
+          <div class="howTo relative flex justify-center">
+
+            <h1 class=" text-[20vw] lg:text-[110px] boldStroke">Get Ready</h1> 
+
+          </div>
  
-    <!-- input image -->
-    <div class="w-[95%] max-w-[3000px] h-[550px] uploadImageContainer cursor-pointer relative flex justify-center items-center rounded-[20px] border-black border-[4px]">
-       <input type="file" id="imageInput" accept="image/*" class="w-full h-full cursor-pointer absolute z-10 opacity-0">
 
-       <div class="absolute top-[5%] flex flex-col items-center z-10 text-white">
-           <img src="./assets/icons/uploadIcon.svg" alt="upload" class="w-[50px] h-auto object-contain">
-           <p class="text-[1.5em]">Drag & drop an image here,</p>
-           <p class="text-[1.5em]">or click to select one</p>
-           <p class="text-[.95em] lowercase">(Only *.jpeg and *.png images will be accepted)            </p>
-       </div>
+        </div>
 
-       <img src="./assets/images/bgInput.webp" alt="" class="bottom-0 w-full h-auto object-contain absolute z-0">
+        <!-- how to get -->
+        <div class="relative hidden max-w-[1700px] mx-auto w-full h-auto">
+          <!-- for desktop -->
+          <swiper-container
+            navigation="true"
+            init="false"
+            class="py-[2rem] z-[0] w-full swiper-container1 h-auto"
+          >
+            <!-- steps 1 -->
+            <swiper-slide
+              class="mx-auto relative overflow-hidden max-w-[90%] w-[335px] h-[350px] md:w-[536px] md:h-[560px] rounded-[10px] md:rounded-[24px] border-black border-[1.8px] md:border-[3px] flex justify-end flex-col items-center py-[1rem]"
+            >
+              <div
+                class="images absolute left-0 top-0 w-full h-full flex justify-center items-center"
+              >
+                <!-- bg -->
+                <img
+                  src="./assets/images/bg_3.jpg"
+                  alt=""
+                  class="absolute h-full w-full left-0 top-0 object-cover"
+                />
+                <!-- icon / how to -->
+                <img
+                  src="./assets/images/steps_1.png"
+                  alt="how to"
+                  class="h-auto absolute bottom-0 w-[315px] md:w-[504px]"
+                />
+              </div>
+              <p
+                class="relative w-[85%] normal-text-stroke text-white text-center z-[1] text-[20px] md:text-[32px]"
+              >
+                Download & Install The Phantom Wallet Either From The App Store
+                On Your Phone .
+              </p>
+            </swiper-slide>
+
+            <!-- steps 2 -->
+            <swiper-slide
+              class="mx-auto relative overflow-hidden max-w-[90%] w-[335px] h-[350px] md:w-[536px] md:h-[560px] rounded-[10px] md:rounded-[24px] border-black border-[1.8px] md:border-[3px] flex justify-end flex-col items-center py-[1rem]"
+            >
+              <div
+                class="images absolute left-0 top-0 w-full h-full flex justify-center items-center"
+              >
+                <!-- bg -->
+                <img
+                  src="./assets/images/bg_image2.jpg"
+                  alt=""
+                  class="absolute h-full w-full left-0 top-0 object-cover"
+                />
+                <!-- icon / how to -->
+                <img
+                  src="./assets/images/steps_2.png"
+                  alt="how to"
+                  class="h-auto absolute bottom-0 w-[315px] md:w-[504px]"
+                />
+              </div>
+              <p
+                class="relative w-[85%] normal-text-stroke text-white text-center z-[1] text-[20px] md:text-[32px]"
+              >
+                Purchase SOL on a cryptocurrency exchange and transfer it to
+                your wallet.
+              </p>
+            </swiper-slide>
+
+            <!-- steps 3 -->
+            <swiper-slide
+              class="mx-auto relative overflow-hidden max-w-[90%] w-[335px] h-[350px] md:w-[536px] md:h-[560px] rounded-[10px] md:rounded-[24px] border-black border-[1.8px] md:border-[3px] flex justify-end flex-col items-center py-[1rem]"
+            >
+              <div
+                class="images absolute left-0 top-0 w-full h-full flex justify-center items-center"
+              >
+                <!-- bg -->
+                <img
+                  src="./assets/images/bg_1-hori.png"
+                  alt=""
+                  class="absolute opacity-85 h-full w-full left-0 top-0 object-cover"
+                />
+              </div>
+              <button
+                class="absolute z-[5] overflow-hidden bg-white border-black border-[1.25px] md:border-[5px] flex justify-center items-center left-[50%] translate-x-[-50%] top-[40%] translate-y-[-50%] rounded-[10px] md:rounded-[16px] w-[299px] h-[58px] md:w-[410px] md:h-[92px]"
+              >
+                <span class="relative z-[1] text-[22.5px] md:text-[36px]"
+                  >CONTRACT : Eb3...Xak789</span
+                >
+                <img
+                  src="./assets/images/bg_3.jpg"
+                  alt=""
+                  class="absolute opacity-80 z-0 left-0 top-0 w-full h-full"
+                />
+              </button>
+              <p
+                class="relative w-[85%] normal-text-stroke text-white text-center z-[1] text-[20px] md:text-[32px]"
+              >
+                Select add new token and choose $MOSK contract. make sure u
+                copied from pinned ca!
+              </p>
+            </swiper-slide>
+
+            <!-- steps 4 -->
+            <swiper-slide
+              class="mx-auto relative overflow-hidden max-w-[90%] w-[335px] h-[350px] md:w-[536px] md:h-[560px] rounded-[10px] md:rounded-[24px] border-black border-[1.8px] md:border-[3px] flex justify-end flex-col items-center py-[1rem]"
+            >
+              <div
+                class="images absolute left-0 top-0 w-full h-full flex justify-center items-center"
+              >
+                <!-- bg -->
+                <img
+                  src="./assets/images/bg_4-hori.png"
+                  alt=""
+                  class="absolute h-full w-full left-0 top-0 object-cover"
+                />
+                <!-- icon / how to -->
+                <img
+                  src="./assets/images/steps_4.png"
+                  alt="how to"
+                  class="h-auto absolute bottom-0 w-[315px] md:w-[504px]"
+                />
+              </div>
+              <p
+                class="relative w-[85%] normal-text-stroke text-white text-center z-[1] text-[20px] md:text-[32px]"
+              >
+                Select <span class="text-[#F1C8B7]">$MOSK</span> as the desired
+                token and enter the amount you'd like to buy. The official token
+                address to import is:
+              </p>
+            </swiper-slide>
+
+            <!-- steps 5 -->
+            <swiper-slide
+              class="mx-auto relative overflow-hidden max-w-[90%] w-[335px] h-[350px] md:w-[536px] md:h-[560px] rounded-[10px] md:rounded-[24px] border-black border-[1.8px] md:border-[3px] flex justify-end flex-col items-center py-[1rem]"
+            >
+              <div
+                class="images absolute left-0 top-0 w-full h-full flex justify-center items-center"
+              >
+                <!-- bg -->
+                <img
+                  src="./assets/images/bg_3.jpg"
+                  alt=""
+                  class="absolute h-full w-full left-0 top-0 object-cover"
+                />
+                <!-- icon / how to -->
+                <img
+                  src="./assets/images/steps_5.png"
+                  alt="how to"
+                  class="h-auto absolute bottom-0 w-[290px] md:w-[504px]"
+                />
+              </div>
+              <p
+                class="relative w-[85%] normal-text-stroke text-white text-center z-[1] text-[20px] md:text-[32px]"
+              >
+                Lastly HOLD onto your
+                <span class="text-[#ff7777]">$MOSK</span> and see your money
+                Magically grow.
+              </p>
+            </swiper-slide>
+          </swiper-container>
+
+          <!-- for mobile -->
+          <div
+            class="py-[2rem] relative z-[0] w-full h-auto flex flex-col items-center gap-[2rem] md:hidden"
+          >
+            <!-- steps 1 -->
+            <div
+              class="mx-auto relative overflow-hidden max-w-[90%] w-[335px] h-[350px] md:w-[536px] md:h-[560px] rounded-[10px] md:rounded-[24px] border-black border-[1.8px] md:border-[3px] flex justify-end flex-col items-center py-[1rem]"
+            >
+              <div
+                class="images absolute left-0 top-0 w-full h-full flex justify-center items-center"
+              >
+                <!-- bg -->
+                <img
+                  src="./assets/images/bg_3.jpg"
+                  alt=""
+                  class="absolute h-full w-full left-0 top-0 object-cover"
+                />
+                <!-- icon / how to -->
+                <img
+                  src="./assets/images/steps_1.png"
+                  alt="how to"
+                  class="h-auto absolute bottom-0 w-[315px] md:w-[504px]"
+                />
+              </div>
+              <p
+                class="relative w-[85%] normal-text-stroke text-white text-center z-[1] text-[20px] md:text-[32px]"
+              >
+                Download & Install The Phantom Wallet Either From The App Store
+                On Your Phone .
+              </p>
+            </div>
+
+            <!-- steps 2 -->
+            <div
+              class="mx-auto relative overflow-hidden max-w-[90%] w-[335px] h-[350px] md:w-[536px] md:h-[560px] rounded-[10px] md:rounded-[24px] border-black border-[1.8px] md:border-[3px] flex justify-end flex-col items-center py-[1rem]"
+            >
+              <div
+                class="images absolute left-0 top-0 w-full h-full flex justify-center items-center"
+              >
+                <!-- bg -->
+                <img
+                  src="./assets/images/bg_image2.jpg"
+                  alt=""
+                  class="absolute h-full w-full left-0 top-0 object-cover"
+                />
+                <!-- icon / how to -->
+                <img
+                  src="./assets/images/steps_2.png"
+                  alt="how to"
+                  class="h-auto absolute bottom-0 w-[315px] md:w-[504px]"
+                />
+              </div>
+              <p
+                class="relative w-[85%] normal-text-stroke text-white text-center z-[1] text-[20px] md:text-[32px]"
+              >
+                Purchase SOL on a cryptocurrency exchange and transfer it to
+                your wallet.
+              </p>
+            </div>
+
+            <!-- steps 3 -->
+            <div
+              class="mx-auto relative overflow-hidden max-w-[90%] w-[335px] h-[350px] md:w-[536px] md:h-[560px] rounded-[10px] md:rounded-[24px] border-black border-[1.8px] md:border-[3px] flex justify-end flex-col items-center py-[1rem]"
+            >
+              <div
+                class="images absolute left-0 top-0 w-full h-full flex justify-center items-center"
+              >
+                <!-- bg -->
+                <img
+                  src="./assets/images/bg_1-hori.png"
+                  alt=""
+                  class="absolute opacity-85 h-full w-full left-0 top-0 object-cover"
+                />
+              </div>
+              <button
+                class="absolute how_to-btn z-[5] overflow-hidden bg-white border-black border-[1.25px] md:border-[5px] flex justify-center items-center left-[50%] translate-x-[-50%] top-[40%] translate-y-[-50%] rounded-[10px] md:rounded-[16px] w-[299px] h-[58px] md:w-[410px] md:h-[92px]"
+              >
+                <span class="relative z-[1] text-[22.5px] md:text-[36px]"
+                  >CONTRACT : Eb3...Xak789</span
+                >
+                <img
+                  src="./assets/images/bg_3.jpg"
+                  alt=""
+                  class="absolute object-cover opacity-80 z-0 left-0 top-0 w-full h-full"
+                />
+              </button>
+              <p
+                class="relative w-[85%] normal-text-stroke text-white text-center z-[1] text-[20px] md:text-[32px]"
+              >
+                Select add new token and choose $MOSK contract. make sure u
+                copied from pinned ca!
+              </p>
+            </div>
+
+            <!-- steps 4 -->
+            <div
+              class="mx-auto relative overflow-hidden max-w-[90%] w-[335px] h-[350px] md:w-[536px] md:h-[560px] rounded-[10px] md:rounded-[24px] border-black border-[1.8px] md:border-[3px] flex justify-end flex-col items-center py-[1rem]"
+            >
+              <div
+                class="images absolute left-0 top-0 w-full h-full flex justify-center items-center"
+              >
+                <!-- bg -->
+                <img
+                  src="./assets/images/bg_4-hori.png"
+                  alt=""
+                  class="absolute h-full w-full left-0 top-0 object-cover"
+                />
+                <!-- icon / how to -->
+                <img
+                  src="./assets/images/steps_4.png"
+                  alt="how to"
+                  class="h-auto absolute bottom-0 w-[315px] md:w-[504px]"
+                />
+              </div>
+              <p
+                class="relative w-[85%] normal-text-stroke text-white text-center z-[1] text-[20px] md:text-[32px]"
+              >
+                Select <span class="text-[#F1C8B7]">$MOSK</span> as the desired
+                token and enter the amount you'd like to buy. The official token
+                address to import is:
+              </p>
+            </div>
+
+            <!-- steps 5 -->
+            <div
+              class="mx-auto relative overflow-hidden max-w-[90%] w-[335px] h-[350px] md:w-[536px] md:h-[560px] rounded-[10px] md:rounded-[24px] border-black border-[1.8px] md:border-[3px] flex justify-end flex-col items-center py-[1rem]"
+            >
+              <div
+                class="images absolute left-0 top-0 w-full h-full flex justify-center items-center"
+              >
+                <!-- bg -->
+                <img
+                  src="./assets/images/bg_3.jpg"
+                  alt=""
+                  class="absolute h-full w-full left-0 top-0 object-cover"
+                />
+                <!-- icon / how to -->
+                <img
+                  src="./assets/images/steps_5.png"
+                  alt="how to"
+                  class="h-auto absolute bottom-0 w-[290px] md:w-[504px]"
+                />
+              </div>
+              <p
+                class="relative w-[85%] normal-text-stroke text-white text-center z-[1] text-[20px] md:text-[32px]"
+              >
+                Lastly HOLD onto your
+                <span class="text-[#ff7777]">$MOSK</span> and see your money
+                Magically grow.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full h-auto relative flex justify-center items-start flex-wrap gap-[20px]">
+            
+            <div
+                class="relative px-[1.5rem] rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] w-[90%] md:w-[70%] lg:w-[30%] h-auto flex items-center justify-center flex-col py-4 "
+                >
+          <div class="bg_images absolute z-[1] left-0 top-0 w-full h-full">
+            <!-- border -->
+            <div
+              class="w-full h-full border-black border-[.7px] md:border-[1.7px] xl:border-[3px] left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] z-[5]"
+            ></div>
+            <!-- image1 -->
+            <div
+              class="image1 w-full h-full left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] overflow-hidden bg-[#003b24] z-[4]"
+            >
+              <img
+                src="./assets/images/Bg3_hori.png"
+                alt=""
+                class="w-full h-full opacity-[.3] object-cover"
+              />
+            </div>
+            <!-- image2 -->
+            <div
+              class="image2 animated_bg_image w-full h-full left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] overflow-hidden bg-[#faee4c]"
+            >
+              <img
+                src="./assets/images/Bg3_hori.png"
+                alt=""
+                class="w-full h-full opacity-[.3] object-cover"
+              />
+            </div>
+            <!-- image3 -->
+            <div
+              class="image3 animated_bg_image2 w-full h-full left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] overflow-hidden bg-[#04b7c4]"
+            >
+              <img
+                src="./assets/images/Bg3_hori.png"
+                alt=""
+                class="w-full h-full opacity-[.3] object-cover"
+              />
+            </div>
+            <!-- image4 -->
+            <div
+              class="image4 animated_bg_image3 w-full h-full left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] overflow-hidden bg-[#0417c4]"
+            >
+              <img
+                src="./assets/images/Bg3_hori.png"
+                alt=""
+                class="w-full h-full opacity-[.3] object-cover"
+              />
+            </div>
+          </div>
+          <div class="w-[50%] lg:w-[35%] h-auto relative z-[20]">
+            <img
+              src="./assets/images/getWallet.png"
+              alt=""
+              class="w-full h-auto"
+            />
+          </div>
+          <h2
+            class="relative mediumStroke z-[2] text-center leading-[1] text-white text-[30px] md:text-[36px] xl:text-[46px] tracking-[-.5px] xl:tracking-[-2px] my-12"
+          >
+          Get a Wallet
+          </h2>
+          <p
+            class="relative mediumStroke z-[2] text-center leading-[1] max-md:leading-[1.2] text-white text-[4vw] md:text-[25px]  "
+          >
+          Download MetaMask or your favorite wallet for free from the App Store, Google Play, or as browser extension if you’re on desktop. Metamask or rabby work well
+          </p>
+            </div>
+
+            <div
+            class="relative px-[1.5rem] rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] w-[90%] md:w-[70%] lg:w-[30%] h-auto flex items-center justify-center flex-col py-4 mt-[50px] lg:mt-[150px]"
+            >
+      <div class="bg_images absolute z-[1] left-0 top-0 w-full h-full">
+        <!-- border -->
+        <div
+          class="w-full h-full border-black border-[.7px] md:border-[1.7px] xl:border-[3px] left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] z-[5]"
+        ></div>
+        <!-- image1 -->
+        <div
+          class="image1 w-full h-full left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] overflow-hidden bg-[red] z-[4]"
+        >
+          <img
+            src="./assets/images/Bg3_hori.png"
+            alt=""
+            class="w-full h-full opacity-[.3] object-cover"
+          />
+        </div>
+        <!-- image2 -->
+        <div
+          class="image2 animated_bg_image w-full h-full left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] overflow-hidden bg-[#faee4c]"
+        >
+          <img
+            src="./assets/images/Bg3_hori.png"
+            alt=""
+            class="w-full h-full opacity-[.3] object-cover"
+          />
+        </div>
+        <!-- image3 -->
+        <div
+          class="image3 animated_bg_image2 w-full h-full left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] overflow-hidden bg-[#04b7c4]"
+        >
+          <img
+            src="./assets/images/Bg3_hori.png"
+            alt=""
+            class="w-full h-full opacity-[.3] object-cover"
+          />
+        </div>
+        <!-- image4 -->
+        <div
+          class="image4 animated_bg_image3 w-full h-full left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] overflow-hidden bg-[#0417c4]"
+        >
+          <img
+            src="./assets/images/Bg3_hori.png"
+            alt=""
+            class="w-full h-full opacity-[.3] object-cover"
+          />
+        </div>
+      </div>
+      <div class="w-[50%] lg:w-[30%] h-auto relative z-[20]">
+        <img
+          src="./assets/images/eth.png"
+          alt=""
+          class="w-full h-auto"
+        />
+      </div>
+      <h2
+        class="relative mediumStroke z-[2] text-center leading-[1] text-white text-[30px] md:text-[36px] xl:text-[46px] tracking-[-.5px] xl:tracking-[-2px] my-12"
+      >
+      Add Some ETH
+      </h2>
+      <p
+        class="relative mediumStroke z-[2] text-center leading-[1] max-md:leading-[1.2] text-white text-[4vw] md:text-[25px]  "
+      >
+      Make sure you have ETH in your wallet. You can buy it directly on MetaMask or Rabby, transfer it from another wallet, or grab some on an exchange and send it over.
+      </p>
+           </div>
+
+            <div
+            class="relative px-[1.5rem] rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] w-[90%] md:w-[70%] lg:w-[30%] h-auto flex items-center justify-center flex-col py-4 mt-[50px] lg:mt-[250px]"
+            >
+                <div class="bg_images absolute z-[1] left-0 top-0 w-full h-full">
+                    <!-- border -->
+                    <div
+                    class="w-full h-full border-black border-[.7px] md:border-[1.7px] xl:border-[3px] left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] z-[5]"
+                    ></div>
+                    <!-- image1 -->
+                    <div
+                    class="image1 w-full h-full left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] overflow-hidden bg-[#1e6cff] z-[4]"
+                    >
+                    <img
+                        src="./assets/images/Bg3_hori.png"
+                        alt=""
+                        class="w-full h-full opacity-[.3] object-cover"
+                    />
+                    </div>
+                    <!-- image2 -->
+                    <div
+                    class="image2 animated_bg_image w-full h-full left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] overflow-hidden bg-[#faee4c]"
+                    >
+                    <img
+                        src="./assets/images/Bg3_hori.png"
+                        alt=""
+                        class="w-full h-full opacity-[.3] object-cover"
+                    />
+                    </div>
+                    <!-- image3 -->
+                    <div
+                    class="image3 animated_bg_image2 w-full h-full left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] overflow-hidden bg-[#04b7c4]"
+                    >
+                    <img
+                        src="./assets/images/Bg3_hori.png"
+                        alt=""
+                        class="w-full h-full opacity-[.3] object-cover"
+                    />
+                    </div>
+                    <!-- image4 -->
+                    <div
+                    class="image4 animated_bg_image3 w-full h-full left-0 top-0 absolute rounded-[6.25px] md:rounded-[13.9px] xl:rounded-[24px] overflow-hidden bg-[#0417c4]"
+                    >
+                    <img
+                        src="./assets/images/Bg3_hori.png"
+                        alt=""
+                        class="w-full h-full opacity-[.3] object-cover"
+                    />
+                    </div>
+                </div>
+                <div class="w-[50%] lg:w-[40%] h-auto relative z-[20]">
+                    <img
+                    src="./assets/images/logocat.png"
+                    alt=""
+                    class="w-full h-auto"
+                    />
+                </div>
+                <h2
+                    class="relative mediumStroke z-[2] text-center leading-[1] text-white text-[30px] md:text-[36px] xl:text-[46px] tracking-[-.5px] xl:tracking-[-2px] my-12"
+                >
+                Get some LMEOW
+                </h2>
+                <p
+                    class="relative mediumStroke z-[2] text-center leading-[1] max-md:leading-[1.2] text-white text-[4vw] md:text-[25px]  "
+                >
+                Head over to Uniswap and sign the transaction when the wallet prompts you!
+                </p>
+            </div>
+
+        </div>
+
+      </section>
+
+      <!-- connect -->
+      <section 
+      class="w-full h-auto relative my-[100px] xl:my-[300px] flex flex-col items-center max-w-[2000px] mx-auto"
+    >
+      <div
+        class="title relative w-full h-[auto] flex items-center justify-center flex-col"
+      >
+      
+      
+      <h1 class=" text-[15vw] md:text-[60px] lg:text-[110px] boldStroke">Stay Connected</h1> 
+
+
+
+      </div> 
+
+      
+      <div class="flex justify-center items-center gap-6 flex-wrap mt-[50px]">
+
+        <a href="" target="_blank" class="flex justify-center items-center gap-5 text-center">
+            <img src="./assets/icons/coinGecko1.png" alt="" class="w-[20%] lg:w-[70px] min-[1400px]:w-[100px] h-auto object-contain">
+            <span class="poppinsFons text-[8vw] md:text-[40px] min-[1500px]:text-[50px] text-white font-light ">Coin<span class="font-semibold">Gecko</span></span>
+        </a>
+
+        <a href="" target="_blank" class="flex justify-center items-center gap-5 text-center">
+            <img src="./assets/icons/dex-screener-seeklogo.svg" alt="" class="w-[15%] lg:w-[70px] min-[1400px]:w-[100px] h-auto object-contain">
+            <span class="poppinsFons text-[8vw] md:text-[40px] min-[1500px]:text-[50px] text-white font-light "><span class="font-semibold">Dex</span>screener</span>
+        </a>
+
+        <a href="" target="_blank" class="flex justify-center items-center gap-5 text-center">
+            <img src="./assets/icons/coinmarket.png" alt="" class="w-[18%] lg:w-[70px] min-[1400px]:w-[100px] h-auto object-contain">
+            <span class="poppinsFons text-[7vw] md:text-[40px] min-[1500px]:text-[50px] text-white font-light ">CoinMarketCap</span>
+        </a>
+
+      </div>
+
+      <p class="text-center mt-[60px] text-white text-[30px] lg:text-[70px] mediumStroke w-[80%]">GCR’s Catalyst - A Prophecy to be fulfilled
+        When GCR speaks, the market listens.</p>
+
+        <span class="h-[100px] lg:h-[180px] w-[2px] bg-white relative mb-[20px]"></span>
+
+      <div class="w-[80%] h-auto">
+        <img src="./assets/images/MarketListen.png" alt="market" class="w-full h-auto object-contain">
+      </div>
+
+      <div class="aboutmoew flex justify-center items-center px-[50px] flex-wrap mt-10">
+        <p class="text-white text-[25px] lg:text-[70px] mediumStroke w-[100%] lg:w-[50%] max-lg:text-center">A hooman named Snowden studied how cats laugh</p>
+        <div class="image w-[90%] lg:w-[40%]">
+            <img src="./assets/images/Market2.png" alt="market" class="w-full object-contain">
+        </div>
+      </div>
+ 
+    </section>
+
+    <!-- matter -->
+     <section  class="w-full h-auto relative flex flex-col items-center max-w-[2000px] mx-auto mb-[50px]">
+        
+       <div
+        class="title relative w-full h-[auto] flex items-center justify-center flex-col"
+      > 
+              <h1 class=" text-[10vw] md:text-[60px] lg:text-[70px] boldStroke">What Actually matters</h1>  
+
+      </div>
+      
+      <div class="flex justify-center flex-wrap text-[20px] mediumStroke text-white w-full px-[20px] lg:px-[80px]">
+
+        <div class="w-full md:w-[40%] flex flex-col  gap-3">
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>Community</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>Poor People Getting Rich</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>[Token] Distribution</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>Attention</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>Fairness</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>Organic Price Discovery</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>Community</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>Elmiminating Class Warfare <br> / Bitterness</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>Attention</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>Fairness</p>
+            </div>  
+        </div>
+        <div class="w-full md:w-[30%] flex flex-col  gap-3">
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>Community</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>Poor People Getting Rich</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>[Token] Distribution</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>Attention</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>Fairness</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>Organic Price Discovery</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>Community</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>Elmiminating Class Warfare <br> / Bitterness</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>Attention</p>
+            </div>
+            <div class="flex items-center gap-5">
+                <img src="./assets/icons/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+                <p>Fairness</p>
+            </div>  
+        </div>
+
+      </div>
+
+     </section>
+ 
+
+      <!-- meme section -->
+      <section id="meme" class="relative w-full h-auto mb-10">
+        <div class="title w-full flex justify-center">
+          <h2 class="text-[40px] md:text-[100px] :text-[128px] relative">
+            meme
+          </h2>
+        </div>
+
+        <div
+          class="memes relative md:px-[2rem] mx-auto max-w-[1500px] w-full flex justify-center"
+        >
+          <!-- for desktop -->
+          <div
+            class="memes_image-container w-auto md:w-full h-auto absolute md:relative opacity-0 md:opacity-100 flex justify-center md:justify-between md:flex-wrap gap-y-[2rem] mx-auto"
+          >
+            <img
+              src="./assets/images/meme1.png"
+              alt=""
+              class="h-auto object-contain w-[90%] relative md:w-[49%] left_meme_animated"
+            />
+            <img
+              src="./assets/images/meme2.png"
+              alt=""
+              class="h-auto object-contain relative w-[90%] md:w-[49%] right_meme_animated"
+            />
+            <div class="w-full flex justify-center">
+                <img
+              src="./assets/images/meme3.png"
+              alt=""
+              class="h-auto object-contain relative w-[90%] md:w-[49%] left_meme_animated-2"
+            />
+            </div>
+           
+          </div>
+          <!-- for mobile -->
+          <swiper-container
+            init="false"
+            class="md:hidden py-[2rem] swiper-container2 h-auto"
+          >
+            <swiper-slide class="h-[400px] min-[500px]:max-w-[350px]">
+              <img
+                src="./assets/images/meme1.png"
+                alt="meme"
+                class="h-auto w-[90%] max-w-[400px] object-contain border-black border-[3px] rounded-[8px]"
+              />
+            </swiper-slide>
+            <swiper-slide class="h-[400px] min-[500px]:max-w-[350px]">
+              <img
+                src="./assets/images/meme2.png"
+                alt="meme"
+                class="h-auto w-[90%] max-w-[400px] object-contain border-black border-[3px] rounded-[8px]"
+              />
+            </swiper-slide>
+            <swiper-slide class="h-[400px] min-[500px]:max-w-[350px]">
+              <img
+                src="./assets/images/meme3.png"
+                alt="meme"
+                class="h-auto w-[90%] max-w-[400px] object-contain border-black border-[3px] rounded-[8px]"
+              />
+            </swiper-slide>
+             
+          </swiper-container>
+        </div>
+      </section>
+
+      <!-- contact us -->
+      <section
+        id="contact"
+        class="relative w-full h-[862px] md:h-[834px] xl:h-[921px] min-[1700px]:h-[1000px] pt-[7rem]"
+      >
+        <!-- title -->
+        <div class="title relative w-full z-[1] flex justify-center">
+          <h2
+            class="tracking-[-2px] md:tracking-[-3.5px] text-[64px] md:text-[96px]"
+          >
+            contact us
+          </h2>
+        </div>
+
+        <!-- images contact -->
+        <div
+          class="images w-full z-[1] h-[80%] absolute left-[50%] translate-x-[-50%] max-w-[1900px] bottom-0 flex justify-center items-start"
+        >
+          <div
+            class="earth_mosk absolute left-[50%] translate-x-[-50%] w-full h-full bottom-0 flex justify-center"
+          >
+            <!-- image left -->
+            <div
+              class="container_image_left w-auto absolute z-0 h-[200px] md:h-[250px] xl:h-[300px] min-[1700px]:h-[350px] object-contain top-[33%] xl:top-[20%] left-[35%] xl:left-[40%] translate-x-[-50%]"
+            >
+              <img
+                src="./assets/images/left_image_contact.png"
+                alt="earth mosk"
+                class="right_contact_image relative w-auto h-full object-contain"
+                data-aos="fade-down-left"
+                data-aos-duration="400"
+                data-aos-offset="100"
+              />
+            </div>
+
+            <!-- image center -->
+            <img
+              src="./assets/images/center_image_contact.png"
+              alt="earth mosk"
+              class="w-auto z-10 relative h-[300px] md:h-[350px] xl:h-[400px] min-[1700px]:h-[500px] object-contain"
+            />
+            <!-- image right -->
+            <div
+              class="container_right w-[50%] md:w-auto absolute z-0 h-[250px] md:h-[250px] xl:h-[350px] min-[1700px]:h-[390px] top-[33%] xl:top-[15%] left-[65%] xl:left-[60%] translate-x-[-50%]"
+            >
+              <img
+                src="./assets/images/right_image_contact.png"
+                alt="earth mosk"
+                class="right_contact_image relative w-auto h-full object-cover md:object-contain"
+                data-aos="fade-down-right"
+                data-aos-duration="400"
+                data-aos-offset="100"
+              />
+            </div>
+          </div>
+          <!-- rokects image-->
+          <img
+            src="./assets/images/roket1.png"
+            alt="rockets"
+            class="absolute rockets left-0 bottom-[20px] min-[1700px]:bottom-[60px] w-auto opacity-0 md:opacity-100 md:h-[388px] xl:h-[601px]"
+          />
+          <img
+            src="./assets/images/roket2.png"
+            alt="rockets"
+            class="absolute rockets right-0 bottom-[20px] min-[1700px]:bottom-[60px] w-auto opacity-0 md:opacity-100 md:h-[388px] xl:h-[601px]"
+          />
+        </div>
+
+        <!-- contact us social / email -->
+        <div
+          class="contactUs-container absolute h-[50%] left-[50%] translate-x-[-50%] bottom-0 w-[50%] z-[1] flex justify-center items-end"
+        >
+          <div
+            class="contact-us_container z-[2] w-[400px] relative flex flex-col items-center gap-[40px]"
+            data-aos="fade-down"
+            data-aos-duration="1400"
+            data-aos-delay="200"
+          >
+            <h3 class="email uppercase text-center text-[32px]">
+              support@elanmosk.com
+            </h3>
+            <div class="social_media w-full flex justify-center gap-[2rem]">
+              <div
+                class="social cursor-pointer duration-300 bg-[#E9BC50] flex items-center flex-col justify-between xl:rounded-[20.21px] rounded-[16px] md:rounded-[24px] border-[#141414] border-[1.5px] py-[.25rem] md:py-[.5rem] w-[85px] h-[99px] md:w-[102px] md:h-[118px]"
+              >
+                <a
+                  href="https://twitter.com/ElanMoskCoin"
+                  target="_blank"
+                  class="icon flex justify-center items-center border-black border-[2.25px] rounded-[inherit] w-[90%] h-[60px] md:h-[72px]"
+                >
+                  <img src="./assets/icons/twitter.svg" alt="twitter logo" />
+                </a>
+                <p class="text-[15.16px] md:text-[16px] tracking-[.5px]">
+                  Twitter
+                </p>
+              </div>
+              <div
+                class="social cursor-pointer duration-300 bg-[#C4D39F] flex items-center flex-col justify-between xl:rounded-[20.21px] rounded-[16px] md:rounded-[24px] border-[#141414] border-[1.5px] py-[.25rem] md:py-[.5rem] w-[85px] h-[99px] md:w-[102px] md:h-[118px]"
+              >
+                <a
+                  href="https://t.me/ElanMoskCoin"
+                  target="_blank"
+                  class="icon flex justify-center items-center border-black border-[2.25px] rounded-[inherit] w-[90%] h-[60px] md:h-[72px]"
+                >
+                  <img src="./assets/icons/Telegram.svg" alt="" />
+                </a>
+                <p class="text-[15.16px] md:text-[16px] tracking-[.5px]">
+                  telegram
+                </p>
+              </div>
+              <div
+                class="social cursor-pointer duration-300 bg-[#9FCFD3] flex items-center flex-col justify-between xl:rounded-[20.21px] rounded-[16px] md:rounded-[24px] border-[#141414] border-[1.5px] py-[.25rem] md:py-[.5rem] w-[85px] h-[99px] md:w-[102px] md:h-[118px]"
+              >
+                <a
+                  href="#solscan"
+                  class="icon flex justify-center items-center border-black border-[2.25px] rounded-[inherit] w-[90%] h-[60px] md:h-[72px]"
+                >
+                  <img src="./assets/images/solscan.png" alt="solscan logo" />
+                </a>
+                <p class="text-[15.16px] md:text-[16px] tracking-[.5px]">
+                  solscan
+                </p>
+              </div>
+            </div>
+            <p class="copyright uppercase text-[26.94px] md:text-[32px]">
+              $mosk copyright 2024
+            </p>
+          </div>
+        </div>
+      </section>
 
     </div>
-   
-   <div class="memeMakerContainer w-[94vw] h-[45vw]  relative hidden justify-center items-center mx-auto border-[2px] rounded-xl border-black bg-white overflow-hidden ">
-       
-       <!-- canvas -->
-       <div class="w-[70%] h-full bg-white relative">
-           <canvas id="imageCanvas" width="700" height="700" class="h-full w-full"></canvas>
-       </div>
 
-       <!-- buttons settings -->
-       <div class="settingContainer w-[30%] flex flex-wrap gap-4 justify-center h-full pt-4 border-l-[2px] border-black">
-
-           <div class="choiseBtnContainer w-[90%] flex justify-between rounded-full border-black border-[1px] h-[40px]">
-
-               <button data-btn="head" class="active">HEAD</button>
-               <button data-btn="accessories">ACCESSORIES</button>
-               <button data-btn="extras">EXTRAS</button>
-
-           </div>
-
-           <!-- choise meme -->
-
-            <!-- head -->
-          <div id="head" class="choiseMemes active w-full justify-center items-start flex-wrap gap-3 h-auto">
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Head/body-cup.png" alt="">
-           </div>
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Head/body-levitating.png" alt="">
-           </div>
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Head/body.png" alt="">
-           </div>
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Head/bogdanoff.png" alt="">
-           </div>
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Head/brave-deebo.png" alt="">
-           </div>
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Head/cashgun.png" alt="">
-           </div>
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Head/deebo-pose-jump.png" alt="">
-           </div>
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Head/deebo-pose-standing.png" alt="">
-           </div>
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Head/eyes.png" alt="">
-           </div>
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Head/face.png" alt="">
-           </div>
-
-          </div>
-
-          <!-- accessories -->
-          <div id="accessories" class="choiseMemes w-full justify-center items-start flex-wrap gap-3 h-auto">
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Accessories/army-helmet.png" alt="">
-           </div> 
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Accessories/bandage.png" alt="">
-           </div> 
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Accessories/bandana.png" alt="">
-           </div> 
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Accessories/beanie.png" alt="">
-           </div> 
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Accessories/bubble.png" alt="">
-           </div> 
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Accessories/cap.png" alt="">
-           </div> 
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Accessories/chain-dol.png" alt="">
-           </div> 
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Accessories/chain.png" alt="">
-           </div> 
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Accessories/cheff.png" alt="">
-           </div> 
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Accessories/crown.png" alt="">
-           </div> 
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Accessories/eyepatch.png" alt="">
-           </div> 
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Accessories/fwog-hat.png" alt="">
-           </div> 
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Accessories/glasses-sup.png" alt="">
-           </div> 
-
-           <div class="w-[25%] relative cursor-pointer addImage">
-               <img src="./assets/images/Accessories/headphones.png" alt="">
-           </div> 
-
-          </div>
-
-           <!-- extras -->
-           <div id="extras" class="choiseMemes w-full justify-center items-start flex-wrap gap-3 h-auto">
-
-               <div class="w-[25%] relative cursor-pointer addImage">
-                   <img src="./assets/images/Extras/bee.png" alt="">
-               </div>  
-
-               <div class="w-[25%] relative cursor-pointer addImage">
-                   <img src="./assets/images/Extras/butterfly-tor.png" alt="">
-               </div>  
-
-               <div class="w-[25%] relative cursor-pointer addImage">
-                   <img src="./assets/images/Extras/butterfly-yellow.png" alt="">
-               </div>  
-
-               <div class="w-[25%] relative cursor-pointer addImage">
-                   <img src="./assets/images/Extras/cash-side.png" alt="">
-               </div>  
-
-               <div class="w-[25%] relative cursor-pointer addImage">
-                   <img src="./assets/images/Extras/cash.png" alt="">
-               </div>  
-
-               <div class="w-[25%] relative cursor-pointer addImage">
-                   <img src="./assets/images/Extras/coin-deebo.png" alt="">
-               </div>  
-
-               <div class="w-[25%] relative cursor-pointer addImage">
-                   <img src="./assets/images/Extras/coins.png" alt="">
-               </div>  
-
-               <div class="w-[25%] relative cursor-pointer addImage">
-                   <img src="./assets/images/Extras/floating-cash.png" alt="">
-               </div>  
-
-               <div class="w-[25%] relative cursor-pointer addImage">
-                   <img src="./assets/images/Extras/gm.png" alt="">
-               </div>  
-
-               <div class="w-[25%] relative cursor-pointer addImage">
-                   <img src="./assets/images/Extras/plantbar.png" alt="">
-               </div>  
-
-               <div class="w-[25%] relative cursor-pointer addImage">
-                   <img src="./assets/images/Extras/rocket.png" alt="">
-               </div>  
-
-               <div class="w-[25%] relative cursor-pointer addImage">
-                   <img src="./assets/images/Extras/stone-dex.png" alt="">
-               </div>  
-   
-           </div>
-
-
-          <!-- start and download -->
-           <div class="btnChoise w-full flex justify-center items-center gap-4">
-
-               <button id="restartButton" class=" ">Start Over</button>
-
-               <button id="downloadButton">Download Image</button>
-
-            
-           </div> 
-
-
-       </div>
-     
-
-   </div>
-
-   <div id="settingsPanel" style="display:none;" class="">
-       <div class="">
-           <label for="rotate">Rotate:</label>
-       <input type="range" id="rotate" min="0" max="360" value="0">
-       </div> 
-       <br>
-       <div class=""><label for="size">Size:</label>
-           <input type="range" id="size" min="0.1" max="2" step="0.1" value="1"  ></div>
-       <br> 
-
-       <button id="toggleMirror">
-           <img src="./assets/icons/mirror.svg" alt="mirror" class="w-[45px] h-auto object-contain">
-       </button>
-
-       <button id="deleteButton">
-           <img src="./assets/icons/deleteIcon.svg" alt="delete" class="w-[45px] h-auto object-contain">
-       </button>
-       <button id="bringToFrontButton" class="my-3">
-           <img src="./assets/icons/indexTop.svg" alt="delete" class="w-[45px] h-auto object-contain">
-       </button>
-       <button id="sendToBackButton">
-           <img src="./assets/icons/indexBottom.svg" alt="index" class="w-[45px] h-auto object-contain">
-       </button>
-
-   </div>
-   </div>
-
-   <div class="h-[100vh] w-full min-[1200px]:hidden relative flex justify-center items-center  ">
-    <h1 class="text-center text-white text-[5vw]">not available on mobile</h1>
-   </div>
-
-
+    <!-- aos js library animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- scroll magic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <!-- swiper cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- scripts -->
     <script src="./assets/js/index.js"></script>
-</body>
+  </body>
 </html>

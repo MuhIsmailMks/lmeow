@@ -1,268 +1,227 @@
-const canvas = document.getElementById('imageCanvas');
-const memeMakerContainer = document.querySelector('.memeMakerContainer');
-const uploadImageContainer = document.querySelector('.uploadImageContainer');
-const ctx = canvas.getContext('2d');
-const imageInput = document.getElementById('imageInput');
-const toggleButton = document.getElementById('toggleMirror');
+const audio = document.getElementById('audio');
+const popUpContainer = document.getElementById('pop-up');
+const enterBtn = document.getElementById('enter');
+const menu_btn = document.querySelectorAll('.menu_btn');
+const menu_container = document.querySelector('.menu_container');
+const close_menu_btn = document.querySelector('.close-btn');
 
-let isMirrored = false;  
-let inputImage = null; 
-let inputImageLoaded = false; 
-let images = []; 
-let isDragging = false;
-let dragIndex = -1; 
-let offsetX = 0, offsetY = 0; 
-
-let addImageClicked = []; 
-
-const settingsPanel = document.getElementById('settingsPanel');
-const rotateInput = document.getElementById('rotate');
-const sizeInput = document.getElementById('size'); 
-
-document.getElementById('imageInput').addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    memeMakerContainer.classList.remove('hidden');
-    memeMakerContainer.classList.add('flex');
-    uploadImageContainer.classList.add('hidden');
-    uploadImageContainer.classList.remove('flex');
-
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const img = new Image();
-            img.onload = function() {
-                inputImage = {
-                    image: img,
-                    x: 0,
-                    y: 0,
-                    width: canvas.width,
-                    height: canvas.height,
-                    rotation: 0,
-                    scale: 1,
-                    mirror: false
-                };
-                inputImageLoaded = true; 
-                renderImages();
-            };
-            img.src = e.target.result;
-        };
-        reader.readAsDataURL(file);
-    } else {
-        alert('Please upload a valid image file.');
-    }
+AOS.init({ 
+  once: true
+});    
+ 
+// navbar 
+window.addEventListener('scroll', function() {
+  let nav = document.getElementById('nav');
+  let scrollPos = window.scrollY;
+  if (scrollPos > 100) {
+    nav.classList.add('scroller');
+    nav.classList.remove('fixScroll');
+  } else {
+    nav.classList.add('fixScroll');
+    nav.classList.remove('scroller');
+  }
 });
 
-document.querySelectorAll('.addImage').forEach((imageDiv) => {
-    const img = imageDiv.querySelector('img');
-    img.addEventListener('click', function() {
-        const newImg = new Image();
-        newImg.onload = function() {
-            newImg.style.backgroundColor="red";
-            const scale = Math.min(canvas.width / newImg.width, canvas.height / newImg.height) * 0.5;
-            const x = Math.random() * (canvas.width - newImg.width * scale); 
-            const y = Math.random() * (canvas.height - newImg.height * scale);
-            images.push({
-                image: newImg,
-                x: x,
-                y: y,
-                width: newImg.width * scale,
-                height: newImg.height * scale,
-                rotation: 0,
-                scale: 1,
-                mirror: false
-            });
-            imageDiv.classList.add('active');
-            renderImages();
-        };
-        newImg.src = this.src;
-    });
-});
+menu_btn.forEach(menuBtn => {
+    menuBtn.addEventListener('click',() => { 
+        menu_container.classList.add('active')
+    })
+})
 
-function renderImages() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    if (inputImageLoaded) {
-        drawImage(inputImage);
-    }
-    images.forEach(imgData => {
-        drawImage(imgData);
-    });
-}
-
-function drawImage(imgData) {
-    ctx.save();
-    ctx.translate(imgData.x + imgData.width / 2, imgData.y + imgData.height / 2);
-    ctx.rotate((imgData.rotation * Math.PI) / 180);
-    if (imgData.mirror) {
-        ctx.scale(-1, 1);
-    }
-    ctx.drawImage(imgData.image, -imgData.width / 2, -imgData.height / 2, imgData.width, imgData.height);
-    ctx.restore();
-}
-
-function isMouseOnImage(x, y, imgData) {
-    return x > imgData.x && x < imgData.x + imgData.width && y > imgData.y && y < imgData.y + imgData.height;
-}
-
-let selectedImageIndex = -1;
-
-function swapArrayElements(arr, index1, index2) {
-    if (index1 >= 0 && index2 >= 0 && index1 < arr.length && index2 < arr.length) {
-        const temp = arr[index1];
-        arr[index1] = arr[index2];
-        arr[index2] = temp;
-    }
-}
-
-document.getElementById('bringToFrontButton').addEventListener('click', function() {
-    if (selectedImageIndex < images.length - 1) {
-        swapArrayElements(images, selectedImageIndex, selectedImageIndex + 1);
-        selectedImageIndex++;
-        renderImages();
-    }
-});
-
-document.getElementById('sendToBackButton').addEventListener('click', function() {
-    if (selectedImageIndex > 0) {
-        swapArrayElements(images, selectedImageIndex, selectedImageIndex - 1);
-        selectedImageIndex--;
-        renderImages();
-    }
-});
-
-canvas.addEventListener('mousedown', function(e) {
-    const mouseX = e.offsetX;
-    const mouseY = e.offsetY;
-    let isOverImage = false;
-
-    for (let i = 0; i < images.length; i++) {
-        const imgData = images[i];
-        const centerX = imgData.x + imgData.width / 2;
-        const centerY = imgData.y + imgData.height / 2;
-        const marginRight = imgData.width * .8; 
-        const marginY = imgData.height * 0.2; 
-
-        if (mouseX > imgData.x && mouseX < imgData.x + imgData.width + marginRight &&
-            mouseY > imgData.y - marginY && mouseY < imgData.y + imgData.height + marginY) {
-            isDragging = true;
-            dragIndex = i;
-            offsetX = mouseX - images[i].x;
-            offsetY = mouseY - images[i].y;
-            const panelX = images[i].x; 
-            const panelY = images[i].y + 100;
-            const settingsPanel = document.getElementById('settingsPanel');
-            settingsPanel.style.left = `${panelX}px`;
-            settingsPanel.style.top = `${panelY}px `;
-            settingsPanel.style.display = 'flex'; 
-            break;
-        }
-        canvas.style.cursor = isOverImage ? 'grabbing' : 'grab';    
-    }
-});
-
-canvas.addEventListener('mousemove', function(e) {
-    if (isDragging) {
-        const mouseX = e.offsetX;
-        const mouseY = e.offsetY;
-        images[dragIndex].x = mouseX - offsetX;
-        images[dragIndex].y = mouseY - offsetY;
-        let isOverImage = false;
-        for (let i = 0; i < images.length; i++) {
-            if (isMouseOnImage(mouseX, mouseY, images[i])) {
-                isOverImage = true; 
-                const panelX = images[i].x; 
-                const panelY = images[i].y + 100;
-                const settingsPanel = document.getElementById('settingsPanel');
-                settingsPanel.style.left = `${panelX}px`;
-                settingsPanel.style.top = `${panelY}px `;
-                settingsPanel.style.display = 'flex'; 
-                break;
-            }
-        }
-        canvas.style.cursor = isOverImage ? 'grabbing' : 'grab'; 
-        renderImages();
-    }
-});
-
-canvas.addEventListener('mouseup', function() {
-    isDragging = false; 
-    canvas.style.cursor = 'grab'; 
-});
-
-rotateInput.addEventListener('input', function() {
-    if (dragIndex >= 0) {
-        images[dragIndex].rotation = parseFloat(this.value);
-        renderImages(); 
-    }
-});
-
-sizeInput.addEventListener('input', function() {
-    if (dragIndex >= 0) {
-        const scale = parseFloat(this.value);
-        images[dragIndex].scale = scale;
-        images[dragIndex].width = images[dragIndex].image.width * scale;
-        images[dragIndex].height = images[dragIndex].image.height * scale;
-        renderImages(); 
-    }
-});
-
-toggleButton.addEventListener('click', function() {
-    isMirrored = !isMirrored; 
-    if (dragIndex >= 0) {
-        images[dragIndex].mirror = isMirrored;
-        renderImages(); 
+menu_container.addEventListener('click', (e) => {
+    let target = e.target 
+    if(target.hasAttribute('href')){
+        menu_container.classList.remove('active')
     } 
+})
+
+close_menu_btn.addEventListener('click',() => { 
+    menu_container.classList.remove('active')
 });
 
-document.getElementById('downloadButton').addEventListener('click', function() {
-    const link = document.createElement('a');
-    link.download = 'meme_maker.png'; 
-    link.href = canvas.toDataURL('image/png'); 
-    link.click(); 
+// copy contract
+document.getElementById("contractButton").addEventListener("click", function() { 
+  let contractValue = document.getElementById("contractInput").value;
+ 
+  let tempInput = document.createElement("input");
+  tempInput.value = contractValue;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+ 
+  alert("Copy Address Success");
+});
+ 
+
+
+// change image 
+// const howToImg = document.querySelector('.howTo img');
+// const moskImg = document.querySelector('.mosk img');
+// const moskPlansImg = document.querySelector('.mosk_plans img');
+ 
+// function changeImage() { 
+//     const screenWidth = window.innerWidth; 
+    
+//     // how to 
+//     const howTo = (screenWidth < 1280) ? './assets/icons/howToGet_mobile.svg' : './assets/icons/howToGet_desk.svg';
+   
+//     // mosk 
+//     const mosk = (screenWidth < 1280) ? './assets/icons/mosk_mobile.svg' : './assets/icons/mosk_desk.svg';
+    
+//     // mosk plans
+//     const moskPlans = (screenWidth < 1280) ? './assets/icons/mosk_plans_mobile.svg' : './assets/icons/mosk_plans_desk.svg';
+ 
+//     howToImg.src = howTo;
+//     moskImg.src = mosk;
+//     moskPlansImg.src = moskPlans;
+// }
+ 
+// window.addEventListener('DOMContentLoaded', changeImage);
+// window.addEventListener('resize', changeImage);
+
+// swiper 1 for how to get 
+const swiper1 = document.querySelector('.swiper-container1');
+
+const swiperParams1 = {
+  slidesPerView: 1, 
+  centered:true,
+  breakpoints: {
+    1: {
+      direction: 'vertical', 
+      slidesPerView: 'auto',
+      spaceBetween:50,   
+    }, 
+    768: {
+      direction: 'horizontal', 
+      slidesPerView: 'auto',
+      spaceBetween:20,   
+    }, 
+  },  
+  on: {
+    init() { 
+    },
+  },
+};
+
+Object.assign(swiper1, swiperParams1);
+swiper1.initialize();
+
+// swiper 2 for meme
+  const swiper2 = document.querySelector('.swiper-container2');
+  
+  const swiperParams2 = {
+    slidesPerView: 1,
+    spaceBetween:10,
+    freeMode:true,
+    on: {
+      init() { 
+      },
+    },
+  };
+  
+  Object.assign(swiper2, swiperParams2);
+  swiper2.initialize();
+
+  // times  
+const initialCountDownDate = new Date("Mar 7, 2024 00:00:00").getTime();
+ 
+let x = setInterval(function() {
+ 
+  let now = new Date().getTime();
+   
+  let distance = now - initialCountDownDate;
+ 
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+ 
+  document.getElementById("day").innerHTML = (days + 1) + " days"
+  document.getElementById("countdown").innerHTML = hours + "H "+ minutes + "M " + seconds + "S";
+
+}, 1000);
+
+
+  // animation 
+let controller = new ScrollMagic.Controller();
+
+const animations = [
+  { selector: ".contract", duration: 300, x: -300, y: 0 },  
+  { selector: ".moskonomics-marquee-1", duration: 5000, x: 300, y: 0 }, 
+  { selector: ".moskonomics-marquee-2", duration: 5000, x: -1000, y: 0 },  
+];
+ 
+function adjustValues() {
+  const screenWidth = window.innerWidth;
+  if (screenWidth > 1200) { 
+    animations.forEach(animation => {
+      animation.x *= 4;
+      if(animation.selector === ".left_contact_image" ||  animation.selector === ".right_contact_image") {
+        animation.y *= 4;  
+        animation.x *= 4;  
+      }
+      if(animation.selector === ".contactUs-container") {
+        animation.y *= 2;  
+      }
+    });
+  } else if (screenWidth > 1500  && screenWidth < 1800) { 
+    animations.forEach(animation => {
+      animation.x *= 5;
+    }) 
+  } else if (screenWidth <= 500) { 
+    animations.forEach(animation => {
+      if(animation.selector === ".contract") {
+        animation.x *= 1;  
+      } 
+    });
+  } else if (screenWidth > 1800 ) { 
+    animations.forEach(animation => {
+      if(animation.selector === ".contract") {
+        animation.x *= 2.5;  
+      } 
+    });
+  }
+}
+ 
+adjustValues();
+ 
+window.addEventListener('resize', adjustValues);
+ 
+animations.forEach(animation => { 
+  let tween = gsap.to(animation.selector, {duration: animation.duration, x: animation.x, y: animation.y});
+ 
+  let scene = new ScrollMagic.Scene({
+    triggerElement: animation.selector,
+    duration: animation.duration,
+    offset: 0
+  })
+  .setTween(tween) 
+  .addTo(controller);
 });
 
-document.getElementById('deleteButton').addEventListener('click', function() { 
-    if (selectedImageIndex !== -1) {
-        images.splice(selectedImageIndex, 1);
-        selectedImageIndex = -1;
-        renderImages();
-        document.getElementById('settingsPanel').style.display = 'none';
-        if (images.length === 0) {
-            document.querySelectorAll('.addImage').forEach(imageDiv => {
-                imageDiv.classList.remove('active');
-            });
-        }
-    }
-});
 
-canvas.addEventListener('mousedown', function(e) {
-    const mouseX = e.offsetX;
-    const mouseY = e.offsetY;
-    for (let i = 0; i < images.length; i++) {
-        if (isMouseOnImage(mouseX, mouseY, images[i])) {
-            isDragging = true;
-            selectedImageIndex = i;  
-            offsetX = mouseX - images[i].x;
-            offsetY = mouseY - images[i].y;
-            const settingsPanel = document.getElementById('settingsPanel');
-            settingsPanel.style.display = 'flex';
-            settingsPanel.style.left = `${images[i].x}px`;
-            settingsPanel.style.top = `${images[i].y + 100}px`;
-            break;
-        }
-    }
-});
 
-canvas.addEventListener('mouseup', function() {
-    isDragging = false;
-});
 
-canvas.addEventListener('mousemove', function(e) {
-    if (isDragging && selectedImageIndex !== -1) {
-        const mouseX = e.offsetX;
-        const mouseY = e.offsetY;
-        images[selectedImageIndex].x = mouseX - offsetX;
-        images[selectedImageIndex].y = mouseY - offsetY;
-        renderImages();
-    }
-});
+// rotate image moskonomics
+function rotateImageOnScroll() {
+  let width = window.innerWidth;
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  let rotation 
+ 
 
+  if (width >= 1300) {
+      rotation = scrollTop / 9 ; 
+  } else if (width >= 500 && width <= 1300) {
+      rotation = scrollTop / 15;
+  } else {
+      rotation = scrollTop / 19 ;
+  } 
+  gsap.to("#rotatingImage", { rotation: rotation, duration: 1.5 });
+}
+ 
+window.addEventListener('scroll', rotateImageOnScroll); 
+rotateImageOnScroll();
+
+ 
