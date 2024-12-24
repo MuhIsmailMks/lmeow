@@ -5,10 +5,13 @@ const menu_btn = document.querySelectorAll('.menu_btn');
 const menu_container = document.querySelector('.menu_container');
 const close_menu_btn = document.querySelector('.close-btn');
 
-AOS.init({ 
-  once: true
-});    
- 
+window.addEventListener('DOMContentLoaded', () => {
+  AOS.init({ 
+    once: true
+  });    
+   
+})
+
 // navbar 
 window.addEventListener('scroll', function() {
   let nav = document.getElementById('nav');
@@ -53,33 +56,7 @@ document.getElementById("contractButton").addEventListener("click", function() {
   alert("Copy Address Success");
 });
  
-
-
-// change image 
-// const howToImg = document.querySelector('.howTo img');
-// const moskImg = document.querySelector('.mosk img');
-// const moskPlansImg = document.querySelector('.mosk_plans img');
  
-// function changeImage() { 
-//     const screenWidth = window.innerWidth; 
-    
-//     // how to 
-//     const howTo = (screenWidth < 1280) ? './assets/icons/howToGet_mobile.svg' : './assets/icons/howToGet_desk.svg';
-   
-//     // mosk 
-//     const mosk = (screenWidth < 1280) ? './assets/icons/mosk_mobile.svg' : './assets/icons/mosk_desk.svg';
-    
-//     // mosk plans
-//     const moskPlans = (screenWidth < 1280) ? './assets/icons/mosk_plans_mobile.svg' : './assets/icons/mosk_plans_desk.svg';
- 
-//     howToImg.src = howTo;
-//     moskImg.src = mosk;
-//     moskPlansImg.src = moskPlans;
-// }
- 
-// window.addEventListener('DOMContentLoaded', changeImage);
-// window.addEventListener('resize', changeImage);
-
 // swiper 1 for how to get 
 const swiper1 = document.querySelector('.swiper-container1');
 
