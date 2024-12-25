@@ -147,26 +147,15 @@ body {
 
   
 .image_fade { 
-  animation: fadeAnimation 14s ease infinite; /* Durasi 2s, ease-in-out, berulang */
+  animation: fadeAnimation 14s ease-in-out infinite; /* Durasi 2s, ease-in-out, berulang */
 }
   
 @keyframes fadeAnimation {
-  0%,55% {
+  0%,41% ,59% {
     opacity: 1; 
   }
   
   50% {
     opacity: 0;  
   }  
-  51% {
-    opacity: .2;  
-  }  
-  52% {
-    opacity: .5;  
-  }  
-  54% {
-    opacity: .8;  
-  }  
-
-
 }
