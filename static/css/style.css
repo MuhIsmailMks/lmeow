@@ -317,25 +317,34 @@ body {
       transform: translateX(0);
   }
   100%{
-      transform: translateX(-100%);
+      transform: translateX(-100%); 
   }
 }
 
 
 /* smoke */
-.smoke {
+.smokeAnimation {
   align-items: flex-end;
-  animation: slide 10s linear infinite;
-  /* background-image: url(/static/media/smoke.e5feab3….webp); */
-  /* background-repeat: repeat-x; */
+  animation: slideCLoud 10s linear infinite;
+  background-image: url('../images/smoke.webp');
+  background-repeat: repeat-x;
   background-size: auto 100%;
-  display: flex
-;
+  display: flex;
   flex-flow: row wrap;
   height: 22.05%;
   justify-content: center;
   left: 0;
   position: absolute;
-  top: 0;
+  bottom: 0;
   width: 100%;
+}
+
+@keyframes slideCLoud {
+  0% {
+      background-position: 0 0
+  }
+
+  to {
+      background-position: -1287px 0
+  }
 }
