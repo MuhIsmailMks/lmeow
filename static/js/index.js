@@ -4,6 +4,8 @@ window.addEventListener('DOMContentLoaded', () => {
         once: true,
         offset: 120, 
     });
+
+    
 })
 
 
