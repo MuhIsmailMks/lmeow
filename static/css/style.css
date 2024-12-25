@@ -159,3 +159,31 @@ body {
     opacity: 0;  
   }  
 }
+
+
+
+
+
+.floating_animationText{
+  animation: floating_animationText 6s linear infinite;
+  -webkit-animation: floating_animationText 6s linear infinite;
+  text-shadow: -3px 3px 0px black;
+}
+
+@keyframes floating_animationText {
+  0%,100%{
+      transform: translateY(-6%);
+      -webkit-transform: translateY(-6%);
+      -moz-transform: translateY(-6%);
+      -ms-transform: translateY(-6%);
+      -o-transform: translateY(-6%);
+  }
+  50%{ 
+      transform: translateY(6%);
+      -webkit-transform: translateY(6%);
+      -moz-transform: translateY(6%);
+      -ms-transform: translateY(6%);
+      -o-transform: translateY(6%);
+  }
+}
+
