@@ -44,6 +44,10 @@ body {
   color: white !important;
 }
 
+.social .linkIcon:hover img{
+  transform: rotate(380deg);
+}
+
 @media screen and (max-width:768px){
   .menuContainer{
     display: none;
