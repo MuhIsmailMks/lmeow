@@ -38,3 +38,18 @@ const menuContainer = document.querySelector('.menuContainer');
 menuBtn.addEventListener('click', () => {
     menuContainer.classList.toggle('active')
 })
+
+
+
+
+// Initialize ScrollReveal
+const sr = ScrollReveal({
+    origin: 'bottom',  
+    distance: '50px', 
+    duration: 800,    
+    delay: 200,      
+    reset: false       
+  });
+    
+  sr.reveal('.revealBottom', { interval: 200 });
+  
