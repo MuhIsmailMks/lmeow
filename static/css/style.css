@@ -10,7 +10,7 @@ html {
 
 @font-face {
   font-family: "milky";
-  src: url("../fonts/MilkyNice-Clean.ttf") format("truetype");
+  src: url("../fonts/yebu2.woff2") format("truetype");
 }
 
 body {
@@ -73,6 +73,11 @@ body {
   .menuContainer.active {
     display: block;
   }
+
+  .xthinStroke {
+    -webkit-text-stroke: .5px black;
+  }
+  
 
   .mediumStroke {
     -webkit-text-stroke: 1px black;
