@@ -122,7 +122,8 @@ body {
 
 
 .zoomIn_animation {
-  animation: zoomIn_animation 10s ease-in-out infinite;  
+  animation: zoomIn_animation 10s ease-in-out infinite;
+  -webkit-animation: zoomIn_animation 10s ease-in-out infinite;
 }
 
 @keyframes zoomIn_animation {
@@ -141,4 +142,31 @@ body {
     -ms-transform: scale(1.05);
     -o-transform: scale(1.05);
   }
+}
+
+
+  
+.image_fade { 
+  animation: fadeAnimation 14s ease infinite; /* Durasi 2s, ease-in-out, berulang */
+}
+  
+@keyframes fadeAnimation {
+  0%,55% {
+    opacity: 1; 
+  }
+  
+  50% {
+    opacity: 0;  
+  }  
+  51% {
+    opacity: .2;  
+  }  
+  52% {
+    opacity: .5;  
+  }  
+  54% {
+    opacity: .8;  
+  }  
+
+
 }
