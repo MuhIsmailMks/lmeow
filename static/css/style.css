@@ -374,12 +374,12 @@ body {
 
 
 .char {
-  bottom: 20%;
+  bottom: 5%;
   display: block;
-  left: 50%;
+  left: 60%;
   position: absolute;
   transform: translateX(-50%);
-  width: 36%;
+  width: 50%;
   z-index: 2
 }
 
