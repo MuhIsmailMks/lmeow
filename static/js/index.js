@@ -51,5 +51,13 @@ const sr = ScrollReveal({
     reset: false       
   });
     
-  sr.reveal('.revealBottom', { interval: 200 });
+  sr.reveal('.revealBottom');
   
+
+  document.querySelectorAll('.revealBottom').forEach((el) => {
+    const delay = el.getAttribute('data-delay') || 0;
+    sr.reveal(el, { delay: parseInt(delay) });
+  });
+  
+
+//   revealBottom data-delay="200"
