@@ -57,12 +57,4 @@ const sr = ScrollReveal({
     const delay = el.getAttribute('data-delay') || 0;
     sr.reveal(el, { delay: parseInt(delay) });
   });
-  
-
-//   revealBottom data-delay="200"
-
-
-
-
-
-// gsap 
+   
