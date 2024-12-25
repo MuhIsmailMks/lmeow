@@ -8,11 +8,8 @@ window.addEventListener('DOMContentLoaded', () => {
     
 })
 
-
 // copy address
-const copyAddressAll = document.querySelectorAll('.copy-box');
-    
-
+const copyAddressAll = document.querySelectorAll('.copy-box');    
 let timeout;
 
 copyAddressAll.forEach(copyAddress => {
