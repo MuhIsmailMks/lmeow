@@ -49,8 +49,8 @@ const sr = ScrollReveal({
     duration: 800,    
     reset: false       
   });
-    
-  sr.reveal('.revealBottom');
+ 
+  sr.reveal('.revealBottom'); 
   
 
   document.querySelectorAll('.revealBottom').forEach((el) => {
@@ -65,28 +65,4 @@ const sr = ScrollReveal({
 
 
 
-// gsap
-function readyWallet() {  
-
-    // const triggerElement = window.innerWidth < 1024 ? '.col1_start' : '.howTo'; 
-    // const YValueResponsive = window.innerWidth < 1024 ? '-50vw' : '-20vw';
-    // const startRocket = window.innerWidth < 1024 ? '10vw' : '50vw';
- 
-    gsap.fromTo('.wallet', 
-        { y: '0' }, 
-        { y: '-100px', 
-          ease: "none", 
-          scrollTrigger: {
-            trigger: "titleWallet",
-            start: "50% 100%",
-            end: "100% 50%",
-            scrub: 5,
-          }
-        }
-    );
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-    readyWallet();     
-      
-});
+// gsap 
