@@ -60,3 +60,33 @@ const sr = ScrollReveal({
   
 
 //   revealBottom data-delay="200"
+
+
+
+
+
+// gsap
+function readyWallet() {  
+
+    // const triggerElement = window.innerWidth < 1024 ? '.col1_start' : '.howTo'; 
+    // const YValueResponsive = window.innerWidth < 1024 ? '-50vw' : '-20vw';
+    // const startRocket = window.innerWidth < 1024 ? '10vw' : '50vw';
+ 
+    gsap.fromTo('.wallet', 
+        { y: '0' }, 
+        { y: '-100px', 
+          ease: "none", 
+          scrollTrigger: {
+            trigger: "titleWallet",
+            start: "50% 100%",
+            end: "100% 50%",
+            scrub: 5,
+          }
+        }
+    );
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    readyWallet();     
+      
+});

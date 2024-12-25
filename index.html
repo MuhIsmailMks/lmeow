@@ -28,32 +28,34 @@
       class="w-full min-h-[100vh] h-auto max-w-[100%] relative overflow-hidden flex items-center flex-col">
 
       <nav class="absolute top-0 w-full z-20 start-0 bg-[#ffbc16]">
+
         <div
           class="max-w-[2000px] flex flex-wrap items-center justify-between mx-auto p-4 lg:px-10"
         >
           <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img 
               src="./static/images/icon.png"
-              class="h-12 lg:h-16"
+              class="h-12 lg:h-16 float_animation"
+              style="animation-delay: -3s;"
               alt="Flowbite Logo"
             />
             <span
-              class="self-center text-2xl font-semibold whitespace-nowrap text-black cooperFont"
+              class="self-center text-[25px] lg:text-[40px] font-semibold whitespace-nowrap text-[#ffbc16] thinStroke cooperFont"
               >LMEOW</span
             >
           </a>
 
           <div
-            class="items-center menuContainer justify-between w-full md:flex md:w-auto md:order-1"
+            class="items-center lg:absolute z-0 lg:translate-x-[-50%] lg:left-[50%]  menuContainer justify-center w-full md:flex md:w-auto  "
             id="navbar-sticky"
           >
             <ul
-              class="flex items-center flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 max-md:gap-6"
+              class="flex items-center flex-col p-4 md:p-0 mt-4 font-medium    rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 max-md:gap-6"
             >
               <li class="max-md:w-full max-md:text-center">
                 <a
                   href="#home"
-                  class="block py-4 md:py-2 px-5 text-[#ffbc16] bg-black rounded-lg duration-200 hover:scale-90"
+                  class="block py-4 md:py-2 px-5 text-black border-b-[2px] border-black rounded-lg duration-200 hover:bg-black hover:text-[#ffbc16]"
                   aria-current="page"
                   >Home</a
                 >
@@ -61,14 +63,14 @@
               <li class="max-md:w-full max-md:text-center">
                 <a
                   href="#about"
-                  class="block py-4 md:py-2 px-5 text-[#ffbc16] bg-black rounded-lg duration-200 hover:scale-90"
+                  class="block py-4 md:py-2 px-5 text-black border-b-[2px] border-black rounded-lg duration-200 hover:bg-black hover:text-[#ffbc16]"
                   >About</a
                 >
               </li>
               <li class="max-md:w-full max-md:text-center">
                 <a
                   href="#memes"
-                  class="block py-4 md:py-2 px-5 text-[#ffbc16] bg-black rounded-lg duration-200 hover:scale-90"
+                  class="block py-4 md:py-2 px-5 text-black border-b-[2px] border-black rounded-lg duration-200 hover:bg-black hover:text-[#ffbc16]"
                   >Memes</a
                 >
               </li>
@@ -82,19 +84,33 @@
                   </button>
                 </div>
               </li>
-              <li class="relative">
-                <div class="flex gap-2 items-center justify-center">
-                  <img 
-                    src="./static/images/us.png"
-                    alt=""
-                    class="w-[45px] h-auto"
-                  />
+
+              <li class="md:hidden">
+                <div class="flex justify-center gap-6">
+                  
+                  <a href="#twitter" class="border-black border-[2px] w-[50px] h-[50px] flex justify-center items-center rounded-full duration-200 hover:rotate-180">
+                    <img src="./static/images/twitterBlack.svg" alt="" class="w-[70%]">
+                  </a>
+                
+                  <a href="#twitter" class="border-black border-[2px] w-[50px] h-[50px] flex justify-center items-center rounded-full duration-200 hover:rotate-180">
+                    <img src="./static/images/telegramBlack.svg" alt="" class="w-[70%]">
+                  </a>
+             
+                  
+                  <div class="flex gap-2 items-center justify-center">
+                    <img 
+                      src="./static/images/us.png"
+                      alt=""
+                      class="w-[55px] h-auto"
+                    />
+                  </div>
+
                 </div>
               </li>
             </ul>
           </div>
 
-          <div class="menu absolute top-[19px] right-7 lg:hidden">
+          <div class="menu absolute top-[17px] right-7 lg:hidden">
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"
@@ -121,6 +137,32 @@
             </button>
           </div>
 
+          <div class="relative max-md:hidden">
+
+              <ul class="flex justify-center items-center gap-4">
+
+                <li> <a href="#twitter" class="border-black border-[2px] w-[50px] h-[50px] flex justify-center items-center rounded-full duration-200 hover:rotate-180">
+                  <img src="./static/images/twitterBlack.svg" alt="" class="w-[70%]">
+                </a>
+                </li> 
+                <li>
+                   <a href="#twitter" class="border-black border-[2px] w-[50px] h-[50px] flex justify-center items-center rounded-full duration-200 hover:rotate-180">
+                  <img src="./static/images/telegramBlack.svg" alt="" class="w-[70%]">
+                </a>
+              </li> 
+              <li class="relative">
+                <div class="flex gap-2 items-center justify-center">
+                  <img 
+                    src="./static/images/us.png"
+                    alt=""
+                    class="w-[55px] h-auto"
+                  />
+                </div>
+              </li>
+
+              </ul>
+          </div>
+
         </div>
       </nav>
 
@@ -132,14 +174,14 @@
           <img 
             src="./static/images/heroImg.png"
             alt=""
-            class="absolute md:left-0 bottom-[-5%] w-full md:w-[50%] max-w-[400px] md:max-w-[600px] h-auto float_animation"
+            class="absolute   bottom-[-5%] w-full md:w-[50%] max-w-[400px] md:max-w-[600px] h-auto float_animation"
           />
 
-          <div class="text max-md:text-center absolute right-0 md:right-[5%] top-[20%] md:top-[40%] lg:top-[20%] w-full md:w-[55%] text-white flex flex-col items-start max-md:items-center max-lg:gap-6 ">
+          <div class="text max-md:text-center absolute top-[20%] md:top-[40%] lg:bottom-[-20%] w-full md:w-[55%] text-white flex flex-col justify-center items-center max-lg:gap-6 ">
 
             <h1 data-aos="fade-up"
             data-aos-duration="600"
-            data-aos-delay="100" class="cooperFont text-[30px] lg:text-[70px] mediumStroke flex flex-wrap max-md:w-[330px]  min-[1600px]:w-[80%] max-w-[100%] lg:max-w-[750px]">
+            data-aos-delay="100" class="cooperFont text-[30px] lg:text-[70px] mediumStroke flex items-center flex-wrap max-md:w-[330px] justify-center min-[1600px]:w-[80%] max-w-[100%] lg:max-w-[750px]">
             <span class="floating_animationText" style="animation-delay: -2s;">L</span>
             <span class="floating_animationText" style="animation-delay: -3s;">M</span>
             <span class="floating_animationText" style="animation-delay: -3.5s;">E</span>
@@ -182,7 +224,7 @@
 
         </div>
 
-        <div class="bg absolute left-0 top-0 w-full h-full z-0">
+        <div class="bg absolute left-0 top-0 w-full h-full z-0 zoomIn_animation">
           <img 
             src="./static/images/catFootprint.png"
             alt=""
@@ -271,7 +313,7 @@
         class="ready w-full h-auto bg-black relative flex flex-col items-center z-10"
       >
         <h2
-          class="my-[40px] text-[50px] lg:text-[80px] text-center text-[#ffbc16] cooperFont" 
+          class="titleWallet my-[40px] text-[50px] lg:text-[80px] text-center text-[#ffbc16] cooperFont" 
           data-aos="fade-up" data-aos-duration="600"
           data-aos-delay="100"
         >
@@ -302,7 +344,7 @@
           </div>
 
           <div
-            class="link w-full md:w-[45%] lg:w-[31%] relative h-auto flex flex-col items-center text-center text-white"
+            class="link w-full md:w-[45%] lg:w-[31%] relative h-auto flex flex-col items-center text-center text-white lg:mt-[100px]"
           >
             <img 
               src="./static/images/GETETH.png"
@@ -324,7 +366,7 @@
           </div>
 
           <div
-            class="link w-full md:w-[45%] lg:w-[31%] relative h-auto flex flex-col items-center text-center text-white"
+            class="link w-full md:w-[45%] lg:w-[31%] relative h-auto flex flex-col items-center text-center text-white wallet"
           >
             <img 
               src="./static/images/GETLMEOW.png"
@@ -342,12 +384,13 @@
               prompts you!
             </p>
           </div>
+
         </div>
 
         <img 
           src="./static/images/line2.jpg"
           alt="line"
-          class="absolute bottom-[-4%] xl:bottom-[-10%] w-full h-auto"
+          class="absolute bottom-[-1%] xl:bottom-[-10%] w-full h-auto"
         />
       </section>
 
@@ -424,6 +467,7 @@
             >
           </a>
         </div>
+
       </section> 
 
       <div class="lines w-full  overflow-hidden relative z-0">
@@ -486,95 +530,50 @@
     
     <div class="matterText flex justify-center flex-wrap text-[20px]  text-white w-full px-[20px] lg:px-[80px]  relative z-10 pb-[10px]">
 
-      <div class="w-full md:w-[40%] flex flex-col gap-3" data-aos="fade-right"
+      <div class="w-full md:w-[60%] flex flex-col items-center gap-3" data-aos="fade-right"
       data-aos-duration="600"
       data-aos-delay="100">
           <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain rotateImg">
               <p>Community</p>
           </div>
           <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain rotateImg">
               <p>Poor People Getting Rich</p>
           </div>
           <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain rotateImg">
               <p>[Token] Distribution</p>
           </div>
           <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain rotateImg">
               <p>Attention</p>
           </div>
           <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain rotateImg">
               <p>Fairness</p>
           </div>
           <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain rotateImg">
               <p>Organic Price Discovery</p>
           </div>
           <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain rotateImg">
               <p>Community</p>
           </div>
           <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
-              <p>Elmiminating Class Warfare <br> / Bitterness</p>
+              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain rotateImg">
+              <p>Elmiminating Class Warfare  / Bitterness</p>
           </div>
           <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain rotateImg">
               <p>Attention</p>
           </div>
           <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
+              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain rotateImg">
               <p>Fairness</p>
           </div>  
-      </div>
-
-      <div class="w-full md:w-[30%] flex flex-col gap-3 max-lg:mt-4 max-md:hidden" data-aos="fade-left"
-      data-aos-duration="600"
-      data-aos-delay="100">
-          <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
-              <p>Community</p>
-          </div>
-          <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
-              <p>Poor People Getting Rich</p>
-          </div>
-          <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
-              <p>[Token] Distribution</p>
-          </div>
-          <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
-              <p>Attention</p>
-          </div>
-          <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
-              <p>Fairness</p>
-          </div>
-          <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
-              <p>Organic Price Discovery</p>
-          </div>
-          <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
-              <p>Community</p>
-          </div>
-          <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
-              <p>Elmiminating Class Warfare <br> / Bitterness</p>
-          </div>
-          <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
-              <p>Attention</p>
-          </div>
-          <div class="flex items-center gap-5">
-              <img  src="./static/images/matterIcon.svg" alt="matt" class="w-[20px] h-auto object-contain">
-              <p>Fairness</p>
-          </div>  
-      </div>
+      </div> 
 
     </div>
 
@@ -668,6 +667,12 @@
     <!-- aos js library animation --> 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollSmoother.min.js"></script>
+
+    <!-- scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
 
