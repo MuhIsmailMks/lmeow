@@ -348,3 +348,114 @@ body {
       background-position: -1287px 0
   }
 }
+
+
+
+
+
+
+
+
+
+/* figure animation */
+.hero-scene {
+  background: #ffe4c2;
+  background: linear-gradient(90deg,#ffe4c2,#c4dde7);
+  display: block;
+  overflow: hidden;
+  position: relative
+}
+
+.hero-scene img {
+  display: block;
+  width: 100%
+}
+
+
+
+.char {
+  bottom: 20%;
+  display: block;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 36%;
+  z-index: 2
+}
+
+.char img {
+  animation: wiggle 2s ease infinite;
+  display: block;
+  width: 60%
+}
+
+@keyframes wiggle {
+  0%,7% {
+      transform: rotate(0)
+  }
+
+  15% {
+      transform: rotate(-7.5deg)
+  }
+
+  20% {
+      transform: rotate(5deg)
+  }
+
+  25% {
+      transform: rotate(-10deg)
+  }
+
+  30% {
+      transform: rotate(6deg)
+  }
+
+  35% {
+      transform: rotate(-2deg)
+  }
+
+  40%,to {
+      transform: rotate(0)
+  }
+}
+
+.fireleft,.fireright {
+  display: block;
+  position: absolute;
+  z-index: 1
+}
+
+.fireleft img,.fireright img {
+  display: block;
+  width: 100%
+}
+
+.fireleft {
+  bottom: 0;
+  left: 0;
+  transform: translate(-18%,13%);
+  width: 42%
+}
+
+.fireleft img {
+  animation: flameMovement 2s ease-in-out infinite
+}
+
+.fireright {
+  bottom: 0;
+  right: 0;
+  transform: translate(5%,3%);
+  width: 41%
+}
+
+.fireright img {
+  animation: flameMovement 2s ease-in-out infinite
+}
+
+@keyframes flameMovement {
+  50% {
+      transform: scaleX(.98) translateY(2px) rotate(-1deg)
+  }
+}
+
+

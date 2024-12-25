@@ -892,6 +892,10 @@ body {
     }
 }
 
+
+
+
+
 .char {
     bottom: 10%;
     display: block;
@@ -976,6 +980,13 @@ body {
         transform: scaleX(.98) translateY(2px) rotate(-1deg)
     }
 }
+
+
+
+
+
+
+
 
 @media (max-width: 1023px) {
     #contract .btn-group .btn:not(.spaceless) {
