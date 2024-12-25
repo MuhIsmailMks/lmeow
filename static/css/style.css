@@ -46,10 +46,7 @@ body {
 .goldStroke {
   -webkit-text-stroke: 0.5vw #ffbc16;
 }
-
-.matterText {
-  color: white !important;
-}
+ 
 
 .social .linkIcon:hover img {
   transform: rotate(380deg);
