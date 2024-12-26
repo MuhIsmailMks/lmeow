@@ -3,9 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
     AOS.init({
         once: true,
         offset: 120, 
-    });
-
-    
+    });    
 })
 
 // copy address
